@@ -1,0 +1,13 @@
+site_name: "My Portfolio"
+theme:
+  name: "material"
+nav:
+  - Home: index.md
+  - About: about.md
+  - Projects: projects.md
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - footnotes
