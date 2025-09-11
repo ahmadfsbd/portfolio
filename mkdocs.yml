@@ -1,13 +1,39 @@
-site_name: "My Portfolio"
+site_name: "Muhammad Ahmad | Cloud & DevOps Engineer"
+
 theme:
   name: "material"
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: 'indigo'
+      accent: 'deep orange'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: 'indigo'
+      accent: 'deep orange'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  logo: "images/logo.png"
+
 nav:
   - Home: index.md
   - About: about.md
   - Projects: projects.md
+
 markdown_extensions:
   - toc:
       permalink: true
   - admonition
   - codehilite
   - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
