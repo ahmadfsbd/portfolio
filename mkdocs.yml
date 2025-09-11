@@ -23,10 +23,16 @@ theme:
   logo: "images/logo.png"
   features:
     - navigation.footer
+    - navigation.expand        # default behavior
+    - navigation.instant       # smooth page loads
+    - navigation.sections      # section-based nav (optional)
+    - navigation.top           # “back to top” button
+    - navigation.tracking      # highlight current heading
+    - navigation.tabs.sticky   # sticky tabs
+    - navigation.indexes      # index page
 
 nav:
   - Home: index.md
-  - About: about.md
   - Projects: projects.md
 
 markdown_extensions:

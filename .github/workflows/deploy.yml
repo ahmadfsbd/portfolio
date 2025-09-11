@@ -3,17 +3,20 @@ name: Deploy MkDocs to GitHub Pages
 on:
   # Deploy automatically on push to main and allow manual runs
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.12'
 
