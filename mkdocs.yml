@@ -23,17 +23,23 @@ theme:
   logo: "images/logo.png"
   features:
     - navigation.footer
-    - navigation.expand        # default behavior
-    - navigation.instant       # smooth page loads
-    - navigation.sections      # section-based nav (optional)
-    - navigation.top           # “back to top” button
-    - navigation.tracking      # highlight current heading
-    - navigation.tabs.sticky   # sticky tabs
-    - navigation.indexes      # index page
+    - navigation.instant
+    - navigation.top
+    - navigation.tracking
+    - navigation.tabs.sticky
 
 nav:
   - Home: index.md
-  - Projects: projects.md
+  - Skills / Tech Stack: skills.md
+  - Certifications: certifications.md
+  - Photography: photography.md
+  - Career Journey:
+      - First Job: career/job1.md
+      - Second Job: career/job2.md
+  - Blog / Tutorials:
+      - First Post: blog/post1.md
+      - Second Post: blog/post2.md
+  - Contact: contact.md
 
 markdown_extensions:
   - toc:
