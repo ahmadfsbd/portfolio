@@ -21,6 +21,8 @@ theme:
     text: "Roboto"
     code: "Roboto Mono"
   logo: "images/logo.png"
+  features:
+    - navigation.footer
 
 nav:
   - Home: index.md
@@ -40,3 +42,16 @@ markdown_extensions:
 
 extra_css:
   - css/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/muhammad-ahmad-b6a04736/
+    - icon: fontawesome/brands/github
+      link: https://www.github.com/ahmadfsbd
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/ehm_ud
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@ehm_ud
+
+copyright: Copyright &copy; 2025 Muhammad Ahmad. All rights reserved.
