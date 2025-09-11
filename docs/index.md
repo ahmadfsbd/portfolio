@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Welcome to my portfolio! This website showcases my work, skills, and background information. 
+Welcome to my portfolio! This website showcases my work, skills, and background information. Feel free to add new lines here.
 
 ## About Me
 Learn more about my journey and what drives me by visiting the [About](about.md) section.

@@ -1,0 +1,9 @@
+/* Hide the right-hand TOC sidebar completely */
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+/* Expand the main content to use the freed space */
+.md-content {
+  max-width: 100% !important;
+}
