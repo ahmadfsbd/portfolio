@@ -1,39 +1,33 @@
 name: Deploy MkDocs to GitHub Pages
 
 on:
-  # Deploy when pushing to main, and allow manual runs
+  # Deploy automatically on push to main and allow manual runs
   push:
     branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
       - uses: actions/checkout@v4
 
-      # 2️⃣ Set up Python
       - uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
-      # 3️⃣ Install MkDocs + Material theme
-      - name: Install MkDocs and theme
+      - name: Install MkDocs + Material
         run: pip install mkdocs mkdocs-material
 
-      # 4️⃣ Build the site (clean local /site folder)
-      - name: Build MkDocs site
-        run: mkdocs build --clean
+      - name: Build site
+        run: mkdocs build --clean    # cleans local ./site directory
 
-      # 5️⃣ Deploy to gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages        # branch served by GitHub Pages
-          publish_dir: ./site             # MkDocs output folder
-          force_orphan: true              # recreate branch from scratch
-          clean: true                     # delete any old files first
-          enable_jekyll: false            # prevent GitHub Pages Jekyll processing
+          publish_dir: ./site        # output folder
+          publish_branch: gh-pages   # branch to publish
+          force_orphan: true         # recreate branch from scratch
+          enable_jekyll: false       # avoid Jekyll processing
