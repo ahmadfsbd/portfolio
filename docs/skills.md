@@ -11,7 +11,6 @@ Technologies for designing and operating public, private, and hybrid clouds.
   <img src="/images/logos/googlecloud.svg" alt="Google Cloud" height="40" style="max-width:150px;" />
   <img src="/images/logos/openstack.svg" alt="OpenStack" height="40" style="max-width:150px;" />
   <img src="/images/logos/aws.svg" alt="AWS" height="40" style="max-width:150px;" />
-  <img src="/images/logos/canonicalopenstack.svg" alt="Canonical OpenStack" height="40" style="max-width:150px;" />
 </div>
 
 * **Cloud Platforms**: Google Cloud (GCP), OpenStack (community & Canonical distributions), Amazon Web Services (AWS)  
@@ -31,7 +30,6 @@ Building, scaling, and managing containerized workloads.
   <img src="/images/logos/helm.svg" alt="Helm" height="40" style="max-width:150px;" />
   <img src="/images/logos/singularity.svg" alt="Singularity" height="40" style="max-width:90px;" />
   <img src="/images/logos/apptainer.svg" alt="Apptainer" height="40" style="max-width:130px;" />
-  <img src="/images/logos/lxd.svg" alt="LXD" height="40" style="max-width:80px;" />
 </div>
 
 * **Container Platforms**: Kubernetes, MicroK8s, Docker, SingularityCE, Apptainer, LXD
