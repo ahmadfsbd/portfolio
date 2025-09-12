@@ -6,20 +6,20 @@
      style="border-radius: 50%; margin-top: 1rem;" />
 
 <div class="tech-logos">
-  <img src="images/logos/ubuntu.svg" alt="Ubuntu" height="40" />
-  <img src="images/logos/openstack.svg" alt="OpenStack" height="40" />
-  <img src="images/logos/kubernetes.svg" alt="Kubernetes" height="40" />
-  <img src="images/logos/ansible.svg" alt="Ansible" height="40" />
-  <img src="images/logos/terraform.svg" alt="Terraform" height="40" />
-  <img src="images/logos/googlecloud.svg" alt="GoogleCloud" height="40" />
-  <img src="images/logos/bash.svg" alt="Bash" height="36" />
-  <img src="images/logos/python.svg" alt="Python" height="40" />
-  <img src="images/logos/github.svg" alt="Github" height="40" />
-  <img src="images/logos/docker.svg" alt="Docker" height="40" />
-  <img src="images/logos/gitlab.svg" alt="Gitlab" height="40" />
-  <img src="images/logos/juju.svg" alt="Juju" height="40" />
-  <img src="images/logos/helm.svg" alt="Helm" height="40" />
-  <img src="images/logos/rancher.svg" alt="Rancher" height="40" />
+  <img src="images/logos/ubuntu.svg" alt="Ubuntu" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/openstack.svg" alt="OpenStack" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/kubernetes.svg" alt="Kubernetes" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/ansible.svg" alt="Ansible" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/terraform.svg" alt="Terraform" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/googlecloud.svg" alt="GoogleCloud" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/bash.svg" alt="Bash" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/python.svg" alt="Python" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/github.svg" alt="Github" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/docker.svg" alt="Docker" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/gitlab.svg" alt="Gitlab" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/juju.svg" alt="Juju" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/helm.svg" alt="Helm" height="40" style="max-width: 150px;"/>
+  <img src="images/logos/rancher.svg" alt="Rancher" height="40" style="max-width: 150px;"/>
 </div>
 
 ---
