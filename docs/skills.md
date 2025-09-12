@@ -8,11 +8,11 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 ## 🏗️ Cloud & Infrastructure
 
 <div class="tech-logos">
-  <img src="images/logos/googlecloud.svg" alt="Google Cloud" height="40" />
-  <img src="images/logos/openstack.svg" alt="OpenStack" height="40" />
-  <img src="images/logos/juju.svg" alt="Juju" height="40" />
-  <img src="images/logos/rancher.svg" alt="Rancher" height="40" />
-  <img src="images/logos/ubuntu.svg" alt="Ubuntu" height="40" />
+  <img src="/images/logos/googlecloud.svg" alt="Google Cloud" height="40" />
+  <img src="/images/logos/openstack.svg" alt="OpenStack" height="40" />
+  <img src="/images/logos/juju.svg" alt="Juju" height="40" />
+  <img src="/images/logos/rancher.svg" alt="Rancher" height="40" />
+  <img src="/images/logos/ubuntu.svg" alt="Ubuntu" height="40" />
 </div>
 
 * **Cloud Providers & Platforms**: Google Cloud (GCP), OpenStack, Rancher  
@@ -24,11 +24,11 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 ## ⚙️ Automation & Orchestration
 
 <div class="tech-logos">
-  <img src="images/logos/ansible.svg" alt="Ansible" height="40" />
-  <img src="images/logos/terraform.svg" alt="Terraform" height="40" />
-  <img src="images/logos/kubernetes.svg" alt="Kubernetes" height="40" />
-  <img src="images/logos/helm.svg" alt="Helm" height="40" />
-  <img src="images/logos/docker.svg" alt="Docker" height="40" />
+  <img src="/images/logos/ansible.svg" alt="Ansible" height="40" />
+  <img src="/images/logos/terraform.svg" alt="Terraform" height="40" />
+  <img src="/images/logos/kubernetes.svg" alt="Kubernetes" height="40" />
+  <img src="/images/logos/helm.svg" alt="Helm" height="40" />
+  <img src="/images/logos/docker.svg" alt="Docker" height="40" />
 </div>
 
 * **Infrastructure as Code**: Ansible, Terraform (including Juju & MAAS providers)  
@@ -40,8 +40,8 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 ## 🔒 Security & Monitoring
 
 <div class="tech-logos">
-  <img src="images/logos/github.svg" alt="GitHub" height="40" />
-  <img src="images/logos/gitlab.svg" alt="GitLab" height="40" />
+  <img src="/images/logos/github.svg" alt="GitHub" height="40" />
+  <img src="/images/logos/gitlab.svg" alt="GitLab" height="40" />
 </div>
 
 * **Compliance & Hardening**: Ubuntu USG with CIS standards  
@@ -53,8 +53,8 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 ## 💻 Programming & Scripting
 
 <div class="tech-logos">
-  <img src="images/logos/python.svg" alt="Python" height="40" />
-  <img src="images/logos/bash.svg" alt="Bash" height="36" />
+  <img src="/images/logos/python.svg" alt="Python" height="40" />
+  <img src="/images/logos/bash.svg" alt="Bash" height="36" />
 </div>
 
 * **Languages**: Python (automation scripts, tooling), Bash  
