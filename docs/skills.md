@@ -5,7 +5,7 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 
 ---
 
-## 🏗️ Cloud & Infrastructure
+## Cloud & Infrastructure
 
 <div class="tech-logos">
   <img src="/images/logos/googlecloud.svg" alt="Google Cloud" height="40" />
@@ -21,7 +21,7 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 
 ---
 
-## ⚙️ Automation & Orchestration
+## Automation & Orchestration
 
 <div class="tech-logos">
   <img src="/images/logos/ansible.svg" alt="Ansible" height="40" />
@@ -37,7 +37,7 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 
 ---
 
-## 🔒 Security & Monitoring
+## Security & Monitoring
 
 <div class="tech-logos">
   <img src="/images/logos/github.svg" alt="GitHub" height="40" />
@@ -50,7 +50,7 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 
 ---
 
-## 💻 Programming & Scripting
+## Programming & Scripting
 
 <div class="tech-logos">
   <img src="/images/logos/python.svg" alt="Python" height="40" />
@@ -62,7 +62,7 @@ Below is a snapshot of the platforms, tools, and practices I work with daily.
 
 ---
 
-## 🏆 Highlights
+## Highlights
 
 * Architected and automated multi-region **cloud and NFV** deployments  
 * Designed modular container build systems cutting image build time drastically  
