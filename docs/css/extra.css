@@ -1,9 +1,9 @@
-/* Hide the right-hand TOC sidebar completely */
-.md-sidebar--secondary {
-  display: none !important;
+/* Hide the left primary sidebar only on screens wider than 960px */
+@media (min-width: 960px) {
+  .md-sidebar--primary,
+  .md-sidebar--primary .md-nav {
+    display: none !important;
+  }
 }
 
-/* Expand the main content to use the freed space */
-.md-content {
-  max-width: 100% !important;
-}
+

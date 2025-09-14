@@ -27,18 +27,21 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.tabs.sticky
+    - navigation.tabs        # 🔑 Enables top-level tabs
+    - navigation.tabs.sticky # (optional) Tabs stay visible when scrolling
 
 nav:
-  - Home: index.md
-  - Skills / Tech Stack: skills.md
+  - Intro: index.md
+  - Skills & Tech Stack: skills.md
   - Certifications: certifications.md
-  - Photography: photography.md
+  - Achievements & Honors: achievements.md
   - Career Journey:
       - First Job: career/job1.md
       - Second Job: career/job2.md
   - Blog / Tutorials:
       - First Post: blog/post1.md
       - Second Post: blog/post2.md
+  - Photography: photography.md
   - Contact: contact.md
 
 markdown_extensions:

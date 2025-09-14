@@ -20,7 +20,7 @@ Technologies for designing and operating public, private, and hybrid clouds.
 
 ---
 
-## Container Orchestration & Management
+## Containers & Orchestration
 Building, scaling, and managing containerized workloads.
 
 <div class="tech-logos">
@@ -61,7 +61,6 @@ Ensuring compliance, monitoring, and automated software delivery.
 <div class="tech-logos">
   <img src="/images/logos/github.svg" alt="GitHub" height="40" style="max-width:150px;" />
   <img src="/images/logos/gitlab.svg" alt="GitLab" height="40" style="max-width:150px;" />
-  <img src="/images/logos/trivy.png" alt="Trivy" height="40" style="max-width:70px;" />
   <img src="/images/logos/snyk.svg" alt="Snyk" height="40" style="max-width:130px;" />
 </div>
 
