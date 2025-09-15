@@ -35,7 +35,7 @@ I have been honored with the **Top Mentor Award multiple times** for my mentorsh
 
 I was awarded the prestegious ERASMUS Mundus scholarship to spend a semester in Technical University of Dortmund (Germany) to conduct my Master's Thesis and Research (2017/2018).  
 
-<img src="/images/certs/erasmus.jpg" alt="Erasmus" height="40" style="max-width:900px;"/>
+<img src="/images/certs/erasmus.jpg" alt="Erasmus" height="40" />
 
     ERASMUS Scholars of Pakistan - 2017. (I am the 4th from left - hidden behind :))
 
