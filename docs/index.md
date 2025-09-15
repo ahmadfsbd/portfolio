@@ -20,4 +20,4 @@ Whether it’s accelerating digital transformation, implementing robust security
 ### Explore My Work
 Discover more about my background and projects through the sections below:
 
-[Skills](skills.md){ .md-button } [Projects](projects.md){ .md-button }  [Resume](resume.md){ .md-button }  [Contact](contact.md){ .md-button }
+[Skills](skills.md){ .md-button } [Career](career/index.md){ .md-button }  [Contact](contact.md){ .md-button }

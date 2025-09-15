@@ -36,8 +36,10 @@ nav:
   - Certifications: certifications.md
   - Achievements & Honors: achievements.md
   - Career Journey:
-      - First Job: career/job1.md
-      - Second Job: career/job2.md
+      - Index: career/index.md
+      - Wellcome Sanger Institute: career/wsi.md
+      - Canonical: career/canonical.md
+      - xFlow Research: career/xflow.md
   - Blog / Tutorials:
       - First Post: blog/post1.md
       - Second Post: blog/post2.md
