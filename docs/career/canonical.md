@@ -19,7 +19,7 @@ I was responsible for delivering **end-to-end Telco Cloud projects**—from the 
   > * Participated in **RFX/RFI** processes, translating customer requirements into actionable proposals.  
   > * Drafted detailed **SOWs** and presented technical solutions to both business and technical audiences.
 
-<img src="/images/career/presales.jpg" alt="Presales" height="40" style="max-width:900px;"/>
+<img src="/images/career/presales.jpg" alt="Presales" height="40" />
     
     Delivering pre-sales speech at one of the Field Engineering Sprints - Vancouver, CA (2024)
 
@@ -27,7 +27,7 @@ I was responsible for delivering **end-to-end Telco Cloud projects**—from the 
   > * Designed aggregated, disaggregated, and **hyper-converged cloud platforms** using the **Charmed Framework**.  
   > * Automated **NFVI deployments** with **Terraform providers for Juju and MAAS**, reducing delivery times and manual errors.
 
-<img src="/images/career/hackathon.jpg" alt="Hackathon" height="40" style="max-width:900px;"/>
+<img src="/images/career/hackathon.jpg" alt="Hackathon" height="40" />
 
     Coding a new Terraform and Juju based cloud deployment solution at a Field Engineering Hackathon.
 
@@ -55,10 +55,10 @@ I was responsible for delivering **end-to-end Telco Cloud projects**—from the 
 Working at Canonical strengthened my ability to **own the entire delivery lifecycle**—from pre-sales to production.  
 I learned to navigate customer requirements, create clear SOWs, and deliver scalable, secure, and fully automated cloud platforms while staying true to open-source values.
 
-<img src="/images/career/dinner.jpg" alt="Dinner" height="40" style="max-width:900px;"/>
+<img src="/images/career/dinner.jpg" alt="Dinner" height="40" />
 
     Enjoying dinner with team on a fine winter evening in Vancouver, CA.
 
-<img src="/images/career/team.jpg" alt="Team" height="40" style="max-width:900px;"/>
+<img src="/images/career/team.jpg" alt="Team" height="40" />
 
     Telco Field Engineering team (EMEA).
