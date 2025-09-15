@@ -29,7 +29,7 @@ I lead and support the automation, scalability, and security of Sanger’s cloud
 ## Beyond the Server Room  
 Tech isn’t the only place I love a good challenge. I proudly played for the **Genome Campus Cricket Team**, where we combined strategy and teamwork on the pitch and celebrated a **Cambridge University Departmental League Cup** victory! 🏆  
 
-<img src="/images/career/cup.jpg" alt="Cup" height="40" style="max-width:900px;"/>
+<img src="/images/career/cup.jpg" alt="Cup" height="40" />
 
 That experience reinforced the same qualities I value in engineering: **teamwork, adaptability, and a drive to win together**.
 
@@ -46,6 +46,6 @@ That experience reinforced the same qualities I value in engineering: **teamwork
 At Sanger, I’m contributing to infrastructure that helps decode the building blocks of life—while keeping my competitive spirit alive both in the **cloud** and on the **cricket field**.
 
 
-<img src="/images/career/boardgames.jpg" alt="Board Games" height="40" style="max-width:900px;"/>
+<img src="/images/career/boardgames.jpg" alt="Board Games" height="40" />
 
     Enjoying Board Games with HGI Team.
