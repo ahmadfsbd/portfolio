@@ -16,7 +16,7 @@ Awarded the **OpenStack Epoxy Contributor Badge** by the [OpenInfra Foundation](
 
 I was invited as a guest speaker to give a seminar on 'Intro to Cloud Computing' by National University of Computer and Emerging Sciences, Pakistan (2021). 
 
-<img src="/images/certs/guestspeaker.jpg" alt="Guest Speaker" height="40" style="max-width:600px;"/>
+<img src="/images/certs/guestspeaker.jpg" alt="Guest Speaker" height="40" />
 
 ---
 
