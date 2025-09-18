@@ -37,10 +37,8 @@ nav:
   - Achievements & Honors: achievements.md
   - Career Journey:
       - Career Journey: career/index.md
-      - Wellcome Sanger Institute: career/wsi.md
-      - Canonical: career/canonical.md
-      - xFlow Research: career/xflow.md
   - Blog / Tutorials:
+      - Blog Home: blog/index.md
       - First Post: blog/post1.md
       - Second Post: blog/post2.md
   - Photography: photography.md
