@@ -1,0 +1,9 @@
+/* Hide the left primary sidebar only on screens wider than 960px */
+@media (min-width: 960px) {
+  .md-sidebar--primary,
+  .md-sidebar--primary .md-nav {
+    display: none !important;
+  }
+}
+
+
