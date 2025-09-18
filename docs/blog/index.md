@@ -4,3 +4,4 @@ Welcome to my blog!
 Here you'll find my latest tutorials, technical articles, and thoughts on technology.
 
 - [Docker vs LXD](dockerlxd.md)
+- [SnapD Tutorial](snapd.md)

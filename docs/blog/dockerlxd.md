@@ -66,4 +66,4 @@ To get hands-on with LXD, try the official tutorial:
 
 ---
 
-#LXD #Docker #Containerization #CloudEngineering #DevOps #SystemContainers #ApplicationContainers #TechComparison #LinuxContainers #CloudComputing
+*tags: #LXD #Docker #Containerization #CloudEngineering #DevOps #SystemContainers #ApplicationContainers #TechComparison #LinuxContainers #CloudComputing*
