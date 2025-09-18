@@ -19,7 +19,7 @@ I was responsible for delivering **end-to-end Telco Cloud projects**—from the 
   > * Participated in **RFX/RFI** processes, translating customer requirements into actionable proposals.  
   > * Drafted detailed **SOWs** and presented technical solutions to both business and technical audiences.
 
-<img src="/images/career/presales.jpg" alt="Presales" height="40" />
+<img src="/images/career/presales.png" alt="Presales" height="40" />
     
     Delivering pre-sales speech at one of the Field Engineering Sprints - Vancouver, CA (2024)
 
