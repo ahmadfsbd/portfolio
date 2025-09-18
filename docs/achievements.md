@@ -12,6 +12,18 @@ Awarded the **OpenStack Epoxy Contributor Badge** by the [OpenInfra Foundation](
 
 ---
 
+## Interview with NoCSDegree.com
+
+I had the pleasure of getting interviewed by [nocsdegree.com](https://nocsdegree.com/)!
+
+<img src="/images/certs/nocsdegree.png" alt="NoCSDegree" height="40" />
+
+For those who don’t know, No CS Degree is an inspiring platform that highlights the journeys of self-taught developers, coders, and entrepreneurs who’ve built successful tech careers without formal computer science degrees. It’s a fantastic resource for anyone looking to break into tech through unconventional paths or learn from real-world experiences.
+
+I was provided with the opportunity to share my story and insights with their audience. You can read the interview [here](https://www.nocsdegree.com/from-electrical-engineering-to-software-development-2/).
+
+---
+
 ## Guest Speaker - Intro to Cloud Computing
 
 I was invited as a guest speaker to give a seminar on 'Intro to Cloud Computing' by National University of Computer and Emerging Sciences, Pakistan (2021). 
