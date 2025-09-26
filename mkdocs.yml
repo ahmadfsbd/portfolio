@@ -20,7 +20,7 @@ theme:
   font:
     text: "Roboto"
     code: "Roboto Mono"
-  logo: "images/logo.png"
+  logo: "images/mainlogo.png"
   features:
     - navigation.footer
     - navigation.instant
