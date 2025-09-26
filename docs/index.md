@@ -1,4 +1,4 @@
-# Intro
+# Wellcome !
 
 <img src="images/profile.jpg"
      alt="Portrait of Muhammad Ahmad, Senior Cloud & DevOps Engineer"
@@ -9,7 +9,7 @@
 
 ---
 
-Welcome! I’m Muhammad Ahmad, a Senior Cloud & DevOps Engineer with deep experience in **cloud-native infrastructure**, **automation**, and **CI/CD pipelines**.  
+I’m Muhammad Ahmad, a **Senior Cloud & DevOps Engineer** with deep experience in **cloud-native infrastructure**, **automation**, and **CI/CD pipelines**.  
 
 I help teams modernize their platforms by designing and deploying **secure, highly available, and cost-efficient environments**—from infrastructure as code to end-to-end delivery.
 

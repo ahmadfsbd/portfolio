@@ -5,15 +5,15 @@ theme:
   palette:
     # Palette toggle for light mode
     - scheme: default
-      primary: 'indigo'
-      accent: 'deep orange'
+      primary: 'blue grey'
+      accent: 'cyan'
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
-      primary: 'indigo'
-      accent: 'deep orange'
+      primary: 'blue grey'
+      accent: 'cyan'
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -32,7 +32,7 @@ theme:
     - content.code.copy
 
 nav:
-  - Intro: index.md
+  - Home: index.md
   - Skills & Tech Stack: skills.md
   - Certifications: certifications.md
   - Achievements & Honors: achievements.md
@@ -40,8 +40,6 @@ nav:
       - Career Journey: career/index.md
   - Blog / Tutorials:
       - Blog Home: blog/index.md
-      - First Post: blog/post1.md
-      - Second Post: blog/post2.md
   - Photography: photography.md
   - Contact: contact.md
 
