@@ -1,5 +1,4 @@
 # Professional Certifications
-## Validated Expertise in Cloud & DevOps Technologies
 
 <div class="skills-intro" style="text-align: center; margin: 2rem 0; padding: 2rem; border-radius: 12px;">
   <p style="font-size: 1.2em; margin: 0; line-height: 1.6; color: var(--content-text-primary);">
@@ -12,7 +11,7 @@
 
 ---
 
-## ⚓ **Certified Kubernetes Administrator (CKA)**
+## ⚓ **Certified Kubernetes Administrator**
 *Mastering the orchestration of containerized worlds*
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
@@ -24,9 +23,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Challenge:</strong> Architecting Kubernetes solutions for EMEA telco companies, handling massive scale and strict reliability requirements.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Challenge:</strong> Architecting Kubernetes solutions for EMEA telco companies, handling massive scale and strict reliability requirements.</p>
   
-  <strong style="color: var(--content-accent);">What This Proves:</strong> Deep expertise in cluster management, networking, security, and troubleshooting complex containerized environments.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What This Proves:</strong> Deep expertise in cluster management, networking, security, and troubleshooting complex containerized environments.</p>
 </div>
 
 ---
@@ -43,9 +42,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Role:</strong> Leading cross-functional teams in agile transformation, facilitating sprints and removing impediments for high-performing teams.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Role:</strong> Leading cross-functional teams in agile transformation, facilitating sprints and removing impediments for high-performing teams.</p>
   
-  <strong style="color: var(--content-accent);">What This Proves:</strong> Deep understanding of Scrum framework, team facilitation, and agile coaching principles.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What This Proves:</strong> Deep understanding of Scrum framework, team facilitation, and agile coaching principles.</p>
 </div>
 
 ---
@@ -62,9 +61,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Experience:</strong> Managing complex research computing projects at Wellcome Sanger Institute, balancing stakeholder needs with technical constraints.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Experience:</strong> Managing complex research computing projects at Wellcome Sanger Institute, balancing stakeholder needs with technical constraints.</p>
   
-  <strong style="color: var(--content-accent);">What This Proves:</strong> Expertise in product strategy, backlog management, and delivering maximum value to users and stakeholders.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What This Proves:</strong> Expertise in product strategy, backlog management, and delivering maximum value to users and stakeholders.</p>
 </div>
 
 ---
@@ -81,9 +80,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Project:</strong> Architecting deployment automation for DELL EMC's OpenShift reference architectures, ensuring enterprise-grade reliability.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Project:</strong> Architecting deployment automation for DELL EMC's OpenShift reference architectures, ensuring enterprise-grade reliability.</p>
   
-  <strong style="color: var(--content-accent);">What This Proves:</strong> Advanced skills in enterprise Kubernetes, automated deployments, and infrastructure as code.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What This Proves:</strong> Advanced skills in enterprise Kubernetes, automated deployments, and infrastructure as code.</p>
 </div>
 
 ---
@@ -100,9 +99,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Beginning:</strong> Early career milestone achieved while consulting for Puffersoft, designing scalable cloud solutions from the ground up.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Beginning:</strong> Early career milestone achieved while consulting for Puffersoft, designing scalable cloud solutions from the ground up.</p>
   
-  <strong style="color: var(--content-accent);">What This Proves:</strong> Solid foundation in cloud architecture, security, and cost optimization principles.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What This Proves:</strong> Solid foundation in cloud architecture, security, and cost optimization principles.</p>
 </div>
 
 ---

@@ -1,5 +1,4 @@
 # Achievements & Recognition
-## Milestones That Define Excellence
 
 <div class="skills-intro" style="text-align: center; margin: 2rem 0; padding: 2rem; border-radius: 12px;">
   <p style="font-size: 1.2em; margin: 0; line-height: 1.6; color: var(--content-text-primary);">
@@ -12,7 +11,7 @@
 
 ---
 
-## 🌟 **OpenInfra Foundation - OpenStack Epoxy Contributor**
+## 🌟 **OpenStack Epoxy Contributor**
 *Recognized for advancing open infrastructure*
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
@@ -24,14 +23,14 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Recognition:</strong> Awarded the prestigious OpenStack Epoxy Contributor Badge for significant contributions to the OpenStack ecosystem.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Recognition:</strong> Awarded the prestigious OpenStack Epoxy Contributor Badge for significant contributions to the OpenStack ecosystem.</p>
   
-  <strong style="color: var(--content-accent);">What It Means:</strong> Dedication to open source excellence and advancing infrastructure technologies that power enterprises worldwide.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What It Means:</strong> Dedication to open source excellence and advancing infrastructure technologies that power enterprises worldwide.</p>
 </div>
 
 ---
 
-## 📚 **Featured Story - NoCSDegree.com Interview**
+## 📚 **Featured at NoCSDegree.com**
 *Inspiring the next generation of tech professionals*
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
@@ -43,9 +42,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Platform:</strong> No CS Degree showcases successful tech careers built without traditional computer science degrees—inspiring unconventional paths to success.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Platform:</strong> No CS Degree showcases successful tech careers built without traditional computer science degrees—inspiring unconventional paths to success.</p>
   
-  <strong style="color: var(--content-accent);">My Story:</strong> Featured for my journey from electrical engineering to cloud architecture, proving that passion and determination create opportunities.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">My Story:</strong> Featured for my journey from electrical engineering to cloud architecture, proving that passion and determination create opportunities.</p>
   
   <div style="margin-top: 1rem;">
     [Read the Full Interview](https://www.nocsdegree.com/from-electrical-engineering-to-software-development-2/){ .md-button }
@@ -54,7 +53,7 @@
 
 ---
 
-## 🎤 **Guest Speaker - Cloud Computing Excellence**
+## 🎤 **Guest Speaker - Cloud Computing**
 *Sharing knowledge with the next generation*
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
@@ -66,9 +65,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Topic:</strong> "Introduction to Cloud Computing" - Demystifying cloud technologies for computer science students.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Topic:</strong> "Introduction to Cloud Computing" - Demystifying cloud technologies for computer science students.</p>
   
-  <strong style="color: var(--content-accent);">The Impact:</strong> Inspiring students to embrace cloud technologies and understand their transformative potential in modern computing.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Impact:</strong> Inspiring students to embrace cloud technologies and understand their transformative potential in modern computing.</p>
 </div>
 
 ---
@@ -85,9 +84,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Achievement:</strong> Recognized as the #1 Top Mentor on ADPList, a global platform connecting mentors and mentees worldwide.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Achievement:</strong> Recognized as the #1 Top Mentor on ADPList, a global platform connecting mentors and mentees worldwide.</p>
   
-  <strong style="color: var(--content-accent);">The Impact:</strong> Helping professionals and students advance their careers through personalized guidance and strategic career advice.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Impact:</strong> Helping professionals and students advance their careers through personalized guidance and strategic career advice.</p>
 </div>
 
 ---
@@ -104,9 +103,9 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Consistency:</strong> Second Top Mentor recognition, demonstrating sustained commitment to empowering the next generation of tech professionals.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Consistency:</strong> Second Top Mentor recognition, demonstrating sustained commitment to empowering the next generation of tech professionals.</p>
   
-  <strong style="color: var(--content-accent);">The Mission:</strong> Fostering career growth and knowledge sharing in the global tech community.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Mission:</strong> Fostering career growth and knowledge sharing in the global tech community.</p>
 </div>
 
 ---
@@ -123,7 +122,7 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Journey:</strong> Third consecutive Top Mentor award, showcasing dedication to helping others overcome challenges and reach their potential.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Journey:</strong> Third consecutive Top Mentor award, showcasing dedication to helping others overcome challenges and reach their potential.</p>
   
   <div style="margin-top: 1rem;">
     [Connect on ADPList](https://adplist.org/mentors/muhammad-ahmad){ .md-button }
@@ -144,11 +143,11 @@
     </div>
   </div>
   
-  <strong style="color: var(--content-accent);">The Achievement:</strong> Awarded the prestigious ERASMUS Mundus scholarship for academic excellence and research potential.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Achievement:</strong> Awarded the prestigious ERASMUS Mundus scholarship for academic excellence and research potential.</p>
   
-  <strong style="color: var(--content-accent);">The Experience:</strong> Conducted Master's thesis research in Germany, gaining international perspective and advanced technical expertise.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Experience:</strong> Conducted Master's thesis research in Germany, gaining international perspective and advanced technical expertise.</p>
   
-  <strong style="color: var(--content-accent);">The Legacy:</strong> Part of a select group of Pakistani scholars chosen for this competitive international program, building bridges between cultures and advancing knowledge across borders.
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Legacy:</strong> Part of a select group of Pakistani scholars chosen for this competitive international program, building bridges between cultures and advancing knowledge across borders.</p>
 </div>
 
 ---

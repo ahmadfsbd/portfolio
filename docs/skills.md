@@ -1,5 +1,4 @@
-# The Arsenal Behind the Magic
-## How I Transform Complex Challenges into Elegant Solutions
+# Arsenal Behind the Magic
 
 <div class="skills-intro" style="text-align: center; margin: 2rem 0; padding: 2rem; border-radius: 12px;">
   <p style="font-size: 1.2em; margin: 0; line-height: 1.6; color: var(--content-text-primary);">
@@ -22,12 +21,12 @@
     <img src="/images/logos/aws.svg" alt="AWS" height="40" style="max-width:150px;" />
   </div>
   
-  <strong style="color: var(--content-accent);">What I Build:</strong> Multi-cloud architectures that scale from startup to enterprise
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Build:</strong> Multi-cloud architectures that scale from startup to enterprise</p>
   
-  • <strong style="color: var(--content-accent);">Cloud Mastery</strong>: Google Cloud (GCP), OpenStack, AWS - I speak all three languages fluently  
-  • <strong style="color: var(--content-accent);">Architecture Expertise</strong>: From hyper-converged to disaggregated - I design what works best for your business  
-  • <strong style="color: var(--content-accent);">Telco & Edge</strong>: NFVI deployments, Edge DCN solutions, Smart NICs - bringing cloud to the edge  
-  • <strong style="color: var(--content-accent);">Performance Optimization</strong>: SR-IOV, DPDK, OVN - squeezing maximum performance from every resource
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Cloud Mastery</strong>: Google Cloud (GCP), OpenStack, AWS - I speak all three languages fluently</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Architecture Expertise</strong>: From hyper-converged to disaggregated - I design what works best for your business</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Telco & Edge</strong>: NFVI deployments, Edge DCN solutions, Smart NICs - bringing cloud to the edge</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Performance Optimization</strong>: SR-IOV, DPDK, OVN - squeezing maximum performance from every resource</p>
 </div>  
 
 ---
@@ -45,12 +44,12 @@
     <img src="/images/logos/apptainer.svg" alt="Apptainer" height="40" style="max-width:130px;" />
   </div>
   
-  <strong style="color: var(--content-accent);">What I Orchestrate:</strong> Container ecosystems that scale beyond imagination
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Orchestrate:</strong> Container ecosystems that scale beyond imagination</p>
   
-  • <strong style="color: var(--content-accent);">Container Mastery</strong>: Kubernetes, Docker, LXD - from development to production at scale  
-  • <strong style="color: var(--content-accent);">Multi-Cluster Management</strong>: Rancher deployments managing hundreds of nodes across environments  
-  • <strong style="color: var(--content-accent);">Application Lifecycle</strong>: Helm charts that make complex deployments feel like magic  
-  • <strong style="color: var(--content-accent);">Scientific Computing</strong>: Singularity & Apptainer for HPC workloads that push boundaries
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Container Mastery</strong>: Kubernetes, Docker, LXD - from development to production at scale</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Multi-Cluster Management</strong>: Rancher deployments managing hundreds of nodes across environments</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Application Lifecycle</strong>: Helm charts that make complex deployments feel like magic</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Scientific Computing</strong>: Singularity & Apptainer for HPC workloads that push boundaries</p>
 </div>  
 
 ---
@@ -67,12 +66,12 @@
     <img src="/images/logos/maas.svg" alt="MAAS" height="40" style="max-width:100px;" />
   </div>
   
-  <strong style="color: var(--content-accent);">What I Automate:</strong> Everything - because manual is the enemy of scale
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Automate:</strong> Everything - because manual is the enemy of scale</p>
   
-  • <strong style="color: var(--content-accent);">Infrastructure as Code</strong>: Terraform, Ansible, CloudFormation - your infrastructure versioned like code  
-  • <strong style="color: var(--content-accent);">Zero-Touch Deployments</strong>: Juju charms and MAAS for telco-grade automation  
-  • <strong style="color: var(--content-accent);">Reproducible Environments</strong>: What works in dev, works in production - guaranteed  
-  • <strong style="color: var(--content-accent);">Self-Healing Systems</strong>: Infrastructure that fixes itself before you know it's broken
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Infrastructure as Code</strong>: Terraform, Ansible, CloudFormation - your infrastructure versioned like code</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Zero-Touch Deployments</strong>: Juju charms and MAAS for telco-grade automation</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Reproducible Environments</strong>: What works in dev, works in production - guaranteed</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Self-Healing Systems</strong>: Infrastructure that fixes itself before you know it's broken</p>
 </div>  
 
 ---
@@ -87,12 +86,12 @@
     <img src="/images/logos/snyk.svg" alt="Snyk" height="40" style="max-width:130px;" />
   </div>
   
-  <strong style="color: var(--content-accent);">What I Secure:</strong> Every layer, every pipeline, every deployment
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Secure:</strong> Every layer, every pipeline, every deployment</p>
   
-  • <strong style="color: var(--content-accent);">Enterprise Security</strong>: CIS-compliant hardening, vulnerability scanning with Trivy & Snyk  
-  • <strong style="color: var(--content-accent);">Real-Time Monitoring</strong>: Prometheus, Grafana dashboards that tell the story of your infrastructure  
-  • <strong style="color: var(--content-accent);">Bulletproof Pipelines</strong>: GitHub Actions & GitLab CI/CD that never break production  
-  • <strong style="color: var(--content-accent);">Proactive Defense</strong>: Security built in, not bolted on
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Enterprise Security</strong>: CIS-compliant hardening, vulnerability scanning with Trivy & Snyk</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Real-Time Monitoring</strong>: Prometheus, Grafana dashboards that tell the story of your infrastructure</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Bulletproof Pipelines</strong>: GitHub Actions & GitLab CI/CD that never break production</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Proactive Defense</strong>: Security built in, not bolted on</p>
 </div>  
 
 ---
@@ -106,12 +105,12 @@
     <img src="/images/logos/bash.svg" alt="Bash" height="40" style="max-width:150px;" />
   </div>
   
-  <strong style="color: var(--content-accent);">What I Code:</strong> Solutions that think ahead and act fast
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Code:</strong> Solutions that think ahead and act fast</p>
   
-  • <strong style="color: var(--content-accent);">Python Mastery</strong>: From simple scripts to complex automation frameworks  
-  • <strong style="color: var(--content-accent);">Shell Expertise</strong>: Bash scripts that orchestrate entire infrastructures  
-  • <strong style="color: var(--content-accent);">Quality Engineering</strong>: Test automation and modular pipelines that scale  
-  • <strong style="color: var(--content-accent);">Custom Solutions</strong>: GUI tools and utilities that make complex tasks simple
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Python Mastery</strong>: From simple scripts to complex automation frameworks</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Shell Expertise</strong>: Bash scripts that orchestrate entire infrastructures</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Quality Engineering</strong>: Test automation and modular pipelines that scale</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Custom Solutions</strong>: GUI tools and utilities that make complex tasks simple</p>
 </div>  
 
 ---
@@ -126,27 +125,27 @@
     <img src="/images/logos/redhat.svg" alt="Red Hat Enterprise Linux" height="40" style="max-width:150px;" />
   </div>
   
-  <strong style="color: var(--content-accent);">What I Master:</strong> The bedrock of reliable systems
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Master:</strong> The bedrock of reliable systems</p>
   
-  • <strong style="color: var(--content-accent);">Linux Fluency</strong>: Ubuntu, Debian, RHEL - I know them inside and out  
-  • <strong style="color: var(--content-accent);">System Optimization</strong>: Performance tuning that squeezes every ounce of capability  
-  • <strong style="color: var(--content-accent);">Enterprise Hardening</strong>: Security configurations that meet the strictest standards  
-  • <strong style="color: var(--content-accent);">Production Ready</strong>: From bare metal to cloud instances, built to last
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Linux Fluency</strong>: Ubuntu, Debian, RHEL - I know them inside and out</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">System Optimization</strong>: Performance tuning that squeezes every ounce of capability</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Enterprise Hardening</strong>: Security configurations that meet the strictest standards</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Production Ready</strong>: From bare metal to cloud instances, built to last</p>
 </div>
 
 ---
 
-## 📚 **Documentation & Knowledge Sharing**
+## 📚 **Tech Documentation**
 *Making the complex simple*
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
   
-  <strong style="color: var(--content-accent);">What I Document:</strong> Knowledge that empowers teams
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Document:</strong> Knowledge that empowers teams</p>
   
-  • <strong style="color: var(--content-accent);">Technical Writing</strong>: Markdown, Confluence - turning complexity into clarity  
-  • <strong style="color: var(--content-accent);">Living Documentation</strong>: MkDocs sites that evolve with your infrastructure  
-  • <strong style="color: var(--content-accent);">Knowledge Systems</strong>: Internal wikis and portfolios that actually get used  
-  • <strong style="color: var(--content-accent);">Team Enablement</strong>: Documentation that makes everyone an expert
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Technical Writing</strong>: Markdown, Confluence - turning complexity into clarity</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Living Documentation</strong>: MkDocs sites that evolve with your infrastructure</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Knowledge Systems</strong>: Internal wikis and portfolios that actually get used</p>
+  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Team Enablement</strong>: Documentation that makes everyone an expert</p>
 </div>
 
 ---
