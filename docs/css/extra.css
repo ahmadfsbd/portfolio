@@ -77,4 +77,60 @@ a:hover,
   color: var(--custom-accent) !important;
 }
 
+/* Dark Mode Support for Skills Page and Content */
+/* Light mode styling (default) */
+:root {
+  --content-bg-primary: rgba(45, 27, 105, 0.1);
+  --content-bg-secondary: rgba(243, 156, 18, 0.1);
+  --content-bg-light: rgba(45, 27, 105, 0.05);
+  --content-text-primary: #2d1b69;
+  --content-text-secondary: #666;
+  --content-accent: #f39c12;
+}
+
+/* Dark mode styling */
+[data-md-color-scheme="slate"] {
+  --content-bg-primary: rgba(243, 156, 18, 0.15);
+  --content-bg-secondary: rgba(45, 27, 105, 0.2);
+  --content-bg-light: rgba(243, 156, 18, 0.08);
+  --content-text-primary: #f39c12;
+  --content-text-secondary: rgba(255, 255, 255, 0.7);
+  --content-accent: #f39c12;
+}
+
+/* Skills page gradient backgrounds - responsive to theme */
+.skills-intro {
+  background: linear-gradient(135deg, var(--content-bg-primary), var(--content-bg-secondary)) !important;
+}
+
+.skills-section {
+  background: linear-gradient(135deg, var(--content-bg-light), rgba(243, 156, 18, 0.05)) !important;
+}
+
+/* Dark mode text colors */
+[data-md-color-scheme="slate"] .skills-intro p,
+[data-md-color-scheme="slate"] .skills-section p,
+[data-md-color-scheme="slate"] .skills-section strong {
+  color: var(--content-text-secondary) !important;
+}
+
+[data-md-color-scheme="slate"] .skills-intro strong {
+  color: var(--content-accent) !important;
+}
+
+/* Ensure proper contrast for content boxes in dark mode */
+[data-md-color-scheme="slate"] div[style*="background: linear-gradient"] {
+  background: linear-gradient(135deg, rgba(243, 156, 18, 0.08), rgba(45, 27, 105, 0.15)) !important;
+  border: 1px solid rgba(243, 156, 18, 0.2);
+}
+
+/* Dark mode text content adjustments */
+[data-md-color-scheme="slate"] div[style*="color: #2d1b69"] {
+  color: var(--content-accent) !important;
+}
+
+[data-md-color-scheme="slate"] div[style*="color: #666"] {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
 
