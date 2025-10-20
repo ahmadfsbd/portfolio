@@ -6,7 +6,7 @@ Joining the **Wellcome Sanger Institute** opened a new chapter in my career—wo
 ---
 
 ## Role  
-**Senior Cloud and Platform Engineer**
+**Senior Cloud Engineer**
 
 I lead and support the automation, scalability, and security of Sanger’s cloud and hybrid infrastructure. This means **designing resilient systems**, enabling **rapid scientific workflows**, and ensuring **research data integrity** at massive scale.
 
