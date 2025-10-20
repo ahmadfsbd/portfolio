@@ -6,7 +6,7 @@ Joining **Canonical**, the company behind Ubuntu, felt like stepping onto the gl
 ---
 
 ## Role  
-**Field Software Engineer (Cloud & DevOps)**  
+**Field Software Engineer (Telco Cloud)**  
 
 I was responsible for delivering **end-to-end Telco Cloud projects**—from the first customer conversation to production hand-over. This meant not only writing code and automating infrastructure, but also engaging with customers on **RFX/RFI**, preparing **Statements of Work (SOWs)**, and supporting **pre-sales** activities.
 
