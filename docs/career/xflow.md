@@ -7,7 +7,7 @@ xFlow Research was more than a job; it was my launchpad into cutting-edge teleco
 ---
 
 ## My Role  
-**Cloud & NFV Engineer → Team Lead**  
+**Manager - NFV Team**  
 I began as a hands-on engineer, building and automating network-function virtualization (NFV) solutions, and eventually led a talented team of developers and QA engineers.
 
 ### Key Highlights
