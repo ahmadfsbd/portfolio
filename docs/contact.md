@@ -18,7 +18,7 @@
   <h3 style="color: var(--content-accent); margin-bottom: 1rem;">Ready to Discuss Your Next Project?</h3>
   
   <div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
-    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(243, 156, 18, 0.1); border-radius: 6px;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--content-bg-secondary); border-radius: 6px;">
       <span style="font-size: 1.5em;">📧</span>
       <div>
         <strong style="color: var(--content-accent);">Email:</strong> <a href="mailto:ahmadfsbd@gmail.com" style="color: var(--content-text-primary);">ahmadfsbd@gmail.com</a><br>
@@ -26,7 +26,7 @@
       </div>
     </div>
     
-    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(243, 156, 18, 0.1); border-radius: 6px;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--content-bg-secondary); border-radius: 6px;">
       <span style="font-size: 1.5em;">💼</span>
       <div>
         <strong style="color: var(--content-accent);">LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-ahmad-b6a04736/" target="_blank" style="color: var(--content-text-primary);">Muhammad Ahmad</a><br>
@@ -34,7 +34,7 @@
       </div>
     </div>
     
-    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(243, 156, 18, 0.1); border-radius: 6px;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--content-bg-secondary); border-radius: 6px;">
       <span style="font-size: 1.5em;">💻</span>
       <div>
         <strong style="color: var(--content-accent);">GitHub:</strong> <a href="https://www.github.com/ahmadfsbd" target="_blank" style="color: var(--content-text-primary);">ahmadfsbd</a><br>
@@ -52,7 +52,7 @@
   <h3 style="color: var(--content-accent); margin-bottom: 1rem;">Connect on a Personal Level</h3>
   
   <div style="display: grid; gap: 1rem;">
-    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(45, 27, 105, 0.1); border-radius: 6px;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--content-bg-primary); border-radius: 6px;">
       <span style="font-size: 1.5em;">📸</span>
       <div>
         <strong style="color: var(--content-accent);">Instagram:</strong> <a href="https://www.instagram.com/ehm_ud" target="_blank" style="color: var(--content-text-primary);">@ehm_ud</a><br>
@@ -60,7 +60,7 @@
       </div>
     </div>
     
-    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(45, 27, 105, 0.1); border-radius: 6px;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--content-bg-primary); border-radius: 6px;">
       <span style="font-size: 1.5em;">🦅</span>
       <div>
         <strong style="color: var(--content-accent);">Wildlife Photography:</strong> <a href="https://www.instagram.com/ehm_wild" target="_blank" style="color: var(--content-text-primary);">@ehm_wild</a><br>
@@ -68,7 +68,7 @@
       </div>
     </div>
     
-    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(45, 27, 105, 0.1); border-radius: 6px;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: var(--content-bg-primary); border-radius: 6px;">
       <span style="font-size: 1.5em;">📺</span>
       <div>
         <strong style="color: var(--content-accent);">YouTube:</strong> <a href="https://www.youtube.com/@ehm_ud" target="_blank" style="color: var(--content-text-primary);">@ehm_ud</a><br>
@@ -90,7 +90,7 @@
   • **Solution-Focused**: I listen first, then propose actionable paths forward  
   • **Collaborative Approach**: Your goals become our shared objectives  
   
-  <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(243, 156, 18, 0.1); border-radius: 6px;">
+  <div style="margin-top: 1.5rem; padding: 1rem; background: var(--content-bg-secondary); border-radius: 6px;">
     <strong style="color: var(--content-accent);">Looking for mentorship?</strong> Check out my <a href="https://adplist.org/mentors/muhammad-ahmad" target="_blank" style="color: var(--content-text-primary);">ADPList profile</a> for one-on-one career guidance and technical mentoring.
   </div>
 </div>

@@ -4,7 +4,7 @@
   <img src="images/profile.jpg"
        alt="Muhammad Ahmad - Cloud Architect & DevOps Visionary"
        width="200"
-       style="border-radius: 50%; border: 4px solid #f39c12; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-bottom: 1rem;" />
+       style="border-radius: 50%; border: 4px solid var(--custom-accent); box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-bottom: 1rem;" />
   
   <div style="margin: 1rem 0;">
     <img src="images/mainlogo.png" alt="Technology Stack" height="50" style="opacity: 0.9;" />
@@ -13,7 +13,7 @@
 
 ---
 
-<div style="text-align: center; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(45, 27, 105, 0.05), rgba(243, 156, 18, 0.05)); border-radius: 12px; border-left: 4px solid #f39c12;">
+<div style="text-align: center; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, var(--content-bg-primary), var(--content-bg-secondary)); border-radius: 12px; border-left: 4px solid var(--custom-accent);">
   
   <h2 style="font-size: 1.4em; color: var(--content-text-primary); margin-bottom: 1.5rem; font-weight: 300; line-height: 1.6;">
     <strong style="color: var(--content-accent);">What if</strong> infrastructure could think for itself?<br>
@@ -63,15 +63,20 @@ Through predictive scaling, intelligent monitoring, and self-healing architectur
 
 Whether you're wrestling with legacy systems, drowning in manual deployments, or dreaming of truly scalable infrastructure—I've been there, solved that, and automated the solution.
 
-<div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, rgba(45, 27, 105, 0.1), rgba(243, 156, 18, 0.1)); border-radius: 12px;">
+<div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, var(--content-bg-primary), var(--content-bg-secondary)); border-radius: 12px;">
   <h3 style="margin-bottom: 1rem; color: var(--content-text-primary);">🔥 Dive Deeper Into My Universe</h3>
 </div>
 
-  [🛠️ Tech Arsenal](skills.md){ .md-button } [🚀 Success Stories](career/index.md){ .md-button } [� Blog & Tutorials](blog/index.md){ .md-button } [�📡 Let's Connect](contact.md){ .md-button }
+<div style="text-align: center; margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+  <a href="skills.md" class="md-button">🛠️ Tech Arsenal</a>
+  <a href="career/index.md" class="md-button">🚀 Success Stories</a>
+  <a href="blog/index.md" class="md-button">📚 Blog & Tutorials</a>
+  <a href="contact.md" class="md-button">📡 Let's Connect</a>
+</div>
 
 ---
 
-<div style="text-align: center; margin-top: 2rem; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-left: 4px solid #f39c12; border-radius: 0 8px 8px 0;">
+<div style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--content-bg-light); border-left: 4px solid var(--custom-accent); border-radius: 0 8px 8px 0;">
   <em>"The best time to plant a tree was 20 years ago. The second best time is now.<br>
   The best time to modernize your infrastructure? <strong>Right now.</strong>"</em>
 </div>

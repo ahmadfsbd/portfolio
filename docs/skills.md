@@ -150,11 +150,11 @@
 
 ---
 
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #2d1b69, #1a0f3d); border-radius: 12px; color: white;">
-  <h3 style="color: #f39c12; margin-bottom: 1rem;">The Complete Picture</h3>
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, var(--custom-primary), var(--custom-primary-dark)); border-radius: 12px; color: white;">
+  <h3 style="color: var(--custom-accent); margin-bottom: 1rem;">The Complete Picture</h3>
   <p style="font-size: 1.1em; line-height: 1.6; margin: 0;">
     This isn't just a tech stack—it's a <strong>transformation toolkit</strong>.<br>
     Every tool, every skill, every technique is focused on one goal:<br>
-    <em style="color: #f39c12; font-size: 1.2em;">Building systems that don't just work—they evolve.</em>
+    <em style="color: var(--custom-accent); font-size: 1.2em;">Building systems that don't just work—they evolve.</em>
   </p>
 </div>

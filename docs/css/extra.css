@@ -6,18 +6,18 @@
   }
 }
 
-/* Custom Color Scheme - Elegant Deep Purple & Gold Accent */
+/* Custom Color Scheme - Elegant Charcoal & Emerald Accent */
 :root {
-  --custom-primary: #2d1b69;     /* Deep purple - sophisticated */
-  --custom-primary-dark: #1a0f3d; /* Darker purple for gradients */
-  --custom-accent: #f39c12;       /* Warm gold - elegant accent */
-  --custom-accent-hover: #e67e22; /* Darker gold for hover states */
+  --custom-primary: #424242;     /* Soft charcoal gray - elegant and modern */
+  --custom-primary-dark: #212121; /* Deep charcoal for gradients */
+  --custom-accent: #00897B;       /* Sophisticated emerald/teal - elegant and professional */
+  --custom-accent-hover: #26A69A; /* Lighter emerald for hover states */
 }
 
-/* Custom Header with Deep Purple */
+/* Custom Header with Elegant Charcoal */
 .md-header {
   background: linear-gradient(135deg, var(--custom-primary) 0%, var(--custom-primary-dark) 100%) !important;
-  box-shadow: 0 2px 12px rgba(45, 27, 105, 0.3);
+  box-shadow: 0 2px 12px rgba(66, 66, 66, 0.3);
 }
 
 /* Header title and buttons */
@@ -62,9 +62,63 @@
 }
 
 /* Links and buttons with custom accent */
-a:hover,
-.md-button--primary {
+a:hover {
   color: var(--custom-accent) !important;
+}
+
+/* Button Styling */
+.md-button {
+  border: 2px solid var(--custom-accent);
+  color: var(--custom-accent) !important;
+  background-color: transparent;
+  padding: 0.5em 1.5em;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.md-button:hover {
+  background-color: var(--custom-accent);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 137, 123, 0.3);
+}
+
+.md-button--primary {
+  background-color: var(--custom-accent);
+  color: white !important;
+  border: 2px solid var(--custom-accent);
+}
+
+.md-button--primary:hover {
+  background-color: var(--custom-accent-hover);
+  border-color: var(--custom-accent-hover);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 137, 123, 0.4);
+}
+
+/* Fix for inline-styled buttons/links with teal background */
+a[style*="background: var(--content-accent)"],
+a[style*="background: var(--custom-accent)"] {
+  color: white !important;
+}
+
+a[style*="background: var(--content-accent)"]:hover,
+a[style*="background: var(--custom-accent)"]:hover {
+  background-color: var(--custom-accent-hover) !important;
+  color: white !important;
+}
+
+/* Fix for bordered teal links */
+a[style*="border: 2px solid var(--content-accent)"],
+a[style*="border: 2px solid var(--custom-accent)"] {
+  color: white !important;
+}
+
+a[style*="border: 2px solid var(--content-accent)"]:hover,
+a[style*="border: 2px solid var(--custom-accent)"]:hover {
+  background-color: var(--custom-accent) !important;
+  color: white !important;
 }
 
 /* Search and interactive elements */
@@ -77,25 +131,25 @@ a:hover,
   color: var(--custom-accent) !important;
 }
 
-/* Dark Mode Support for Skills Page and Content */
+/* Content Color Variables */
 /* Light mode styling (default) */
 :root {
-  --content-bg-primary: rgba(45, 27, 105, 0.1);
-  --content-bg-secondary: rgba(243, 156, 18, 0.1);
-  --content-bg-light: rgba(45, 27, 105, 0.05);
-  --content-text-primary: #2d1b69;
+  --content-bg-primary: rgba(66, 66, 66, 0.08);
+  --content-bg-secondary: rgba(0, 137, 123, 0.08);
+  --content-bg-light: rgba(66, 66, 66, 0.04);
+  --content-text-primary: #424242;
   --content-text-secondary: #666;
-  --content-accent: #f39c12;
+  --content-accent: #00897B;
 }
 
 /* Dark mode styling */
 [data-md-color-scheme="slate"] {
-  --content-bg-primary: rgba(243, 156, 18, 0.15);
-  --content-bg-secondary: rgba(45, 27, 105, 0.2);
-  --content-bg-light: rgba(243, 156, 18, 0.08);
-  --content-text-primary: #f39c12;
+  --content-bg-primary: rgba(0, 137, 123, 0.12);
+  --content-bg-secondary: rgba(66, 66, 66, 0.2);
+  --content-bg-light: rgba(0, 137, 123, 0.08);
+  --content-text-primary: #26A69A;
   --content-text-secondary: rgba(255, 255, 255, 0.7);
-  --content-accent: #f39c12;
+  --content-accent: #00897B;
 }
 
 /* Skills page gradient backgrounds - responsive to theme */
@@ -104,7 +158,7 @@ a:hover,
 }
 
 .skills-section {
-  background: linear-gradient(135deg, var(--content-bg-light), rgba(243, 156, 18, 0.05)) !important;
+  background: linear-gradient(135deg, var(--content-bg-light), rgba(0, 137, 123, 0.05)) !important;
 }
 
 /* Dark mode text colors */
@@ -119,13 +173,16 @@ a:hover,
 }
 
 /* Ensure proper contrast for content boxes in dark mode */
+/* Dark mode content boxes */
 [data-md-color-scheme="slate"] div[style*="background: linear-gradient"] {
-  background: linear-gradient(135deg, rgba(243, 156, 18, 0.08), rgba(45, 27, 105, 0.15)) !important;
-  border: 1px solid rgba(243, 156, 18, 0.2);
+  background: linear-gradient(135deg, rgba(0, 137, 123, 0.08), rgba(66, 66, 66, 0.15)) !important;
+  border: 1px solid rgba(0, 137, 123, 0.2);
 }
 
-/* Dark mode text content adjustments */
-[data-md-color-scheme="slate"] div[style*="color: #2d1b69"] {
+/* Dark mode text adjustments */
+[data-md-color-scheme="slate"] div[style*="color: #2d1b69"],
+[data-md-color-scheme="slate"] div[style*="color: #37474F"],
+[data-md-color-scheme="slate"] div[style*="color: #424242"] {
   color: var(--content-accent) !important;
 }
 
