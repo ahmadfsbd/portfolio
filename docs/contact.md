@@ -85,10 +85,12 @@
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
   <strong style="color: var(--content-accent);">When you reach out, here's what you can expect:</strong>
   
-  • **Quick Response**: I typically respond within 24 hours  
-  • **Clear Communication**: No jargon, just honest discussions about what's possible  
-  • **Solution-Focused**: I listen first, then propose actionable paths forward  
-  • **Collaborative Approach**: Your goals become our shared objectives  
+  <ul style="margin-top: 1rem; margin-bottom: 1rem; line-height: 1.8;">
+    <li><strong>Quick Response</strong>: I typically respond within 24 hours</li>
+    <li><strong>Clear Communication</strong>: No jargon, just honest discussions about what's possible</li>
+    <li><strong>Solution-Focused</strong>: I listen first, then propose actionable paths forward</li>
+    <li><strong>Collaborative Approach</strong>: Your goals become our shared objectives</li>
+  </ul>
   
   <div style="margin-top: 1.5rem; padding: 1rem; background: var(--content-bg-secondary); border-radius: 6px;">
     <strong style="color: var(--content-accent);">Looking for mentorship?</strong> Check out my <a href="https://adplist.org/mentors/muhammad-ahmad" target="_blank" style="color: var(--content-text-primary);">ADPList profile</a> for one-on-one career guidance and technical mentoring.
