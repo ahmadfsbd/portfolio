@@ -70,10 +70,10 @@ Whether you're modernizing legacy infrastructure, streamlining deployment workfl
 </div>
 
 <div style="text-align: center; margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  <a href="skills.md" class="md-button">🛠️ Technical Expertise</a>
-  <a href="career/index.md" class="md-button">🚀 Professional Experience</a>
-  <a href="blog/index.md" class="md-button">📚 Technical Articles</a>
-  <a href="contact.md" class="md-button">📡 Get In Touch</a>
+  <a href="/skills/" class="md-button">🛠️ Technical Expertise</a>
+  <a href="/career/" class="md-button">🚀 Professional Experience</a>
+  <a href="/blog/" class="md-button">📚 Technical Articles</a>
+  <a href="/contact/" class="md-button">📡 Get In Touch</a>
 </div>
 
 ---
