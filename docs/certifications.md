@@ -11,6 +11,25 @@
 
 ---
 
+## ☁️ **AWS Certified Solutions Architect**
+*Designing cloud architectures that scale*
+
+<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+    <img src="/images/certs/aws-saa-2026.png" alt="AWS Solutions Architect" height="60" style="border-radius: 8px; flex-shrink: 0;" />
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="margin: 0; color: var(--content-accent);">Amazon Web Services</h4>
+      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Certified 2026 - AWS cloud achitecture expertise</p>
+    </div>
+  </div>
+
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Focus:</strong> Designing and implementing scalable cloud infrastructure, architecting resilient systems that balance performance, security, and cost efficiency across diverse workloads.</p>
+
+  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What This Proves:</strong> Solid foundation in cloud architecture principles, including compute, storage, networking, security best practices, and cost optimization strategies.</p>
+</div>
+
+---
+
 ## ⚓ **Certified Kubernetes Administrator**
 *Mastering the orchestration of containerized worlds*
 
