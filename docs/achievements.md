@@ -16,7 +16,7 @@
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
   <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/openinfra.png" alt="OpenInfra Summit" height="60" style="border-radius: 8px; flex-shrink: 0;" />
+    <img src="/images/certs/openinfra.webp" alt="OpenInfra Summit" height="60" style="border-radius: 8px; flex-shrink: 0;" />
     <div style="flex: 1; min-width: 200px;">
       <h4 style="margin: 0; color: var(--content-accent);">OpenInfra Summit Europe 2025 - Paris, France</h4>
       <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Oct 17-19, 2025 | Invited for a track-record of open-source contributions</p>
@@ -56,7 +56,7 @@
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
   <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/nocsdegree.png" alt="No CS Degree Interview" height="60" style="border-radius: 8px; flex-shrink: 0;" />
+    <img src="/images/certs/nocsdegree.webp" alt="No CS Degree Interview" height="60" style="border-radius: 8px; flex-shrink: 0;" />
     <div style="flex: 1; min-width: 200px;">
       <h4 style="margin: 0; color: var(--content-accent);">No CS Degree Platform</h4>
       <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">From Electrical Engineering to Software Development</p>
@@ -79,7 +79,7 @@
 
 <div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
   <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/guestspeaker.jpg" alt="Guest Speaker" height="60" style="border-radius: 8px; flex-shrink: 0;" />
+    <img src="/images/certs/guestspeaker.webp" alt="Guest Speaker" height="60" style="border-radius: 8px; flex-shrink: 0;" />
     <div style="flex: 1; min-width: 200px;">
       <h4 style="margin: 0; color: var(--content-accent);">National University of Computer & Emerging Sciences</h4>
       <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Pakistan - 2021</p>

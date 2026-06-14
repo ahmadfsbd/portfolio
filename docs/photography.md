@@ -23,32 +23,32 @@
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
     
     <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/robin.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/robin.png" alt="Robin at RSPB Fowlmere" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/robin.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/robin.webp" alt="Robin at RSPB Fowlmere" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Robin</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">RSPB Fowlmere Nature Reserve</p>
     </div>
     
     <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/gull.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/gull.png" alt="Yellow-legged Gull at Blackpool Beach" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/gull.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/gull.webp" alt="Yellow-legged Gull at Blackpool Beach" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Yellow-legged Gull</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Blackpool Beach</p>
     </div>
     
     <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/warbler.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/warbler.png" alt="Willow Warbler in Cambridge" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/warbler.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/warbler.webp" alt="Willow Warbler in Cambridge" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Willow Warbler</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Eddington, Cambridge</p>
     </div>
     
     <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/duck.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/duck.png" alt="Duck in Cambridge" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/duck.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/duck.webp" alt="Duck in Cambridge" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Mallard Duck</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Eddington, Cambridge</p>
@@ -76,24 +76,24 @@
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
     
     <div style="text-align: center; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-radius: 8px;">
-      <a href="/images/insta/marsden.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/marsden.png" alt="Marsden Moor Landscape" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/marsden.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/marsden.webp" alt="Marsden Moor Landscape" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Marsden Moor</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Yorkshire Moors, United Kingdom</p>
     </div>
     
     <div style="text-align: center; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-radius: 8px;">
-      <a href="/images/insta/vancouver.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/vancouver.png" alt="Downtown Vancouver Skyline" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/vancouver.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/vancouver.webp" alt="Downtown Vancouver Skyline" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Vancouver Skyline</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Downtown Vancouver, Canada</p>
     </div>
     
     <div style="text-align: center; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-radius: 8px;">
-      <a href="/images/insta/moon.png" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/moon.png" alt="Half Moon Photography" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+      <a href="/images/insta/moon.webp" target="_blank" style="text-decoration: none;">
+        <img src="/images/insta/moon.webp" alt="Half Moon Photography" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
       </a>
       <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Half Moon</h4>
       <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Astrophotography Experiment</p>

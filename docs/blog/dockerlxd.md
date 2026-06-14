@@ -1,6 +1,6 @@
 # System Containers vs. Application Containers: A delve into the world of LXD
 
-<img src="/images/blog/dockerlxd.png" alt="DockerLXD" height="40" />
+<img src="/images/blog/dockerlxd.webp" alt="DockerLXD" height="40" />
 
 ---
 
@@ -25,7 +25,7 @@ Application containers such as Docker are built to package and host a *single ap
 
 System-level containers, on the other hand, provide a **full operating system** environment inside a container. They behave like lightweight virtual machines and can run any workload you’d normally run on a VM or physical server.
 
-<img src="/images/blog/systemcontainers.png" alt="DockerLXD" height="40" />
+<img src="/images/blog/systemcontainers.webp" alt="DockerLXD" height="40" />
 
 **Key traits of system containers:**
 

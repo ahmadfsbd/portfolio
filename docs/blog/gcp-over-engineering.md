@@ -1,6 +1,6 @@
 # When "Simple" Isn't Simple: Scheduling Long-Running Jobs in GCP with VPC Service Controls
 
-<img src="/images/blog/gcpoe00.png" alt="GCP-EventDriven" height="40" />
+<img src="/images/blog/gcpoe00.webp" alt="GCP-EventDriven" height="40" />
 
 ---
 
@@ -40,7 +40,7 @@ Cloud Run services and functions have a **60-minute execution limit**. Disk arch
 
 Some runs crossed the time limit and failed part-way through. Partial execution wasn't acceptable, so this approach had to go.
 
-<img src="/images/blog/gcpoe02.png" alt="First-Approach" height="40" />
+<img src="/images/blog/gcpoe02.webp" alt="First-Approach" height="40" />
 
 ---
 
@@ -70,7 +70,7 @@ This broke the design in multiple ways:
 - Cloud Run Jobs can't be invoked over HTTP anyway
 - Adding ingress rules would undermine the whole security model
 
-<img src="/images/blog/gcpoe03.png" alt="Second-Approach" height="40" />
+<img src="/images/blog/gcpoe03.webp" alt="Second-Approach" height="40" />
 
 At this point, "just schedule the job" was officially dead.
 
@@ -92,7 +92,7 @@ I convinced myself this was necessary because:
 
 The architecture looked sophisticated. It had multiple components. It felt "correct."
 
-<img src="/images/blog/gcpoe01.png" alt="Overcomplicated-Approach" height="40" />
+<img src="/images/blog/gcpoe01.webp" alt="Overcomplicated-Approach" height="40" />
 
 ---
 
@@ -114,7 +114,7 @@ Cloud Function (Gen 2)
 Cloud Run Job
 ```
 
-<img src="/images/blog/gcpoe04.png" alt="Final-Approach" height="40" />
+<img src="/images/blog/gcpoe04.webp" alt="Final-Approach" height="40" />
 
 ### The simplified flow
 

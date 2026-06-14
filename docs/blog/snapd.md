@@ -1,6 +1,6 @@
 # Harness the Power of Snapd: A Quick Tutorial
 
-<img src="/images/blog/snapd.png" alt="Snapd" height="40" />
+<img src="/images/blog/snapd.webp" alt="Snapd" height="40" />
 
 ---
 

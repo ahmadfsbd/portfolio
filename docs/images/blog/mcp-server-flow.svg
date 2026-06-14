@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">MCP server flow</title>
+  <desc id="desc">Codex sends a standard MCP request to an MCP server, which forwards an API request to Google Drive and returns the result.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#134e4a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020617" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="22" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="115" width="240" height="165" rx="18" fill="#f8fafc"/>
+    <rect x="480" y="115" width="240" height="165" rx="18" fill="#f8fafc"/>
+    <rect x="880" y="115" width="240" height="165" rx="18" fill="#f8fafc"/>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <text x="200" y="180" font-size="32" font-weight="700" fill="#0f172a">Codex</text>
+    <text x="200" y="220" font-size="20" fill="#475569">LLM tool request</text>
+
+    <text x="600" y="170" font-size="32" font-weight="700" fill="#0f172a">MCP Server</text>
+    <text x="600" y="210" font-size="20" fill="#475569">standard front end</text>
+    <text x="600" y="238" font-size="20" fill="#475569">service-specific back end</text>
+
+    <text x="1000" y="180" font-size="32" font-weight="700" fill="#0f172a">Drive API</text>
+    <text x="1000" y="220" font-size="20" fill="#475569">real service calls</text>
+  </g>
+
+  <g fill="none" stroke="#99f6e4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M335 205 H455"/>
+    <path d="M440 182 L465 205 L440 228"/>
+    <path d="M735 205 H855"/>
+    <path d="M840 182 L865 205 L840 228"/>
+  </g>
+
+  <g font-family="Roboto Mono, monospace" text-anchor="middle" font-size="17" fill="#ccfbf1">
+    <text x="400" y="108">MCP request</text>
+    <text x="800" y="108">API request</text>
+    <text x="400" y="307">structured result</text>
+    <text x="800" y="307">API response</text>
+  </g>
+
+  <g fill="none" stroke="#67e8f9" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round">
+    <path d="M865 265 H735"/>
+    <path d="M465 265 H335"/>
+  </g>
+
+  <g fill="#14b8a6" opacity="0.2">
+    <circle cx="126" cy="68" r="18"/>
+    <circle cx="1090" cy="340" r="26"/>
+    <circle cx="620" cy="55" r="12"/>
+  </g>
+</svg>

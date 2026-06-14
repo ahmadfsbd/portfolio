@@ -1,6 +1,6 @@
 # Automating TLS Certificate Management with Cert-Manager, ACME, and Infoblox
 
-<img src="/images/blog/cert-manager.png" alt="CertManager ACME Infoblox" height="40" />
+<img src="/images/blog/cert-manager.webp" alt="CertManager ACME Infoblox" height="40" />
 
 ---
 
@@ -65,7 +65,7 @@ This enables **fully automated validation** without manual DNS changes.
 
 ## Architecture Overview
 
-<img src="/images/blog/cert-manager-02.png" alt="cert-manager-02.png" height="40" />
+<img src="/images/blog/cert-manager-02.webp" alt="cert-manager-02.png" height="40" />
 
 ---
 
