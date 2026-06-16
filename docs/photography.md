@@ -1,140 +1,147 @@
-# Through My Lens
-## Where Technology Meets Nature's Artistry
-
-<div class="skills-intro" style="text-align: center; margin: 2rem 0; padding: 2rem; border-radius: 12px;">
-  <p style="font-size: 1.2em; margin: 0; line-height: 1.6; color: var(--content-text-primary);">
-    When I'm not architecting <strong style="color: var(--content-accent);">cloud infrastructures</strong>, I'm capturing the <strong style="color: var(--content-accent);">natural world</strong> through photography.
-  </p>
-  <p style="font-size: 1em; margin-top: 1rem; font-style: italic; color: var(--content-text-secondary);">
-    Each frame tells a story of patience, precision, and finding beauty in unexpected moments.
-  </p>
-</div>
-
----
-
-## 🦅 **Wildlife Photography**
-*Patience, observation, and respect for nature*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <p style="color: var(--content-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
-    Wildlife photography requires the same precision and patience I bring to complex infrastructure projects. Hours of quiet observation, understanding behavior patterns, and capturing that perfect moment when nature reveals its authentic self.
-  </p>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/robin.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/robin.webp" alt="Robin at RSPB Fowlmere" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Robin</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">RSPB Fowlmere Nature Reserve</p>
+<section class="photo-hero" aria-label="Photography portfolio introduction">
+  <img class="photo-hero__image" src="/images/photography/corvid-fence.webp" alt="Black and white corvid perched on a fence" loading="eager" decoding="sync" />
+  <div class="photo-hero__content">
+    <p class="photo-kicker">Photography</p>
+    <h1>Quiet fieldwork, patient frames.</h1>
+    <p>
+      A personal visual archive of wildlife, landscape, city, and night-sky images.
+      The work is slow, observational, and built around timing rather than spectacle.
+    </p>
+    <div class="photo-hero__meta" aria-label="Photography themes">
+      <span>Wildlife</span>
+      <span>Landscape</span>
+      <span>Travel</span>
+      <span>Night sky</span>
     </div>
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/gull.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/gull.webp" alt="Yellow-legged Gull at Blackpool Beach" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Yellow-legged Gull</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Blackpool Beach</p>
-    </div>
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/warbler.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/warbler.webp" alt="Willow Warbler in Cambridge" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Willow Warbler</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Eddington, Cambridge</p>
-    </div>
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(45, 27, 105, 0.05); border-radius: 8px;">
-      <a href="/images/insta/duck.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/duck.webp" alt="Duck in Cambridge" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Mallard Duck</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Eddington, Cambridge</p>
-    </div>
-    
   </div>
-  
-  <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="https://www.instagram.com/ehm_wild/" target="_blank" style="display: inline-block; padding: 12px 24px; background: var(--content-accent); color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-      🦅 Follow @ehm_wild on Instagram
+</section>
+
+<section class="photo-intro">
+  <div>
+    <p class="photo-kicker">Field Notes</p>
+    <h2>Photography gives me a different way to study systems.</h2>
+  </div>
+  <p>
+    The habits are familiar: observe before acting, wait for signal, respect context, and keep the frame simple. Away from infrastructure work, the same patience shows up in the field through birds, weather, light, movement, and place.
+  </p>
+</section>
+
+<section class="photo-feature" id="wildlife">
+  <a class="photo-feature__image" href="/images/photography/robin-branch.webp" target="_blank" rel="noopener">
+    <img src="/images/photography/robin-branch.webp" alt="Robin perched on a branch against green woodland bokeh" loading="eager" decoding="sync" />
+  </a>
+  <div class="photo-feature__copy">
+    <p class="photo-kicker">Wildlife Study</p>
+    <h2>Stillness first, shutter second.</h2>
+    <p>
+      Most of the image is made before the camera comes up: reading movement, light, distance, and whether the subject has accepted your presence. The goal is not to force a moment, but to be ready when one appears.
+    </p>
+  </div>
+</section>
+
+<section class="photo-section" aria-label="Selected photography work">
+  <div class="photo-section__header">
+    <p class="photo-kicker">Selected Frames</p>
+    <h2>Wildlife, motion, and texture.</h2>
+  </div>
+
+  <div class="photo-mosaic">
+    <figure class="photo-card photo-card--wide">
+      <a href="/images/photography/pigeon-wing.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/pigeon-wing.webp" alt="Bird in flight with wings spread" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Motion</span><strong>Wing study</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card photo-card--tall">
+      <a href="/images/photography/blue-tit.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/blue-tit.webp" alt="Blue tit perched on a branch" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Wildlife</span><strong>Blue tit</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card">
+      <a href="/images/insta/warbler.webp" target="_blank" rel="noopener">
+        <img src="/images/insta/warbler.webp" alt="Willow warbler in Cambridge" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Wildlife</span><strong>Willow warbler</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card photo-card--wide">
+      <a href="/images/photography/gull-flight.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/gull-flight.webp" alt="Gull in flight against a pale sky" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Flight</span><strong>Gull</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card photo-card--tall">
+      <a href="/images/photography/magpie-lichen.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/magpie-lichen.webp" alt="Magpie in branches with yellow lichen" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Texture</span><strong>Magpie and lichen</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card">
+      <a href="/images/photography/reed-bunting.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/reed-bunting.webp" alt="Reed bunting perched among tall reeds" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Habitat</span><strong>Reed bunting</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card">
+      <a href="/images/insta/duck.webp" target="_blank" rel="noopener">
+        <img src="/images/insta/duck.webp" alt="Mallard duck in Cambridge" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Local</span><strong>Mallard</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card photo-card--wide">
+      <a href="/images/photography/goose-water.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/goose-water.webp" alt="Goose raising its wings on water" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Waterfowl</span><strong>Goose</strong></figcaption>
+    </figure>
+
+    <figure class="photo-card">
+      <a href="/images/photography/squirrel-ground.webp" target="_blank" rel="noopener">
+        <img src="/images/photography/squirrel-ground.webp" alt="Squirrel eating on grass" loading="eager" decoding="sync" />
+      </a>
+      <figcaption><span>Mammal</span><strong>Squirrel</strong></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="photo-journal" id="places">
+  <div class="photo-journal__copy">
+    <p class="photo-kicker">Places</p>
+    <h2>Frames from the margins of travel.</h2>
+    <p>
+      I keep a small visual record of places I pass through: coastlines, city skylines, moorland, woodland, and the quiet scenes between destinations.
+    </p>
+  </div>
+  <div class="photo-journal__grid">
+    <a href="/images/insta/vancouver.webp" target="_blank" rel="noopener">
+      <img src="/images/insta/vancouver.webp" alt="Downtown Vancouver skyline" loading="eager" decoding="sync" />
+      <span>Vancouver</span>
+    </a>
+    <a href="/images/insta/marsden.webp" target="_blank" rel="noopener">
+      <img src="/images/insta/marsden.webp" alt="Marsden Moor landscape" loading="eager" decoding="sync" />
+      <span>Marsden Moor</span>
+    </a>
+    <a href="/images/insta/moon.webp" target="_blank" rel="noopener">
+      <img src="/images/insta/moon.webp" alt="Half moon in the night sky" loading="eager" decoding="sync" />
+      <span>Night sky</span>
     </a>
   </div>
-</div>
+</section>
 
----
-
-## 🌍 **Adventure & Landscape Photography**
-*Capturing the world beyond the server room*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <p style="color: var(--content-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
-    Beyond wildlife, I explore landscapes, cityscapes, and the spontaneous moments that make travel memorable. These images reflect my perspective when I step away from keyboards and cloud architectures to explore the physical world.
-  </p>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-radius: 8px;">
-      <a href="/images/insta/marsden.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/marsden.webp" alt="Marsden Moor Landscape" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Marsden Moor</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Yorkshire Moors, United Kingdom</p>
-    </div>
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-radius: 8px;">
-      <a href="/images/insta/vancouver.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/vancouver.webp" alt="Downtown Vancouver Skyline" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Vancouver Skyline</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Downtown Vancouver, Canada</p>
-    </div>
-    
-    <div style="text-align: center; padding: 1rem; background: rgba(243, 156, 18, 0.05); border-radius: 8px;">
-      <a href="/images/insta/moon.webp" target="_blank" style="text-decoration: none;">
-        <img src="/images/insta/moon.webp" alt="Half Moon Photography" style="width: 100%; max-width: 250px; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-      </a>
-      <h4 style="color: var(--content-accent); margin: 0.5rem 0;">Half Moon</h4>
-      <p style="color: var(--content-text-secondary); font-size: 0.9em; margin: 0;">Astrophotography Experiment</p>
-    </div>
-    
+<section class="photo-cta" aria-label="Photography social links">
+  <div>
+    <p class="photo-kicker">Follow Along</p>
+    <h2>Wildlife and everyday frames.</h2>
   </div>
-  
-  <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="https://www.instagram.com/ehm_ud/" target="_blank" style="display: inline-block; padding: 12px 24px; background: var(--content-accent); color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-      📸 Follow @ehm_ud on Instagram
-    </a>
+  <div class="photo-cta__links">
+    <a href="https://www.instagram.com/ehm_wild/" target="_blank" rel="noopener">Wildlife work</a>
+    <a href="https://www.instagram.com/ehm_ud/" target="_blank" rel="noopener">Travel and daily frames</a>
   </div>
-</div>
-
----
-
-## 🎯 **The Photography Philosophy**
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <strong style="color: var(--content-accent);">Why Photography Matters to a Cloud Engineer:</strong>
-  
-  <p style="margin: 1rem 0;">• <strong>Patience & Precision</strong>: Both photography and infrastructure require careful planning and timing</p>
-  
-  <p style="margin: 1rem 0;">• <strong>Attention to Detail</strong>: Whether debugging code or composing a shot, the details make all the difference</p>
-  
-  <p style="margin: 1rem 0;">• <strong>Problem Solving</strong>: Challenging lighting conditions mirror complex technical challenges</p>
-  
-  <p style="margin: 1rem 0;">• <strong>Continuous Learning</strong>: New techniques in photography keep creativity alive, just like new technologies</p>
-  
-  <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(243, 156, 18, 0.1); border-radius: 6px; font-style: italic; color: var(--content-text-secondary);">
-    "Photography teaches you to see without a camera. It's about finding beauty in the systematic, patience in the complex, and art in the technical."
-  </div>
-</div>
-
----
-
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, var(--custom-primary), var(--custom-primary-dark)); border-radius: 12px; color: white;">
-  <h3 style="color: var(--content-accent); margin-bottom: 1rem;">Beyond Code & Cameras</h3>
-  <p style="font-size: 1.1em; line-height: 1.6; margin: 0;">
-    Photography isn't just a hobby—it's a <strong>different lens</strong> through which I see the world.<br>
-    Each image reflects patience, curiosity, and appreciation for beauty in both <em style="color: var(--content-accent);">natural systems</em> and <em style="color: var(--content-accent);">technical elegance</em>.<br><br>
-    <strong>Whether building infrastructure or capturing wildlife, it's all about finding the perfect moment.</strong>
-  </p>
-</div>
+</section>
