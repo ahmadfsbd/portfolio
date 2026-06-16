@@ -1,184 +1,171 @@
-# Achievements & Recognition
+# Achievements & Honors
 
-<div class="skills-intro" style="text-align: center; margin: 2rem 0; padding: 2rem; border-radius: 12px;">
-  <p style="font-size: 1.2em; margin: 0; line-height: 1.6; color: var(--content-text-primary);">
-    Beyond certifications and code lies a story of <strong style="color: var(--content-accent);">recognition</strong>, <strong style="color: var(--content-accent);">contribution</strong>, and <strong style="color: var(--content-accent);">impact</strong>.
-  </p>
-  <p style="font-size: 1em; margin-top: 1rem; font-style: italic; color: var(--content-text-secondary);">
-    These achievements reflect a commitment to excellence, community, and sharing knowledge with the world.
-  </p>
-</div>
+<section class="evidence-hero evidence-hero--achievements" aria-label="Achievements overview">
+  <div class="evidence-hero__copy">
+    <p class="evidence-kicker">Recognition</p>
+    <h1>Contribution beyond delivery work.</h1>
+    <p>
+      The strongest signal here is not trophy collecting. It is a pattern of contributing to open infrastructure, sharing technical context publicly, teaching early-career engineers, and staying connected to the communities that shape modern platforms.
+    </p>
+  </div>
+  <div class="recognition-stack" aria-label="Recognition highlights">
+    <a href="#open-infrastructure">
+      <span>Open infrastructure</span>
+      <strong>OpenInfra and OpenStack ecosystem participation</strong>
+    </a>
+    <a href="#public-voice">
+      <span>Public technical voice</span>
+      <strong>No CS Degree feature and cloud computing guest lecture</strong>
+    </a>
+    <a href="#mentorship">
+      <span>Mentorship</span>
+      <strong>Repeated ADPList top mentor recognition</strong>
+    </a>
+  </div>
+</section>
 
----
+<section class="evidence-section" id="open-infrastructure" aria-label="Open infrastructure recognition">
+  <div class="evidence-section__head">
+    <p class="evidence-kicker">Open Infrastructure</p>
+    <h2>Recognition tied to the infrastructure communities I work in.</h2>
+  </div>
 
-## 📚 **OpenInfra Summit Europe 2025 Attendee**
-*Advancing open-source cloud infrastructure excellence*
+  <div class="recognition-grid">
+    <article class="recognition-card recognition-card--wide">
+      <a class="recognition-card__media" href="/images/certs/openinfra.webp" target="_blank" rel="noopener">
+        <img src="/images/certs/openinfra.webp" alt="OpenInfra Summit Europe 2025 attendance proof" loading="eager" decoding="sync" />
+      </a>
+      <div class="recognition-card__body">
+        <p class="credential-card__issuer">OpenInfra Summit Europe 2025</p>
+        <h3>Open infrastructure community participation</h3>
+        <p>
+          Attended the European OpenInfra community gathering in Paris, connecting production cloud work with the broader OpenStack, Kubernetes, and open infrastructure ecosystem.
+        </p>
+        <div class="credential-tags">
+          <span>OpenStack</span>
+          <span>Open infrastructure</span>
+          <span>Community</span>
+        </div>
+      </div>
+    </article>
 
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/openinfra.webp" alt="OpenInfra Summit" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">OpenInfra Summit Europe 2025 - Paris, France</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Oct 17-19, 2025 | Invited for a track-record of open-source contributions</p>
+    <article class="recognition-card">
+      <a class="recognition-card__media" href="/images/certs/epoxy.png" target="_blank" rel="noopener">
+        <img src="/images/certs/epoxy.png" alt="OpenStack Epoxy contributor badge" loading="eager" decoding="sync" />
+      </a>
+      <div class="recognition-card__body">
+        <p class="credential-card__issuer">OpenInfra Foundation</p>
+        <h3>OpenStack Epoxy Contributor</h3>
+        <p>
+          Contributor recognition for participation in the OpenStack ecosystem, reinforcing a practical connection to the platforms I design and operate.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="evidence-band" id="public-voice" aria-label="Public technical voice">
+  <div>
+    <p class="evidence-kicker">Public Voice</p>
+    <h2>Explaining technical paths clearly is part of engineering leadership.</h2>
+  </div>
+  <div class="evidence-context-grid">
+    <div>
+      <strong>Career path without a standard template</strong>
+      <p>Featured by No CS Degree for a route from electrical engineering into software, cloud, and platform architecture.</p>
+    </div>
+    <div>
+      <strong>Teaching cloud fundamentals</strong>
+      <p>Guest lecture on cloud computing for university students, focused on making infrastructure concepts understandable.</p>
+    </div>
+    <div>
+      <strong>Knowledge sharing</strong>
+      <p>Uses writing, mentoring, and talks to make complex platform topics less opaque for others.</p>
     </div>
   </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Recognition:</strong> Selected to attend OpenInfra Summit Europe 2025—the premier global event for open infrastructure—in acknowledgment of meaningful contributions to the OpenStack and open-source cloud ecosystem.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">Why This Matters:</strong> The OpenInfra Summit brings together industry leaders, cloud architects, and open-source innovators to shape the future of infrastructure. This invitation recognizes active participation in advancing open cloud technologies and community engagement.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Impact:</strong> Networking with global infrastructure experts, learning cutting-edge cloud patterns, and contributing to discussions on the evolution of open infrastructure technologies including OpenStack, Kubernetes, and emerging cloud-native tools.</p>
-</div>
+</section>
 
----
+<section class="evidence-section" aria-label="Public features and teaching">
+  <div class="story-grid">
+    <article class="story-card">
+      <a class="story-card__image" href="/images/certs/nocsdegree.webp" target="_blank" rel="noopener">
+        <img src="/images/certs/nocsdegree.webp" alt="No CS Degree feature screenshot" loading="eager" decoding="sync" />
+      </a>
+      <div class="story-card__body">
+        <p class="credential-card__issuer">No CS Degree</p>
+        <h3>Featured career story</h3>
+        <p>
+          Interviewed about moving from electrical engineering into software and infrastructure work, with a focus on practical learning and non-linear career paths.
+        </p>
+        <a class="evidence-link" href="https://www.nocsdegree.com/from-electrical-engineering-to-software-development-2/" target="_blank" rel="noopener">Read interview</a>
+      </div>
+    </article>
 
-## 🌟 **OpenStack Epoxy Contributor**
-*Recognized for advancing open infrastructure*
+    <article class="story-card story-card--portrait">
+      <a class="story-card__image" href="/images/certs/guestspeaker.webp" target="_blank" rel="noopener">
+        <img src="/images/certs/guestspeaker.webp" alt="Guest speaker cloud computing certificate" loading="eager" decoding="sync" />
+      </a>
+      <div class="story-card__body">
+        <p class="credential-card__issuer">National University of Computer & Emerging Sciences</p>
+        <h3>Guest speaker on cloud computing</h3>
+        <p>
+          Delivered an introductory cloud computing session for students, connecting cloud primitives to real infrastructure design choices.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
 
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/epoxy.png" alt="OpenStack Epoxy Contributor" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">OpenInfra Foundation</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Contributing to the future of open cloud infrastructure</p>
+<section class="evidence-section" id="mentorship" aria-label="Mentorship recognition">
+  <div class="evidence-section__head">
+    <p class="evidence-kicker">Mentorship</p>
+    <h2>Career support, technical direction, and practical guidance.</h2>
+  </div>
+
+  <div class="mentor-strip">
+    <a href="/images/certs/top1.webp" target="_blank" rel="noopener">
+      <img src="/images/certs/top1.webp" alt="ADPList top mentor recognition number one" loading="eager" decoding="sync" />
+      <span>Top Mentor #1</span>
+    </a>
+    <a href="/images/certs/top2.webp" target="_blank" rel="noopener">
+      <img src="/images/certs/top2.webp" alt="ADPList top mentor recognition number two" loading="eager" decoding="sync" />
+      <span>Top Mentor #2</span>
+    </a>
+    <a href="/images/certs/top3.webp" target="_blank" rel="noopener">
+      <img src="/images/certs/top3.webp" alt="ADPList top mentor recognition number three" loading="eager" decoding="sync" />
+      <span>Top Mentor #3</span>
+    </a>
+  </div>
+
+  <div class="recognition-note">
+    <p>
+      The mentoring work is most valuable when it is concrete: helping people understand technical trade-offs, navigate career choices, and build confidence through clearer next steps.
+    </p>
+    <a class="evidence-link" href="https://adplist.org/mentors/muhammad-ahmad" target="_blank" rel="noopener">ADPList profile</a>
+  </div>
+</section>
+
+<section class="evidence-section" aria-label="Academic recognition">
+  <div class="evidence-section__head">
+    <p class="evidence-kicker">Academic Recognition</p>
+    <h2>International research exposure before the platform engineering path.</h2>
+  </div>
+
+  <article class="credential-history recognition-history">
+    <a href="/images/certs/erasmus.jpg" target="_blank" rel="noopener">
+      <img src="/images/certs/erasmus.jpg" alt="ERASMUS Mundus scholarship certificate" loading="eager" decoding="sync" />
+    </a>
+    <div>
+      <p class="credential-card__issuer">ERASMUS Mundus Program</p>
+      <h3>ERASMUS Mundus Scholar</h3>
+      <p>
+        International academic recognition connected to master's research at TU Dortmund, Germany. It adds context to the research, systems, and cross-cultural collaboration thread that later carried into research infrastructure work.
+      </p>
     </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Recognition:</strong> Awarded the prestigious OpenStack Epoxy Contributor Badge for significant contributions to the OpenStack ecosystem.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What It Means:</strong> Dedication to open source excellence and advancing infrastructure technologies that power enterprises worldwide.</p>
-</div>
+  </article>
+</section>
 
----
-
-## 📚 **Featured at NoCSDegree.com**
-*Inspiring the next generation of tech professionals*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/nocsdegree.webp" alt="No CS Degree Interview" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">No CS Degree Platform</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">From Electrical Engineering to Software Development</p>
-    </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Platform:</strong> No CS Degree showcases successful tech careers built without traditional computer science degrees—inspiring unconventional paths to success.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">My Story:</strong> Featured for my journey from electrical engineering to cloud architecture, proving that passion and determination create opportunities.</p>
-  
-  <div style="margin-top: 1rem;">
-    [Read the Full Interview](https://www.nocsdegree.com/from-electrical-engineering-to-software-development-2/){ .md-button }
-  </div>
-</div>
-
----
-
-## 🎤 **Guest Speaker - Cloud Computing**
-*Sharing knowledge with the next generation*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/guestspeaker.webp" alt="Guest Speaker" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">National University of Computer & Emerging Sciences</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Pakistan - 2021</p>
-    </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Topic:</strong> "Introduction to Cloud Computing" - Demystifying cloud technologies for computer science students.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Impact:</strong> Inspiring students to embrace cloud technologies and understand their transformative potential in modern computing.</p>
-</div>
-
----
-
-## 🏆 **ADPList Top Mentor #1**
-*Global recognition for exceptional mentorship*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/top1.webp" alt="Top Mentor #1" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">ADPList Global Platform</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Top Mentor Award #1</p>
-    </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Achievement:</strong> Recognized as the #1 Top Mentor on ADPList, a global platform connecting mentors and mentees worldwide.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Impact:</strong> Helping professionals and students advance their careers through personalized guidance and strategic career advice.</p>
-</div>
-
----
-
-## 🥈 **ADPList Top Mentor #2**
-*Continued excellence in mentorship*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/top2.webp" alt="Top Mentor #2" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">ADPList Global Platform</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Top Mentor Award #2</p>
-    </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Consistency:</strong> Second Top Mentor recognition, demonstrating sustained commitment to empowering the next generation of tech professionals.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Mission:</strong> Fostering career growth and knowledge sharing in the global tech community.</p>
-</div>
-
----
-
-## 🥉 **ADPList Top Mentor #3**
-*Sustained commitment to mentorship excellence*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/top3.webp" alt="Top Mentor #3" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">ADPList Global Platform</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Top Mentor Award #3</p>
-    </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Journey:</strong> Third consecutive Top Mentor award, showcasing dedication to helping others overcome challenges and reach their potential.</p>
-  
-  <div style="margin-top: 1rem;">
-    [Connect on ADPList](https://adplist.org/mentors/muhammad-ahmad){ .md-button }
-  </div>
-</div>
-
----
-
-## 🎓 **ERASMUS Mundus Scholar**
-*Academic excellence recognized internationally*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <img src="/images/certs/erasmus.jpg" alt="ERASMUS Mundus Scholar" height="60" style="border-radius: 8px; flex-shrink: 0;" />
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="margin: 0; color: var(--content-accent);">ERASMUS Mundus Program</h4>
-      <p style="margin: 0.5rem 0 0 0; color: var(--content-text-secondary); font-style: italic;">Technical University of Dortmund, Germany - 2017/2018</p>
-    </div>
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Achievement:</strong> Awarded the prestigious ERASMUS Mundus scholarship for academic excellence and research potential.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Experience:</strong> Conducted Master's thesis research in Germany, gaining international perspective and advanced technical expertise.</p>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">The Legacy:</strong> Part of a select group of Pakistani scholars chosen for this competitive international program, building bridges between cultures and advancing knowledge across borders.</p>
-</div>
-
----
-
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, var(--custom-primary), var(--custom-primary-dark)); border-radius: 12px; color: white;">
-  <h3 style="color: var(--content-accent); margin-bottom: 1rem;">Impact Beyond Code</h3>
-  <p style="font-size: 1.1em; line-height: 1.6; margin: 0;">
-    These achievements represent more than personal success—they reflect a commitment to <strong>community</strong>, <strong>knowledge sharing</strong>, and <strong>lifting others up</strong>.<br><br>
-    <em style="color: var(--content-accent);">Because true excellence is measured not just by what you build, but by whom you inspire along the way.</em>
-  </p>
-</div>
-
----
+<section class="evidence-cta" aria-label="Achievement summary">
+  <p class="evidence-kicker">Pattern</p>
+  <h2>The through-line is contribution: building platforms, engaging with open infrastructure, and making technical work easier for others to understand.</h2>
+</section>
