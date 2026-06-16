@@ -909,35 +909,6 @@ a[style*="border: 2px solid var(--custom-accent)"]:hover {
   line-height: 1.62;
 }
 
-.skills-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 1.15rem;
-}
-
-.skills-hero-actions a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.15rem;
-  padding: 0.4rem 0.72rem;
-  border: 1px solid rgba(0, 137, 123, 0.28);
-  border-radius: 6px;
-  color: var(--content-text-primary) !important;
-  background: rgba(255, 255, 255, 0.78);
-  font-size: 0.78rem;
-  font-weight: 750;
-  text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.skills-hero-actions a:hover {
-  border-color: var(--custom-accent);
-  background: rgba(255, 255, 255, 0.96);
-  color: var(--content-text-primary) !important;
-  transform: translateY(-2px);
-}
-
 .skills-system-map {
   position: relative;
   z-index: 1;
@@ -1268,7 +1239,6 @@ a[style*="border: 2px solid var(--custom-accent)"]:hover {
   box-shadow: none;
 }
 
-[data-md-color-scheme="slate"] .skills-hero-actions a,
 [data-md-color-scheme="slate"] .skills-node {
   background: rgba(255, 255, 255, 0.92);
 }
@@ -1462,10 +1432,6 @@ a[style*="border: 2px solid var(--custom-accent)"]:hover {
   color: var(--content-text-secondary);
   font-size: 1rem;
   line-height: 1.62;
-}
-
-.skills-orbit-copy .skills-hero-actions {
-  justify-content: center;
 }
 
 .skills-orbit-stage {
@@ -1777,11 +1743,6 @@ a[style*="border: 2px solid var(--custom-accent)"]:hover {
   color: #666;
 }
 
-[data-md-color-scheme="slate"] .skills-orbit-showcase .skills-hero-actions a {
-  color: #424242 !important;
-  background: rgba(255, 255, 255, 0.78);
-}
-
 [data-md-color-scheme="slate"] .skills-orbit-legend div {
   border-color: rgba(0, 137, 123, 0.18);
   background: rgba(255, 255, 255, 0.78);
@@ -1883,10 +1844,6 @@ a[style*="border: 2px solid var(--custom-accent)"]:hover {
 
   .skills-orbit-copy {
     text-align: left;
-  }
-
-  .skills-orbit-copy .skills-hero-actions {
-    justify-content: flex-start;
   }
 
   .skills-orbit-stage {

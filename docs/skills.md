@@ -7,10 +7,6 @@
     <p>
       A layer-by-layer view of the stack beneath the platform work: cloud substrate, orchestration, automation, delivery, security, observability, and performance primitives.
     </p>
-    <div class="skills-hero-actions" aria-label="Skills page quick links">
-      <a href="#stack-layers">Stack Layers</a>
-      <a href="#operating-depth">Operating Depth</a>
-    </div>
   </div>
 
   <div class="skills-orbit-stage" aria-label="Animated orbital infrastructure tool map">
