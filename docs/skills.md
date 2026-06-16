@@ -1,160 +1,136 @@
-# Arsenal Behind the Magic
+# Technical Capabilities
 
-<div class="skills-intro" style="text-align: center; margin: 2rem 0; padding: 2rem; border-radius: 12px;">
-  <p style="font-size: 1.2em; margin: 0; line-height: 1.6; color: var(--content-text-primary);">
-    Every <strong style="color: var(--content-accent);">scalable architecture</strong> I design, every <strong style="color: var(--content-accent);">automated pipeline</strong> I build, and every <strong style="color: var(--content-accent);">secure infrastructure</strong> I deploy starts with choosing the right tools for the job.
-  </p>
-  <p style="font-size: 1em; margin-top: 1rem; font-style: italic; color: var(--content-text-secondary);">
-    Here's the technology stack that powers enterprise-grade solutions.
-  </p>
+<section class="skills-orbit-showcase">
+  <div class="skills-orbit-copy">
+    <p class="skills-kicker">Technical stack by operating layer</p>
+    <h2>A practical map of the infrastructure tools I use in production.</h2>
+    <p>
+      A layer-by-layer view of the stack beneath the platform work: cloud substrate, orchestration, automation, delivery, security, observability, and performance primitives.
+    </p>
+    <div class="skills-hero-actions" aria-label="Skills page quick links">
+      <a href="#stack-layers">Stack Layers</a>
+      <a href="#operating-depth">Operating Depth</a>
+    </div>
+  </div>
+
+  <div class="skills-orbit-stage" aria-label="Animated orbital infrastructure tool map">
+    <div class="skills-orbit-grid"></div>
+
+    <div class="skills-orbit-core" aria-label="Infrastructure platform core">
+      <div class="skills-core-mesh" aria-hidden="true">
+        <span class="skills-core-ring skills-core-ring--outer"></span>
+        <span class="skills-core-ring skills-core-ring--inner"></span>
+        <svg class="skills-core-datacenter" viewBox="0 0 72 72" role="img" focusable="false">
+          <path class="skills-core-dc-cloud" d="M19 28h34l-17-9-17 9Z"></path>
+          <path class="skills-core-dc-floor" d="M16 55h40"></path>
+          <rect class="skills-core-dc-rack skills-core-dc-rack--side" x="17" y="31" width="12" height="22" rx="2"></rect>
+          <rect class="skills-core-dc-rack skills-core-dc-rack--center" x="30" y="26" width="12" height="27" rx="2"></rect>
+          <rect class="skills-core-dc-rack skills-core-dc-rack--side" x="43" y="31" width="12" height="22" rx="2"></rect>
+          <path class="skills-core-dc-line" d="M21 37h4M21 43h4M34 33h4M34 39h4M34 45h4M47 37h4M47 43h4"></path>
+          <circle class="skills-core-dc-light skills-core-dc-light--one" cx="25" cy="49" r="1.3"></circle>
+          <circle class="skills-core-dc-light skills-core-dc-light--two" cx="38" cy="49" r="1.3"></circle>
+          <circle class="skills-core-dc-light skills-core-dc-light--three" cx="51" cy="49" r="1.3"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <div class="skills-orbit-track skills-orbit-track--outer">
+      <span class="skills-orbit-item" style="--angle: 0deg;"><span><img src="/images/logos/openstack.svg" alt="OpenStack" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 60deg;"><span><img src="/images/logos/googlecloud.svg" alt="Google Cloud" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 120deg;"><span><img src="/images/logos/aws.svg" alt="AWS" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 180deg;"><span><img src="/images/logos/redhat.svg" alt="Red Hat" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 240deg;"><span><img src="/images/logos/ubuntu.svg" alt="Ubuntu" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 300deg;"><span><img src="/images/logos/lxd.svg" alt="LXD" /></span></span>
+    </div>
+
+    <div class="skills-orbit-track skills-orbit-track--middle">
+      <span class="skills-orbit-item" style="--angle: 30deg;"><span><img src="/images/logos/kubernetes.svg" alt="Kubernetes" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 102deg;"><span><img src="/images/logos/openshift.svg" alt="Red Hat OpenShift" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 174deg;"><span><img src="/images/logos/rancher.svg" alt="Rancher" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 246deg;"><span><img src="/images/logos/docker.svg" alt="Docker" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 318deg;"><span><img src="/images/logos/helm.svg" alt="Helm" /></span></span>
+    </div>
+
+    <div class="skills-orbit-track skills-orbit-track--inner">
+      <span class="skills-orbit-item" style="--angle: 45deg;"><span><img src="/images/logos/terraform.svg" alt="Terraform" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 135deg;"><span><img src="/images/logos/ansible.svg" alt="Ansible" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 225deg;"><span><img src="/images/logos/juju.svg" alt="Juju" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 315deg;"><span><img src="/images/logos/maas.svg" alt="MAAS" /></span></span>
+    </div>
+
+    <div class="skills-orbit-pulse skills-orbit-pulse--one"></div>
+    <div class="skills-orbit-pulse skills-orbit-pulse--two"></div>
+  </div>
+
+  <div class="skills-orbit-legend" aria-label="Orbit layer legend">
+    <div><span>Outer Orbit</span><strong>Cloud, operating systems, virtualization</strong></div>
+    <div><span>Middle Orbit</span><strong>Containers, orchestration, application runtime</strong></div>
+    <div><span>Inner Orbit</span><strong>Provisioning, configuration, deployment automation</strong></div>
+  </div>
+</section>
+
+## Stack Layers
+
+<div class="skills-visual-grid">
+  <article class="skills-visual-card skills-visual-card--platform">
+    <div class="skills-card-body">
+      <span class="skills-card-index">01</span>
+      <h3>Cloud substrate</h3>
+      <p>Compute, storage, network, tenancy, and cloud service foundations.</p>
+      <div class="skills-tool-list"><span>OpenStack</span><span>GCP</span><span>AWS</span><span>Azure</span><span>Ceph</span><span>KVM/LXD</span><span>VMware</span></div>
+    </div>
+  </article>
+
+  <article class="skills-visual-card skills-visual-card--runtime">
+    <div class="skills-card-body">
+      <span class="skills-card-index">02</span>
+      <h3>Orchestration and runtime</h3>
+      <p>Cluster lifecycle, application packaging, ingress patterns, and workload placement.</p>
+      <div class="skills-tool-list"><span>Kubernetes</span><span>Rancher</span><span>OpenShift</span><span>Docker</span><span>Helm</span><span>MicroK8s</span></div>
+    </div>
+  </article>
+
+  <article class="skills-visual-card skills-visual-card--automation">
+    <div class="skills-card-body">
+      <span class="skills-card-index">03</span>
+      <h3>Provisioning and configuration</h3>
+      <p>Declarative infrastructure, bare-metal provisioning, configuration, and repeatable builds.</p>
+      <div class="skills-tool-list"><span>Terraform</span><span>Ansible</span><span>Juju</span><span>MAAS</span><span>CloudFormation</span><span>Kolla Ansible</span></div>
+    </div>
+  </article>
+
+  <article class="skills-visual-card skills-visual-card--delivery">
+    <div class="skills-card-body">
+      <span class="skills-card-index">04</span>
+      <h3>Delivery and engineering tooling</h3>
+      <p>Source control, CI/CD, image builds, scripting, and operational utilities.</p>
+      <div class="skills-tool-list"><span>GitLab CI</span><span>GitHub Actions</span><span>Jenkins</span><span>Gerrit</span><span>GitOps</span><span>Python</span><span>Bash</span></div>
+    </div>
+  </article>
+
+  <article class="skills-visual-card skills-visual-card--security">
+    <div class="skills-card-body">
+      <span class="skills-card-index">05</span>
+      <h3>Security and identity controls</h3>
+      <p>Hardening, vulnerability scanning, identity integration, and secure service boundaries.</p>
+      <div class="skills-tool-list"><span>CIS</span><span>Trivy</span><span>Snyk</span><span>Vault</span><span>TLS</span><span>OAuth</span><span>AD</span><span>Entra ID</span></div>
+    </div>
+  </article>
+
+  <article class="skills-visual-card skills-visual-card--telco">
+    <div class="skills-card-body">
+      <span class="skills-card-index">06</span>
+      <h3>Performance and network primitives</h3>
+      <p>Hardware-aware infrastructure for packet-heavy and latency-sensitive workloads.</p>
+      <div class="skills-tool-list"><span>SR-IOV</span><span>DPDK</span><span>OVS-DPDK</span><span>VPP</span><span>NUMA</span><span>HugePages</span><span>Smart NICs</span></div>
+    </div>
+  </article>
 </div>
 
----
+## Operating Depth
 
-## ☁️ **Cloud Platforms & Infrastructure**
-*Building the foundation for tomorrow's applications*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div class="tech-logos" style="text-align: center; margin-bottom: 1rem;">
-    <img src="/images/logos/googlecloud.svg" alt="Google Cloud" height="40" style="max-width:150px;" />
-    <img src="/images/logos/openstack.svg" alt="OpenStack" height="40" style="max-width:150px;" />
-    <img src="/images/logos/aws.svg" alt="AWS" height="40" style="max-width:150px;" />
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Build:</strong> Multi-cloud architectures that scale from startup to enterprise</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Cloud Mastery</strong>: Google Cloud (GCP), OpenStack, AWS - I speak all three languages fluently</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Architecture Expertise</strong>: From hyper-converged to disaggregated - I design what works best for your business</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Telco & Edge</strong>: NFVI deployments, Edge DCN solutions, Smart NICs - bringing cloud to the edge</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Performance Optimization</strong>: SR-IOV, DPDK, OVN - squeezing maximum performance from every resource</p>
-</div>  
-
----
-
-## 🚢 **Containers & Orchestration**
-*Where applications become unstoppable*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div class="tech-logos" style="text-align: center; margin-bottom: 1rem;">
-    <img src="/images/logos/kubernetes.svg" alt="Kubernetes" height="40" style="max-width:150px;" />
-    <img src="/images/logos/rancher.svg" alt="Rancher" height="40" style="max-width:150px;" />
-    <img src="/images/logos/docker.svg" alt="Docker" height="40" style="max-width:150px;" />
-    <img src="/images/logos/helm.svg" alt="Helm" height="40" style="max-width:150px;" />
-    <img src="/images/logos/singularity.svg" alt="Singularity" height="40" style="max-width:90px;" />
-    <img src="/images/logos/apptainer.svg" alt="Apptainer" height="40" style="max-width:130px;" />
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Orchestrate:</strong> Container ecosystems that scale beyond imagination</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Container Mastery</strong>: Kubernetes, Docker, LXD - from development to production at scale</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Multi-Cluster Management</strong>: Rancher deployments managing hundreds of nodes across environments</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Application Lifecycle</strong>: Helm charts that make complex deployments feel like magic</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Scientific Computing</strong>: Singularity & Apptainer for HPC workloads that push boundaries</p>
-</div>  
-
----
-
-## 🤖 **Infrastructure Automation & IaC**
-*Code that builds empires*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div class="tech-logos" style="text-align: center; margin-bottom: 1rem;">
-    <img src="/images/logos/ansible.svg" alt="Ansible" height="40" style="max-width:150px;" />
-    <img src="/images/logos/terraform.svg" alt="Terraform" height="40" style="max-width:150px;" />
-    <img src="/images/logos/juju.svg" alt="Juju" height="40" style="max-width:150px;" />
-    <img src="/images/logos/cloudformation.svg" alt="CloudFormation" height="40" style="max-width:150px;" />
-    <img src="/images/logos/maas.svg" alt="MAAS" height="40" style="max-width:100px;" />
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Automate:</strong> Everything - because manual is the enemy of scale</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Infrastructure as Code</strong>: Terraform, Ansible, CloudFormation - your infrastructure versioned like code</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Zero-Touch Deployments</strong>: Juju charms and MAAS for telco-grade automation</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Reproducible Environments</strong>: What works in dev, works in production - guaranteed</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Self-Healing Systems</strong>: Infrastructure that fixes itself before you know it's broken</p>
-</div>  
-
----
-
-## 🛡️ **Security, CI/CD & Observability**
-*Guardian of systems, master of pipelines*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div class="tech-logos" style="text-align: center; margin-bottom: 1rem;">
-    <img src="/images/logos/github.svg" alt="GitHub" height="40" style="max-width:150px;" />
-    <img src="/images/logos/gitlab.svg" alt="GitLab" height="40" style="max-width:150px;" />
-    <img src="/images/logos/snyk.svg" alt="Snyk" height="40" style="max-width:130px;" />
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Secure:</strong> Every layer, every pipeline, every deployment</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Enterprise Security</strong>: CIS-compliant hardening, vulnerability scanning with Trivy & Snyk</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Real-Time Monitoring</strong>: Prometheus, Grafana dashboards that tell the story of your infrastructure</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Bulletproof Pipelines</strong>: GitHub Actions & GitLab CI/CD that never break production</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Proactive Defense</strong>: Security built in, not bolted on</p>
-</div>  
-
----
-
-## 💻 **Programming & Scripting**
-*The language of automation*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div class="tech-logos" style="text-align: center; margin-bottom: 1rem;">
-    <img src="/images/logos/python.svg" alt="Python" height="40" style="max-width:150px;" />
-    <img src="/images/logos/bash.svg" alt="Bash" height="40" style="max-width:150px;" />
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Code:</strong> Solutions that think ahead and act fast</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Python Mastery</strong>: From simple scripts to complex automation frameworks</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Shell Expertise</strong>: Bash scripts that orchestrate entire infrastructures</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Quality Engineering</strong>: Test automation and modular pipelines that scale</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Custom Solutions</strong>: GUI tools and utilities that make complex tasks simple</p>
-</div>  
-
----
-
-## 🐧 **Operating Systems**
-*The foundation of everything*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  <div class="tech-logos" style="text-align: center; margin-bottom: 1rem;">
-    <img src="/images/logos/ubuntu.svg" alt="Ubuntu" height="40" style="max-width:150px;" />
-    <img src="/images/logos/debian.svg" alt="Debian" height="40" style="max-width:150px;" />
-    <img src="/images/logos/redhat.svg" alt="Red Hat Enterprise Linux" height="40" style="max-width:150px;" />
-  </div>
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Master:</strong> The bedrock of reliable systems</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Linux Fluency</strong>: Ubuntu, Debian, RHEL - I know them inside and out</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">System Optimization</strong>: Performance tuning that squeezes every ounce of capability</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Enterprise Hardening</strong>: Security configurations that meet the strictest standards</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Production Ready</strong>: From bare metal to cloud instances, built to last</p>
-</div>
-
----
-
-## 📚 **Tech Documentation**
-*Making the complex simple*
-
-<div class="skills-section" style="padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-  
-  <p style="margin: 1rem 0;"><strong style="color: var(--content-accent);">What I Document:</strong> Knowledge that empowers teams</p>
-  
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Technical Writing</strong>: Markdown, Confluence - turning complexity into clarity</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Living Documentation</strong>: MkDocs sites that evolve with your infrastructure</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Knowledge Systems</strong>: Internal wikis and portfolios that actually get used</p>
-  <p style="margin: 0.5rem 0;">• <strong style="color: var(--content-accent);">Team Enablement</strong>: Documentation that makes everyone an expert</p>
-</div>
-
----
-
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, var(--custom-primary), var(--custom-primary-dark)); border-radius: 12px; color: white;">
-  <h3 style="color: var(--custom-accent); margin-bottom: 1rem;">The Complete Picture</h3>
-  <p style="font-size: 1.1em; line-height: 1.6; margin: 0;">
-    This isn't just a tech stack—it's a <strong>transformation toolkit</strong>.<br>
-    Every tool, every skill, every technique is focused on one goal:<br>
-    <em style="color: var(--custom-accent); font-size: 1.2em;">Building systems that don't just work—they evolve.</em>
-  </p>
+<div class="skills-decision-flow">
+  <div><span>1</span><strong>Design</strong><p>Topology, tenancy, storage, network paths, identity boundaries, and lifecycle choices.</p></div>
+  <div><span>2</span><strong>Build</strong><p>Infrastructure code, configuration, pipelines, image flows, and reusable platform modules.</p></div>
+  <div><span>3</span><strong>Run</strong><p>Upgrades, observability, backup paths, incident support, capacity, and cost visibility.</p></div>
 </div>
