@@ -1,10 +1,36 @@
 # Blog / Tutorials
 
-Welcome to my blog!  
-Here you'll find my latest tutorials, technical articles, and thoughts on technology.
+Technical notes, tutorials, and implementation write-ups from platform,
+cloud, Kubernetes, Linux, and automation work.
 
-- [Setting Up Google Drive MCP for Codex on Linux](google-drive-mcp-codex.md)
-- [Scheduling Long-Running Jobs in GCP with VPC Service Controls](gcp-over-engineering.md)
-- [ACME and Certificate Management in K8S](cert-manager.md)
-- [Docker vs LXD](dockerlxd.md)
-- [SnapD Tutorial](snapd.md)
+<div class="portfolio-card-grid portfolio-card-grid--blog">
+  <a class="portfolio-card portfolio-card--accent" href="google-drive-mcp-codex/">
+    <span class="portfolio-card__eyebrow">Codex / MCP / Linux</span>
+    <strong>Setting Up Google Drive MCP for Codex on Linux</strong>
+    <span>OAuth, Google Drive integration, and local Codex workflow notes for a practical MCP setup.</span>
+  </a>
+
+  <a class="portfolio-card" href="gcp-over-engineering/">
+    <span class="portfolio-card__eyebrow">GCP / Architecture</span>
+    <strong>Scheduling Long-Running Jobs in GCP with VPC Service Controls</strong>
+    <span>A practical look at job scheduling, perimeter constraints, and where simple cloud workflows become over-engineered.</span>
+  </a>
+
+  <a class="portfolio-card" href="cert-manager/">
+    <span class="portfolio-card__eyebrow">Kubernetes / TLS</span>
+    <strong>ACME and Certificate Management in Kubernetes</strong>
+    <span>Certificate automation patterns for Kubernetes-hosted services using cert-manager and ACME.</span>
+  </a>
+
+  <a class="portfolio-card" href="dockerlxd/">
+    <span class="portfolio-card__eyebrow">Containers / Linux</span>
+    <strong>Docker vs LXD</strong>
+    <span>A comparison of application containers and system containers from an infrastructure perspective.</span>
+  </a>
+
+  <a class="portfolio-card" href="snapd/">
+    <span class="portfolio-card__eyebrow">Linux / Packaging</span>
+    <strong>SnapD Tutorial</strong>
+    <span>Operational notes for Snap-based software distribution and package management on Linux.</span>
+  </a>
+</div>
