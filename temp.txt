@@ -1,0 +1,92 @@
+MUHAMMAD AHMAD
+SENIOR CLOUD ENGINEER
+ahmadfsbd@gmail.com    | +447936647713     |     Cambridge, UK 
+Portfolio: mahmad.cloud  |     Linkedin-Profile  | github.com/ahmadfsbd
+
+PROFILE
+
+Senior Cloud & DevOps Engineer with a 8+ years of proven record of accelerating cloud transformation, building scalable platforms, and optimizing costs across hybrid cloud environments in Telco and Research sectors. Opensource Enthusiast.
+
+SKILLS
+
+• GCP	• Python	• Singularity / Apptainer
+• OpenStack	• Bash/Shell Scripting	• MAAS / JuJu
+• Kubernetes	• Ansible	• Team Leadership
+• Docker	• Rancher	• NFV / SDN
+• Terraform	• OpenShift	• Cloud Network Design
+• Helm Charts	• Cloud Security	• Agile / Scrum
+• CI/CD	• Ceph	• LXD / KVM
+AWS Azure Microservices Vault Cloudformation Disaster Recovery Cloud Networking Monitoring and Alerting Git Jenkins ELK Stack GitOps Distributed Systems Monitoring tools and Observability actionable alerts production support metrics collection Elasticsearch Puppet Chef Customer-facing TLS OAuth Leading Migrations Modernise software Kolla Ansible Gitlab CI FinOps Juju / MAAS VMware Active Directory, Entra-ID, Red Hat IDP Gerrit
+
+
+WORK EXPERIENCE
+Wellcome Sanger Institute – Cambridge, UK
+Senior Cloud Engineer	Sep 2024 - Present
+Own and evolve the cloud security and platform architecture for on prem Cloud Infrastructure and GCP-based Trusted Research Environment (TRE), supporting sensitive genomic research under strict regulatory and compliance constraints.
+Lead platform security and compliance architecture, including ISO 27001 alignment and Zero Trust controls across identity, networking, and service boundaries. 
+Define and standardise secure application delivery patterns for Kubernetes-hosted research platforms, balancing developer velocity with compliance requirements.
+Architect and operate Kubernetes platforms on OpenStack with Rancher, integrating Ceph-backed storage for resilient, scalable workloads.
+Design and optimise GCP platform services, including Cloud Functions for automated backups and scalable storage, improving performance and reliability.
+Modernise legacy container workloads by migrating to Kubernetes with standardised ingress, service exposure, and lifecycle controls.
+Establish automated image build and software delivery pipelines for reproducible, auditable deployments.
+Lead proactive reliability engineering, code reviews, and operational risk management across the platform. 
+Drive platform sustainability through continuous cost optimisation, storage tiering, and workload efficiency.
+Advise technical stakeholders on strategic platform improvements, architecture, and technology adoption.
+CANONICAL - The Company Behind Ubuntu
+Field Software Engineer - Telco Cloud	Jun 2022 - Sep 2024
+Led Telco Cloud Engineering efforts across EMEA, driving design, deployment, and automation of open-source, next-gen network cloud solutions.
+Contributed to open source projects including OpenStack & Charmed Framework, driving innovation.
+Engaged with stakeholders in cloud pre-sales, offering technical insights and building relationships with Tier-1 telco operators to drive business growth.
+Engineered Telco Cloud infrastructure using MicroK8s, Real-Time Kernel, and Juju, enabling rapid provisioning.
+Automated infrastructure deployments using Terraform, Juju, and MAAS to streamline operations.
+Provisioned open source distributed storage systems, primarily CEPH integrations with OpenStack and K8S.
+Utilized data-path acceleration technologies like SR-IOV and DPDK to cater next-gen telco software needs.
+Configured offline repositories for secure air-gapped environments, ensuring reliable cloud operations.
+Architected aggregated, disaggregated, and hyper converged cloud platforms for optimized performance.
+Delivered monitoring stacks with Prometheus, Grafana, NRPE, and Alertmanager, ensuring real-time insights.
+Ensured cloud security compliance with CIS standards by leveraging Ubuntu Security Guide.
+xFlow Research Inc. – Islamabad, Pakistan
+Technical Manager – NFV & Telco Cloud	Jan 2021 - May 2022
+Planned, Developed, and Automated containerized cloud-based NFVI layer Telco solutions for DELL EMC, leveraging RedHat's OpenStack and OpenShift technologies.
+Led and mentored technical team members, providing training and guidance while managing development..
+Architected RHEL and RHOSP based Telco Cloud Reference Architectures for DELL EMC.
+Ensured quality standards by monitoring and reviewing deliverables across the development cycle.
+Facilitated stakeholder communication across teams, translating requirements into actionable goals.
+Architected and automated Edge Distributed Compute Node (DCN) stacks in OpenStack Solutions.
+Contributed 15,000+ lines of code to Dell EMC's OpenStack deployment automation toolkit, Jetpack.
+Directed QA strategy by planning test cases, driving automation, and executing validations.
+Senior Cloud Engineer	Jan 2020 - Jan 2021
+Specialty contractor for DELL EMC - USA, as part of the NFV team, responsible for investigation, integration, and validation of NFV features in RedHat OpenStack and OpenShift platforms.
+Integrated NFVi layer technologies like NUMA, Hugepages, SRIOV, and OVS-DPDK for Data Path Acceleration.
+Automated RedHat OpenStack deployments with Python, extending support for HCI, Edge, and NFV.
+Initiated and directed the automatic deployment of OpenShift clusters for streamlined operations.
+Enabled PCI passthrough and hardware offload technologies on smart NICs to enhance network performance.
+Network Design Engineer II	Oct 2018 - Jan 2020
+Managed Server Rack and Stack Operations, RAID configurations, NIC setups, and BIOS configurations.
+Benchmarked and Optimized RedHat Ceph Storage to enhance performance and scalability.
+Conducted R&D on NFV-based Broadband Network Gateway (BNG) solution with Vector Packet Processing (VPP).
+BLC Solutions – Ankara, Turkey (Remote, Part-time)
+Cloud Architecture Consultant	Oct 2021 - May 2022
+Architected resilient, enterprise-grade, Kubernetes clusters using Ansible and KubeSpray.
+Implemented high availability with HAProxy, KeepAliveD, and Nginx.
+Integrated CEPH clusters with Kubernetes for persistent storage using Rook Operator.
+Puffersoft – London, UK (Remote, Part-time)
+DevOps Consultant	Nov 2019 - Oct 2020
+Architected and deployed multi-AZ highly available applications, ensuring fault tolerance.
+Configured fault-tolerant databases using RDS, Aurora, and DynamoDB, with seamless migration via AWS DMS.
+Conducted cost analysis and designed VPCs, utilizing AWS services like EC2, S3, Route53, and NAT Gateways.
+CERTIFICATIONS / COURSES
+
+AWS Certified Solutions Architect - Associate	Feb 2026
+CKA: Certified Kubernetes Administrator 	Aug 2024
+Certified Professional Scrum Master I (PSM I) 	Dec 2024
+Certified Professional Scrum Product Owner I (PSPO I) 	Dec 2024
+RedHat Certified Specialist in Openshift Administration	Oct 2021
+EDUCATION
+MSc. Electrical Engineering
+NUST, Islamabad-Pakistan	2015 - 2017
+ERASMUS MUNDUS Scholar at the Technical University of Dortmund, Germany - 2017/2018
+BSc. Electrical Engineering
+COMSATS, Lahore-Pakistan	2009 – 2013
+Programming Languages, Computer Networks & Telecommunications.
+
