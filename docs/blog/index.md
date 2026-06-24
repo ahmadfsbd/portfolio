@@ -4,7 +4,13 @@ Technical notes, tutorials, and implementation write-ups from platform,
 cloud, Kubernetes, Linux, and automation work.
 
 <div class="portfolio-card-grid portfolio-card-grid--blog">
-  <a class="portfolio-card portfolio-card--accent" href="google-drive-mcp-codex/">
+  <a class="portfolio-card portfolio-card--accent" href="gcp-audit-logs/">
+    <span class="portfolio-card__eyebrow">GCP / Security / Logging</span>
+    <strong>Audit-Based Alerting for Sensitive Cloud Storage Buckets</strong>
+    <span>A low-noise Google Cloud pattern for detecting suspicious reads and deletes against sensitive TRE buckets.</span>
+  </a>
+
+  <a class="portfolio-card" href="google-drive-mcp-codex/">
     <span class="portfolio-card__eyebrow">Codex / MCP / Linux</span>
     <strong>Setting Up Google Drive MCP for Codex on Linux</strong>
     <span>OAuth, Google Drive integration, and local Codex workflow notes for a practical MCP setup.</span>
