@@ -33,7 +33,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Skills & Tech Stack: skills.md
   - Certifications: certifications.md
   - Achievements & Honors: achievements.md
   - Career Journey:
