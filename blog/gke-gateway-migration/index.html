@@ -1,0 +1,1900 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A practical, low-risk pattern for moving private GKE services from internal Ingress to Gateway API with Terraform, reserved internal IPs, TLS, policy resources, and DNS cutover.">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Migrating GKE Internal Ingress to Gateway API - Muhammad Ahmad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migrating-gke-internal-ingress-to-gateway-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Muhammad Ahmad" class="md-header__button md-logo" aria-label="Muhammad Ahmad" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Muhammad Ahmad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migrating GKE Internal Ingress to Gateway API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../certifications/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Certifications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../achievements/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Achievements & Honors
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../career/" class="md-tabs__link">
+          
+  
+  
+  Career Journey
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Blog / Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../photography/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Photography
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Muhammad Ahmad" class="md-nav__button md-logo" aria-label="Muhammad Ahmad" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Muhammad Ahmad
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../certifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../achievements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Achievements & Honors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Career Journey
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Career Journey
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../career/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Career Journey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../career/wsi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wellcome Sanger Institute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../career/canonical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canonical Ltd
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../career/xflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    xFlow Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog / Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog / Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../photography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Photography
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-migration-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Migration Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gke-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GKE Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-only-subnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy-Only Subnet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-the-existing-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory The Existing Ingress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reserved-internal-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reserved Internal IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS Secret
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-specific-or-shared-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application-Specific Or Shared Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#httproute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPRoute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-facing-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gateway-Facing Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-policy-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Policy Migration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-usually-breaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Usually Breaks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-cutover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Cutover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terraform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-and-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gateway And Route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-and-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service And Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Policies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traffic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rollback-and-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback And Cleanup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="migrating-gke-internal-ingress-to-gateway-api">Migrating GKE Internal Ingress to Gateway API<a class="headerlink" href="#migrating-gke-internal-ingress-to-gateway-api" title="Permanent link">&para;</a></h1>
+<p><img src="/images/blog/gke-gateway-migration-title.png" alt="GKE internal Ingress migration to Gateway API with Terraform" /></p>
+<hr />
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>GKE internal Ingress has been a familiar way to expose private HTTP and HTTPS services inside Google Kubernetes Engine. It works, but it also concentrates several different concerns into one Kubernetes object: the load balancer frontend, TLS termination, routing rules, backend selection, and controller-specific annotations.</p>
+<p>Gateway API separates those concerns into a clearer model:</p>
+<ul>
+<li><code>Gateway</code> owns the load balancer entry point, listeners, frontend address, TLS references, and route attachment rules.</li>
+<li><code>HTTPRoute</code> owns hostname, path, header, and backend routing.</li>
+<li>Policy resources handle platform-specific behavior such as backend timeouts and health checks.</li>
+</ul>
+<p>That separation is the real reason to migrate. Google recommends Gateway API for new GKE load balancing designs, especially where teams need richer traffic management, clearer ownership boundaries, or better multi-tenancy. Ingress still works for many existing HTTP and HTTPS workloads, but Gateway API is the stronger long-term model.</p>
+<p>This article follows a conservative migration pattern for private services that already use internal GKE Ingress. The goal is not to redesign the platform during cutover. The goal is to preserve behavior first, prove the new path, and then decide whether shared Gateways or other improvements are worth doing later.</p>
+<p><img src="/images/blog/gke-gateway-architecture.png" alt="Architecture comparison between GKE Ingress and Gateway API" /></p>
+<hr />
+<h2 id="the-migration-principle">The Migration Principle<a class="headerlink" href="#the-migration-principle" title="Permanent link">&para;</a></h2>
+<p>The safest migration is deliberately boring: keep the application contract the same while changing the infrastructure model underneath it.</p>
+<p>For the first pass, preserve:</p>
+<ul>
+<li>the same application hostname</li>
+<li>the same path behavior</li>
+<li>the same internal accessibility</li>
+<li>the same TLS certificate or certificate source</li>
+<li>the same backend workload and port</li>
+<li>the same timeout, health-check, and security policy behavior where those settings already exist</li>
+<li>a quick rollback path through DNS</li>
+</ul>
+<p>Only after the Gateway path is stable should you consider consolidation, shared listeners, central certificate ownership, or route restructuring.</p>
+<p>The high-level sequence is:</p>
+<ol>
+<li>Enable Gateway API on the cluster.</li>
+<li>Verify the GKE and VPC prerequisites.</li>
+<li>Inventory the current Ingress behavior.</li>
+<li>Reserve a new internal frontend IP for the Gateway.</li>
+<li>Create the TLS Secret, Gateway, HTTPRoute, Gateway-facing Service, and required policies.</li>
+<li>Validate traffic directly against the Gateway IP.</li>
+<li>Move DNS only after validation succeeds.</li>
+<li>Keep the old Ingress available during the observation period, with a separate Service for the Gateway path if both controllers run in parallel.</li>
+<li>Remove legacy resources only after the Gateway path is proven stable.</li>
+</ol>
+<hr />
+<h2 id="gke-prerequisites">GKE Prerequisites<a class="headerlink" href="#gke-prerequisites" title="Permanent link">&para;</a></h2>
+<p>Start with the cluster and network, not the YAML.</p>
+<p>For an internal Gateway on GKE, verify that:</p>
+<ul>
+<li>the cluster is VPC-native</li>
+<li>the <code>HttpLoadBalancing</code> add-on is enabled</li>
+<li>Gateway API is enabled on the cluster</li>
+<li>a proxy-only subnet exists in the same VPC and region</li>
+<li>Shared VPC IAM permissions are in place where the cluster uses a Shared VPC</li>
+</ul>
+<p>Enable the Gateway API Standard channel with <code>gcloud</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gcloud<span class="w"> </span>container<span class="w"> </span>clusters<span class="w"> </span>update<span class="w"> </span>&lt;CLUSTER_NAME&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--location<span class="w"> </span>&lt;REGION_OR_ZONE&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--gateway-api<span class="o">=</span>standard
+</span></code></pre></div>
+<p>Or manage it in Terraform:</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;google_container_cluster&quot;</span><span class="w"> </span><span class="nv">&quot;main&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="na">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-cluster&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="na">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;europe-west2&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nb">gateway_api_config</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="na">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;CHANNEL_STANDARD&quot;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Then confirm that the cluster exposes GatewayClasses:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>gatewayclass
+</span></code></pre></div>
+<p>The <code>ACCEPTED</code> column should be <code>True</code> for the classes you plan to use.</p>
+<p>Common GKE GatewayClasses are:</p>
+<table>
+<thead>
+<tr>
+<th>GatewayClass</th>
+<th>Load balancer</th>
+<th>IP type</th>
+<th>Scope</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gke-l7-global-external-managed</code></td>
+<td>Global external Application Load Balancer</td>
+<td>Public</td>
+<td>Global</td>
+<td>Public websites and APIs</td>
+</tr>
+<tr>
+<td><code>gke-l7-gxlb</code></td>
+<td>Classic global external Application Load Balancer</td>
+<td>Public</td>
+<td>Global</td>
+<td>Legacy external load balancer patterns</td>
+</tr>
+<tr>
+<td><code>gke-l7-regional-external-managed</code></td>
+<td>Regional external Application Load Balancer</td>
+<td>Public</td>
+<td>Regional</td>
+<td>Regional public applications</td>
+</tr>
+<tr>
+<td><code>gke-l7-rilb</code></td>
+<td>Regional internal Application Load Balancer</td>
+<td>Private</td>
+<td>Regional</td>
+<td>Internal applications and private services</td>
+</tr>
+</tbody>
+</table>
+<p>For internal GKE Ingress replacement, the usual GatewayClass is <code>gke-l7-rilb</code>. It provisions a regional internal Application Load Balancer with a private frontend IP.</p>
+<hr />
+<h2 id="proxy-only-subnet">Proxy-Only Subnet<a class="headerlink" href="#proxy-only-subnet" title="Permanent link">&para;</a></h2>
+<p>Regional internal Application Load Balancers require a proxy-only subnet. The Gateway frontend IP does not come from this proxy-only subnet; it is the forwarding-rule virtual IP. The proxy-only subnet is used by Google-managed load-balancer proxies inside the VPC.</p>
+<p>The proxy-only subnet requirement depends on the load balancer family:</p>
+<table>
+<thead>
+<tr>
+<th>GKE resource</th>
+<th>Google Cloud load balancer</th>
+<th>Proxy-only subnet required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>External Ingress with <code>gce</code></td>
+<td>Global external Application Load Balancer</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Internal Ingress with <code>gce-internal</code></td>
+<td>Regional internal Application Load Balancer</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Gateway <code>gke-l7-global-external-managed</code></td>
+<td>Global external Application Load Balancer</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Gateway <code>gke-l7-gxlb</code></td>
+<td>Classic global external Application Load Balancer</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Gateway <code>gke-l7-regional-external-managed</code></td>
+<td>Regional external Application Load Balancer</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Gateway <code>gke-l7-rilb</code></td>
+<td>Regional internal Application Load Balancer</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Check for an existing proxy-only subnet:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gcloud<span class="w"> </span>compute<span class="w"> </span>networks<span class="w"> </span>subnets<span class="w"> </span>list<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--filter<span class="o">=</span><span class="s1">&#39;purpose=(REGIONAL_MANAGED_PROXY OR INTERNAL_HTTPS_LOAD_BALANCER)&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--format<span class="o">=</span><span class="s1">&#39;table(name,region,network,ipCidrRange,purpose,role)&#39;</span>
+</span></code></pre></div>
+<p>For regional GKE Gateways, the proxy-only subnet purpose must be <code>REGIONAL_MANAGED_PROXY</code>. If an older internal Ingress environment already has a proxy-only subnet with <code>INTERNAL_HTTPS_LOAD_BALANCER</code>, migrate the subnet purpose in place before creating the new Gateway:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gcloud<span class="w"> </span>compute<span class="w"> </span>networks<span class="w"> </span>subnets<span class="w"> </span>update<span class="w"> </span>&lt;PROXY_SUBNET_NAME&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--purpose<span class="o">=</span>REGIONAL_MANAGED_PROXY<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>--region<span class="o">=</span>&lt;REGION&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>--project<span class="o">=</span>&lt;PROJECT_ID&gt;
+</span></code></pre></div>
+<p>If Terraform manages that subnet, do the in-place migration first, then update the Terraform configuration so future plans match reality. Review the next plan carefully to ensure Terraform is not trying to replace the live proxy-only subnet.</p>
+<hr />
+<h2 id="inventory-the-existing-ingress">Inventory The Existing Ingress<a class="headerlink" href="#inventory-the-existing-ingress" title="Permanent link">&para;</a></h2>
+<p>Before building the Gateway resources, capture what the current Ingress actually does:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>ingress<span class="w"> </span>-A
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>ingress<span class="w"> </span>&lt;INGRESS_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>kubectl<span class="w"> </span>get<span class="w"> </span>ingress<span class="w"> </span>&lt;INGRESS_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;<span class="w"> </span>-o<span class="w"> </span>yaml
+</span></code></pre></div>
+<p>Record:</p>
+<ul>
+<li>ingress class, usually <code>gce-internal</code></li>
+<li>frontend IP and private DNS records pointing to it</li>
+<li>whether routes use explicit hostnames or catch-all host matching</li>
+<li>path rules, such as <code>/internal-api/*</code></li>
+<li>backend Service name and port</li>
+<li>TLS Secret name or certificate mechanism</li>
+<li>HTTP behavior, especially <code>kubernetes.io/ingress.allow-http</code></li>
+<li><code>BackendConfig</code>, <code>FrontendConfig</code>, and any Service annotations</li>
+<li><code>ManagedCertificate</code> resources, if the Ingress uses Google-managed certificates</li>
+<li>firewall rules or Shared VPC permissions that are tied to load balancer health checks or proxies</li>
+<li>Terraform ownership for Ingress, Service, DNS, certificates, and network resources</li>
+</ul>
+<p>Generated Ingress annotations should not be copied into Gateway resources. Annotations such as generated backend service, forwarding rule, URL map, and certificate references belong to the Ingress controller. The GKE Gateway controller creates and manages its own Google Cloud load-balancer resources.</p>
+<p><code>ManagedCertificate</code>, <code>FrontendConfig</code>, and <code>BackendConfig</code> are also not direct copy-and-paste replacements in this Gateway pattern. Treat each one as a behavior to preserve, then map it to the Gateway, route, certificate, or policy mechanism that actually owns that behavior.</p>
+<hr />
+<h2 id="worked-example">Worked Example<a class="headerlink" href="#worked-example" title="Permanent link">&para;</a></h2>
+<p>The source guide uses a <code>backend</code> application as the worked example. The existing internal Ingress has this important shape:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend-internal-ingress</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web-interface</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">kubernetes.io/ingress.class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gce-internal</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nt">kubernetes.io/ingress.allow-http</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">http</span><span class="p">:</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="nt">paths</span><span class="p">:</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/internal-api/*</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">            </span><span class="nt">pathType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ImplementationSpecific</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">            </span><span class="nt">backend</span><span class="p">:</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">              </span><span class="nt">service</span><span class="p">:</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">                </span><span class="nt">port</span><span class="p">:</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">                  </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">  </span><span class="nt">tls</span><span class="p">:</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend-internal-ingress-cert-v2</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="nt">status</span><span class="p">:</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">  </span><span class="nt">loadBalancer</span><span class="p">:</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="nt">ingress</span><span class="p">:</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.10.0.7</span>
+</span></code></pre></div>
+<p>That translates into a few concrete decisions:</p>
+<table>
+<thead>
+<tr>
+<th>Existing Ingress detail</th>
+<th>Gateway API consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kubernetes.io/ingress.class: gce-internal</code></td>
+<td>Use <code>gatewayClassName: gke-l7-rilb</code></td>
+</tr>
+<tr>
+<td><code>kubernetes.io/ingress.allow-http: "false"</code></td>
+<td>Start with an HTTPS-only listener</td>
+</tr>
+<tr>
+<td>No <code>host</code> field under <code>rules</code></td>
+<td>Preserve catch-all hostname behavior unless you intentionally narrow it</td>
+</tr>
+<tr>
+<td><code>/internal-api/*</code> with <code>ImplementationSpecific</code></td>
+<td>Use <code>PathPrefix</code> with <code>/internal-api</code></td>
+</tr>
+<tr>
+<td>TLS Secret in the Ingress spec</td>
+<td>Reference the Secret from the Gateway listener</td>
+</tr>
+<tr>
+<td>Backend Service <code>backend:80</code></td>
+<td>Route to a Gateway-facing Service that selects the same Pods</td>
+</tr>
+</tbody>
+</table>
+<p>Adding an HTTP listener does not automatically create an HTTP-to-HTTPS redirect. If clients need redirect behavior, configure an HTTP listener and an <code>HTTPRoute</code> with a <code>RequestRedirect</code> filter deliberately.</p>
+<hr />
+<h2 id="resource-model">Resource Model<a class="headerlink" href="#resource-model" title="Permanent link">&para;</a></h2>
+<p>The replacement is a small set of resources rather than a single Ingress object.</p>
+<p><img src="/images/blog/gke-gateway-route.png" alt="Route translation from GKE internal Ingress to Gateway API and HTTPRoute" /></p>
+<p>The diagram shows a hostname-specific route because many production migrations eventually add explicit hostnames. If the source Ingress had no <code>host</code> field, omit <code>hostnames</code> in the first Gateway API version unless you intentionally want to narrow the accepted hostnames during the migration.</p>
+<p>Terraform normally spans two providers for this migration:</p>
+<table>
+<thead>
+<tr>
+<th>Resource type</th>
+<th>Examples</th>
+<th>Terraform provider</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kubernetes resources</td>
+<td><code>Gateway</code>, <code>HTTPRoute</code>, Gateway-facing Service, TLS Secret, <code>GCPBackendPolicy</code>, <code>HealthCheckPolicy</code></td>
+<td>Kubernetes provider, often with <code>kubernetes_manifest</code></td>
+</tr>
+<tr>
+<td>Google Cloud resources</td>
+<td>Reserved internal IP, Cloud DNS record, firewall rules</td>
+<td>Google provider</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reserved-internal-ip">Reserved Internal IP<a class="headerlink" href="#reserved-internal-ip" title="Permanent link">&para;</a></h3>
+<p>Reserve the internal frontend IP first. This makes DNS cutover and rollback easier than relying on an ephemeral address.</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;google_compute_address&quot;</span><span class="w"> </span><span class="nv">&quot;internal_gateway&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="na">project</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">var.project</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="na">name</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="nv">var.gateway_address_name</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="na">address_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;INTERNAL&quot;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="na">purpose</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SHARED_LOADBALANCER_VIP&quot;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="na">region</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nv">var.region</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="na">subnetwork</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">var.subnetwork</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The Gateway references the address resource name through <code>NamedAddress</code>. DNS uses the literal IP address from <code>google_compute_address.internal_gateway.address</code>.</p>
+<h3 id="tls-secret">TLS Secret<a class="headerlink" href="#tls-secret" title="Permanent link">&para;</a></h3>
+<p>If the existing Ingress used a Kubernetes TLS Secret, the Gateway can reference the same Secret. Keeping the old Secret name is fine, even if it contains the word <code>ingress</code>, unless you have a separate reason to rename or rotate it.</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;kubernetes_secret_v1&quot;</span><span class="w"> </span><span class="nv">&quot;gateway_tls&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nb">metadata</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="na">name</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">var.tls_secret_name</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="na">namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.namespace</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nb">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="s2">&quot;tls.crt&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.certificate</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="s2">&quot;tls.key&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.private_key</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kubernetes.io/tls&quot;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="gateway">Gateway<a class="headerlink" href="#gateway" title="Permanent link">&para;</a></h3>
+<p>The Gateway defines the internal load balancer frontend, listener, TLS termination, and route attachment rules.</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;kubernetes_manifest&quot;</span><span class="w"> </span><span class="nv">&quot;gateway&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nb">manifest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="na">apiVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;gateway.networking.k8s.io/v1&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="na">kind</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Gateway&quot;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="nb">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="na">name</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">var.gateway_name</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">      </span><span class="na">namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.namespace</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="nb">spec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">      </span><span class="na">gatewayClassName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;gke-l7-rilb&quot;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">      </span><span class="na">addresses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">          </span><span class="na">type</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;NamedAddress&quot;</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">          </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">google_compute_address.internal_gateway.name</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">      </span><span class="na">listeners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">          </span><span class="na">name</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https&quot;</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">          </span><span class="na">protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HTTPS&quot;</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">          </span><span class="na">port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">443</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">          </span><span class="nb">allowedRoutes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">            </span><span class="nb">namespaces</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">              </span><span class="na">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Same&quot;</span>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">          </span><span class="p">}</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">          </span><span class="nb">tls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">            </span><span class="na">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Terminate&quot;</span>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="w">            </span><span class="na">certificateRefs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="w">              </span><span class="p">{</span>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="w">                </span><span class="na">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="w">                </span><span class="na">kind</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Secret&quot;</span>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="w">                </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">var.tls_secret_name</span>
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="w">              </span><span class="p">}</span>
+</span><span id="__span-9-41"><a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="w">            </span><span class="p">]</span>
+</span><span id="__span-9-42"><a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="w">          </span><span class="p">}</span>
+</span><span id="__span-9-43"><a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-9-44"><a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-9-45"><a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-46"><a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-9-47"><a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>For an application-specific Gateway, <code>allowedRoutes.namespaces.from = "Same"</code> is usually enough because the Gateway and route live with the application. Use cross-namespace attachment only when you are intentionally designing a shared Gateway model.</p>
+<p>One important GKE caveat: do not point the Gateway at a Service that is still referenced by an Ingress during the parallel validation period. Use a dedicated Gateway-facing Service that selects the same Pods, then retire the old Ingress path after cutover.</p>
+<h3 id="application-specific-or-shared-gateway">Application-Specific Or Shared Gateway<a class="headerlink" href="#application-specific-or-shared-gateway" title="Permanent link">&para;</a></h3>
+<p>There are two common migration shapes:</p>
+<table>
+<thead>
+<tr>
+<th>Design</th>
+<th>What it means</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application-specific Gateway</td>
+<td>Each application gets its own Gateway, frontend IP, listener, certificate reference, route, and Gateway-facing Service</td>
+<td>Best for the first migration because it preserves the old per-application operating model</td>
+</tr>
+<tr>
+<td>Shared Gateway</td>
+<td>Multiple applications attach routes to one Gateway and usually share a frontend IP and listener model</td>
+<td>Useful later, but it changes DNS ownership, certificate ownership, route boundaries, and failure domains</td>
+</tr>
+</tbody>
+</table>
+<p>For a low-risk migration, start with an application-specific Gateway. Shared Gateway consolidation is a separate architecture decision, especially if the old internal Ingresses used catch-all hostnames on separate IPs. Several catch-all routes attached to one shared Gateway will overlap unless you introduce explicit hostnames or non-overlapping path prefixes.</p>
+<p>If a route attaches from the same namespace as the Gateway, <code>allowedRoutes.namespaces.from = "Same"</code> is usually enough. Cross-namespace route attachment requires the Gateway listener to allow it, and in some designs it also requires explicit cross-namespace reference handling.</p>
+<h3 id="httproute">HTTPRoute<a class="headerlink" href="#httproute" title="Permanent link">&para;</a></h3>
+<p>The HTTPRoute carries the routing rules that previously lived inside the Ingress.</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;kubernetes_manifest&quot;</span><span class="w"> </span><span class="nv">&quot;http_route&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nb">manifest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="na">apiVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;gateway.networking.k8s.io/v1&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="na">kind</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HTTPRoute&quot;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nb">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="na">name</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">var.http_route_name</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">      </span><span class="na">namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.namespace</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nb">spec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">      </span><span class="na">parentRefs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">          </span><span class="na">name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">var.gateway_name</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">          </span><span class="na">namespace</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">var.namespace</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">          </span><span class="na">sectionName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https&quot;</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">      </span><span class="na">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">          </span><span class="na">matches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">              </span><span class="nb">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">                </span><span class="na">type</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;PathPrefix&quot;</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">                </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/internal-api&quot;</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">              </span><span class="p">}</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">          </span><span class="p">]</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">          </span><span class="na">backendRefs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">              </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.gateway_service_name</span>
+</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">              </span><span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.service_port</span>
+</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="w">          </span><span class="p">]</span>
+</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">      </span><span class="p">]</span>
+</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This example omits <code>hostnames</code> because the source Ingress had no host field and therefore accepted any hostname that reached the load balancer. If your current Ingress uses explicit hosts, add the same hostnames to the route.</p>
+<p>The path translation is worth reviewing carefully. An Ingress path such as <code>/internal-api/*</code> normally becomes:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">path</span><span class="p">:</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PathPrefix</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/internal-api</span>
+</span></code></pre></div>
+<p>Do not copy the trailing wildcard blindly into the HTTPRoute.</p>
+<h3 id="gateway-facing-service">Gateway-Facing Service<a class="headerlink" href="#gateway-facing-service" title="Permanent link">&para;</a></h3>
+<p>GKE Gateway routes to Pod endpoints through standalone Network Endpoint Groups. The safest migration pattern is to create a dedicated Service for the Gateway path while the old Ingress remains live. That Service can keep the same port and selector as the original Service, but it has its own name and lifecycle.</p>
+<p>Avoid hand-managing the <code>cloud.google.com/neg</code> annotation on a Service that is part of Gateway reconciliation unless you have verified that the exact pattern is supported for your GKE version. Let the Gateway controller own the NEG behavior it needs.</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;kubernetes_service_v1&quot;</span><span class="w"> </span><span class="nv">&quot;gateway_application&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nb">metadata</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="na">name</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">var.gateway_service_name</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="na">namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.namespace</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="nb">spec</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="nb">port</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">      </span><span class="na">port</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">var.service_port</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">      </span><span class="na">target_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.target_port</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="na">selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.selector</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>If the original Service is no longer referenced by Ingress at the time of migration, you can reuse it deliberately. During a staged migration, though, a separate Gateway-facing Service keeps controller ownership clean and rollback simpler.</p>
+<hr />
+<h2 id="backend-policy-migration">Backend Policy Migration<a class="headerlink" href="#backend-policy-migration" title="Permanent link">&para;</a></h2>
+<p>Older GKE Ingress deployments often rely on <code>BackendConfig</code> through Service annotations. Gateway API does not use that old Service-to-BackendConfig path. Migrate only the settings that the application actually depends on, and attach the new policies to the Gateway-facing Service.</p>
+<p>Common mappings are:</p>
+<table>
+<thead>
+<tr>
+<th>Existing behavior</th>
+<th>Gateway-style replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backend timeout</td>
+<td><code>GCPBackendPolicy</code></td>
+</tr>
+<tr>
+<td>Custom health check</td>
+<td><code>HealthCheckPolicy</code></td>
+</tr>
+<tr>
+<td>Cloud Armor policy</td>
+<td>Gateway-compatible backend policy configuration</td>
+</tr>
+<tr>
+<td>IAP</td>
+<td>Gateway-compatible backend policy configuration where supported</td>
+</tr>
+<tr>
+<td>No custom <code>BackendConfig</code></td>
+<td>No policy required by default</td>
+</tr>
+</tbody>
+</table>
+<p>For example, a previous <code>BackendConfig</code> timeout can become a <code>GCPBackendPolicy</code> targeting the Gateway-facing Service:</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;kubernetes_manifest&quot;</span><span class="w"> </span><span class="nv">&quot;backend_policy&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nb">manifest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="na">apiVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;networking.gke.io/v1&quot;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="na">kind</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;GCPBackendPolicy&quot;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nb">metadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="na">name</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;${var.gateway_service_name}-policy&quot;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="na">namespace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.namespace</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="nb">spec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">      </span><span class="nb">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">        </span><span class="na">timeoutSec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.timeout_seconds</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">      </span><span class="nb">targetRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">        </span><span class="na">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">        </span><span class="na">kind</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Service&quot;</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">        </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">var.gateway_service_name</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>GCPBackendPolicy</code> and <code>HealthCheckPolicy</code> resources must live in the same namespace as the Service they target, and each policy targets a single backend resource. A Service can have only one attached <code>GCPBackendPolicy</code>, so combine timeout, session affinity, logging, Cloud Armor, and similar backend settings into one policy when needed.</p>
+<p>After the behavior is represented by Gateway-compatible policies, remove the old <code>cloud.google.com/backend-config</code> annotation from Services that no longer need the Ingress path. Leaving stale annotations around makes future debugging harder.</p>
+<hr />
+<h2 id="what-usually-breaks">What Usually Breaks<a class="headerlink" href="#what-usually-breaks" title="Permanent link">&para;</a></h2>
+<p>Most Gateway migrations fail in small, predictable places rather than in the main Gateway manifest.</p>
+<p>Watch for:</p>
+<ul>
+<li>a Gateway route targeting the same Service that an Ingress still references</li>
+<li>a stale <code>cloud.google.com/backend-config</code> annotation that no longer matches the policy model</li>
+<li>a proxy-only subnet still using <code>INTERNAL_HTTPS_LOAD_BALANCER</code></li>
+<li>a <code>NamedAddress</code> value set to the literal IP address instead of the reserved address resource name</li>
+<li>an HTTPRoute with <code>hostnames</code> that does not match the hostname used in validation</li>
+<li>a copied Ingress wildcard path such as <code>/internal-api/*</code> instead of <code>PathPrefix</code> <code>/internal-api</code></li>
+<li>a default health check path that does not return success for the application</li>
+<li>a DNS TTL that is too high for a comfortable cutover window</li>
+</ul>
+<hr />
+<h2 id="dns-cutover">DNS Cutover<a class="headerlink" href="#dns-cutover" title="Permanent link">&para;</a></h2>
+<p>The DNS change is the real production cutover. The Gateway usually receives a different frontend IP from the old Ingress, so validate the new IP before moving the application hostname.</p>
+<p><img src="/images/blog/gke-gateway-dns-cutover.png" alt="DNS cutover flow from old internal Ingress IP to new GKE Gateway IP with validation and rollback" /></p>
+<p>Before cutover:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>internal-api.example.internal -&gt; old Ingress frontend IP
+</span></code></pre></div>
+<p>During validation, both load balancers can exist:</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Frontend IP</th>
+<th>Production DNS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Existing Ingress</td>
+<td>Existing internal IP</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>New Gateway</td>
+<td>New reserved internal IP</td>
+<td>Not active yet</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>curl --resolve</code> so the request uses the real hostname while connecting to the new Gateway IP:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>curl<span class="w"> </span>-k<span class="w"> </span>--resolve<span class="w"> </span>internal-api.example.internal:443:&lt;GATEWAY_IP&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span>https://internal-api.example.internal/internal-api/
+</span></code></pre></div>
+<p>That validates:</p>
+<ul>
+<li>connectivity to the Gateway frontend IP</li>
+<li>TLS termination</li>
+<li>hostname matching, if the route uses <code>hostnames</code></li>
+<li>HTTPRoute path matching</li>
+<li>Service resolution</li>
+<li>backend reachability</li>
+</ul>
+<p>An application-level response such as <code>401 Unauthorized</code> can still be a successful infrastructure test because it proves the request reached the application.</p>
+<p>A temporary validation DNS record can also be useful:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>gateway-test.example.internal -&gt; new Gateway frontend IP
+</span></code></pre></div>
+<p>Use this only when the route and certificate also accept the temporary hostname. If the <code>HTTPRoute</code> only matches the production hostname, <code>curl --resolve</code> is usually the cleaner validation method because it keeps the hostname unchanged while directing traffic to the new IP.</p>
+<p>When validation succeeds, update the DNS A record:</p>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;google_dns_record_set&quot;</span><span class="w"> </span><span class="nv">&quot;application&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="na">project</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">var.project</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="na">managed_zone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.dns_zone_name</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="na">name</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="nv">var.hostname</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="na">type</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;A&quot;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">  </span><span class="na">ttl</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="nv">var.dns_ttl</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">  </span><span class="na">rrdatas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="nv">google_compute_address.internal_gateway.address</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>If the current TTL is high, reduce it before the planned cutover and wait for the old TTL to expire. After the migration is stable, increase it again if that matches your DNS standards.</p>
+<p>After the DNS change, verify resolution from a client that uses the relevant private zone:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>dig<span class="w"> </span>&lt;HOSTNAME&gt;
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>nslookup<span class="w"> </span>&lt;HOSTNAME&gt;
+</span></code></pre></div>
+<p>The answer should return the Gateway frontend IP.</p>
+<hr />
+<h2 id="validation-checklist">Validation Checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
+<p>Validate the migration at several layers.</p>
+<h3 id="terraform">Terraform<a class="headerlink" href="#terraform" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>terraform<span class="w"> </span>fmt<span class="w"> </span>-recursive
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>terraform<span class="w"> </span>validate
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>terraform<span class="w"> </span>plan
+</span></code></pre></div>
+<p>Review the plan for unintended replacement or deletion, especially around DNS records, reserved addresses, proxy-only subnets, Services, Secrets, and old Ingress resources.</p>
+<h3 id="gateway-and-route">Gateway And Route<a class="headerlink" href="#gateway-and-route" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>gateway<span class="w"> </span>-A
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>httproute<span class="w"> </span>-A
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>gateway<span class="w"> </span>&lt;GATEWAY_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>httproute<span class="w"> </span>&lt;HTTP_ROUTE_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;
+</span></code></pre></div>
+<p>Look for healthy status conditions such as <code>Accepted=True</code>, <code>Programmed=True</code>, and <code>ResolvedRefs=True</code>, depending on the resource and controller output.</p>
+<p>If <code>ResolvedRefs=False</code>, inspect the Service name, port, namespace, Gateway reference, listener section name, and TLS Secret references before looking deeper into the load balancer.</p>
+<p>You can also confirm the assigned address:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>gateway<span class="w"> </span>&lt;GATEWAY_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.status.addresses[0].value}&#39;</span>
+</span></code></pre></div>
+<h3 id="service-and-endpoints">Service And Endpoints<a class="headerlink" href="#service-and-endpoints" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>service<span class="w"> </span>&lt;GATEWAY_SERVICE_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>endpointslice<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span>-l<span class="w"> </span>kubernetes.io/service-name<span class="o">=</span>&lt;GATEWAY_SERVICE_NAME&gt;
+</span></code></pre></div>
+<p>Confirm that the Gateway-facing Service selector matches the Pods, healthy endpoints exist, the Service port matches the route backend port, and the Pods listen on the expected target port.</p>
+<h3 id="policies">Policies<a class="headerlink" href="#policies" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>gcpbackendpolicy<span class="w"> </span>&lt;POLICY_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>healthcheckpolicy<span class="w"> </span>&lt;POLICY_NAME&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;NAMESPACE&gt;
+</span></code></pre></div>
+<p>Confirm that each policy targets the intended Service and is accepted by the controller.</p>
+<h3 id="traffic">Traffic<a class="headerlink" href="#traffic" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>curl<span class="w"> </span>-k<span class="w"> </span>--resolve<span class="w"> </span>&lt;HOSTNAME&gt;:443:&lt;GATEWAY_IP&gt;<span class="w"> </span>https://&lt;HOSTNAME&gt;/&lt;PATH&gt;
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>curl<span class="w"> </span>-k<span class="w"> </span>https://&lt;HOSTNAME&gt;/&lt;PATH&gt;
+</span></code></pre></div>
+<p>Where possible, test normal requests, authenticated requests, long-running requests, upload or download paths, and application-specific API routes.</p>
+<hr />
+<h2 id="rollback-and-cleanup">Rollback And Cleanup<a class="headerlink" href="#rollback-and-cleanup" title="Permanent link">&para;</a></h2>
+<p>Plan rollback before DNS changes.</p>
+<p>If problems appear after cutover:</p>
+<ol>
+<li>Move the DNS A record back to the old Ingress IP.</li>
+<li>Confirm DNS resolution from a client that uses the relevant private zone.</li>
+<li>Validate traffic through the old Ingress.</li>
+<li>Inspect the Gateway, route, Service, endpoints, and policies before retrying.</li>
+</ol>
+<p>Do not delete the old Ingress immediately after DNS moves. Keep it until application traffic is healthy, logs are clean, and the team is comfortable with the new path. If the old Ingress and new Gateway exist at the same time, keep their Services separate even when those Services select the same Pods.</p>
+<p>After the Gateway is stable, cleanup may include:</p>
+<ul>
+<li>old Ingress resources</li>
+<li>replaced <code>BackendConfig</code> resources</li>
+<li>stale <code>cloud.google.com/backend-config</code> Service annotations</li>
+<li>obsolete <code>FrontendConfig</code> resources</li>
+<li>the old Ingress-facing Service, if it was kept only for rollback</li>
+<li>old static addresses that are no longer required</li>
+<li>temporary validation DNS records</li>
+<li>retired Terraform modules for the old Ingress path</li>
+</ul>
+<p>Run a final Terraform plan before cleanup and confirm that only intended legacy resources are being removed.</p>
+<hr />
+<h2 id="lessons-learned">Lessons Learned<a class="headerlink" href="#lessons-learned" title="Permanent link">&para;</a></h2>
+<p>The biggest migration lesson is that a Gateway migration is mostly an operational change, not a YAML translation exercise.</p>
+<p>The details that matter most are:</p>
+<ul>
+<li>preserve behavior before redesigning architecture</li>
+<li>use <code>gke-l7-rilb</code> for internal GKE L7 load balancing</li>
+<li>ensure the proxy-only subnet uses <code>REGIONAL_MANAGED_PROXY</code></li>
+<li>use <code>NamedAddress</code> with the reserved address resource name</li>
+<li>point DNS at the actual reserved IP address</li>
+<li>convert wildcard Ingress paths intentionally</li>
+<li>use a dedicated Gateway-facing Service while Ingress and Gateway run in parallel</li>
+<li>migrate only backend policies that are truly required</li>
+<li>retain the old Ingress until rollback is no longer needed</li>
+</ul>
+<p>Gateway API gives you a cleaner long-term model, but the first migration should be intentionally modest. Once the application-specific Gateway is running reliably, you can evaluate shared Gateways, central listener ownership, route delegation, and other platform improvements as separate architecture decisions.</p>
+<p>The same discipline applies beyond GKE as well. AWS, Azure, RKE2, and vanilla Kubernetes environments differ in implementation details, but the durable pattern is the same: separate frontend infrastructure, routing, and backend policy, then migrate production traffic with validation and rollback built in.</p>
+<hr />
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://cloud.google.com/kubernetes-engine/docs/concepts/gateway-api">GKE Gateway API overview</a></li>
+<li><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/deploying-gateways">Deploy Gateways on GKE</a></li>
+<li><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/gatewayclass-capabilities">GKE GatewayClass capabilities</a></li>
+<li><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/configure-gateway-resources">Configure Gateway resources using Policies</a></li>
+<li><a href="https://cloud.google.com/kubernetes-engine/docs/how-to/secure-gateway">Secure a Gateway</a></li>
+<li><a href="https://cloud.google.com/load-balancing/docs/proxy-only-subnets">Google Cloud proxy-only subnets</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Muhammad Ahmad. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/muhammad-ahmad-b6a04736/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.github.com/ahmadfsbd" target="_blank" rel="noopener" title="www.github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/ehm_ud" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@ehm_ud" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.top", "navigation.tracking", "navigation.tabs.sticky", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
