@@ -4,7 +4,13 @@ Technical notes, tutorials, and implementation write-ups from platform,
 cloud, Kubernetes, Linux, and automation work.
 
 <div class="portfolio-card-grid portfolio-card-grid--blog">
-  <a class="portfolio-card portfolio-card--accent" href="gcp-audit-logs/">
+  <a class="portfolio-card portfolio-card--accent" href="gke-gateway-migration/">
+    <span class="portfolio-card__eyebrow">Kubernetes / GKE / Networking</span>
+    <strong>Migrating GKE Internal Ingress to Gateway API</strong>
+    <span>A practical migration pattern for moving private GKE services from Ingress to Gateway API with Terraform and DNS cutover.</span>
+  </a>
+
+  <a class="portfolio-card" href="gcp-audit-logs/">
     <span class="portfolio-card__eyebrow">GCP / Security / Logging</span>
     <strong>Audit-Based Alerting for Sensitive Cloud Storage Buckets</strong>
     <span>A low-noise Google Cloud pattern for detecting suspicious reads and deletes against sensitive TRE buckets.</span>
