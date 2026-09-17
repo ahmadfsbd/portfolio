@@ -1,13 +1,13 @@
 # From Code to Cloud: Engineering Tomorrow's Infrastructure { .home-page-title }
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="images/profile.jpg"
+  <img src="/portfolio/images/profile.jpg"
        alt="Muhammad Ahmad - Cloud Architect & DevOps Visionary"
        width="200"
        style="border-radius: 50%; border: 4px solid var(--custom-accent); box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-bottom: 1rem;" />
   
   <div style="margin: 1rem 0;">
-    <img src="images/mainlogo.png" alt="Technology Stack" height="50" style="opacity: 0.9;" />
+    <img src="/portfolio/images/mainlogo.png" alt="Technology Stack" height="50" style="opacity: 0.9;" />
   </div>
 </div>
 
@@ -121,27 +121,27 @@
     </div>
 
     <div class="skills-orbit-track skills-orbit-track--outer">
-      <span class="skills-orbit-item" style="--angle: 0deg;"><span><img src="/images/logos/openstack.svg" alt="OpenStack" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 60deg;"><span><img src="/images/logos/googlecloud.svg" alt="Google Cloud" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 120deg;"><span><img src="/images/logos/aws.svg" alt="AWS" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 180deg;"><span><img src="/images/logos/redhat.svg" alt="Red Hat" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 240deg;"><span><img src="/images/logos/ubuntu.svg" alt="Ubuntu" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 300deg;"><span><img src="/images/logos/lxd.svg" alt="LXD" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 0deg;"><span><img src="/portfolio/images/logos/openstack.svg" alt="OpenStack" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 60deg;"><span><img src="/portfolio/images/logos/googlecloud.svg" alt="Google Cloud" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 120deg;"><span><img src="/portfolio/images/logos/aws.svg" alt="AWS" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 180deg;"><span><img src="/portfolio/images/logos/redhat.svg" alt="Red Hat" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 240deg;"><span><img src="/portfolio/images/logos/ubuntu.svg" alt="Ubuntu" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 300deg;"><span><img src="/portfolio/images/logos/lxd.svg" alt="LXD" /></span></span>
     </div>
 
     <div class="skills-orbit-track skills-orbit-track--middle">
-      <span class="skills-orbit-item" style="--angle: 30deg;"><span><img src="/images/logos/kubernetes.svg" alt="Kubernetes" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 102deg;"><span><img src="/images/logos/openshift.svg" alt="Red Hat OpenShift" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 174deg;"><span><img src="/images/logos/rancher.svg" alt="Rancher" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 246deg;"><span><img src="/images/logos/docker.svg" alt="Docker" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 318deg;"><span><img src="/images/logos/helm.svg" alt="Helm" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 30deg;"><span><img src="/portfolio/images/logos/kubernetes.svg" alt="Kubernetes" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 102deg;"><span><img src="/portfolio/images/logos/openshift.svg" alt="Red Hat OpenShift" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 174deg;"><span><img src="/portfolio/images/logos/rancher.svg" alt="Rancher" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 246deg;"><span><img src="/portfolio/images/logos/docker.svg" alt="Docker" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 318deg;"><span><img src="/portfolio/images/logos/helm.svg" alt="Helm" /></span></span>
     </div>
 
     <div class="skills-orbit-track skills-orbit-track--inner">
-      <span class="skills-orbit-item" style="--angle: 45deg;"><span><img src="/images/logos/terraform.svg" alt="Terraform" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 135deg;"><span><img src="/images/logos/ansible.svg" alt="Ansible" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 225deg;"><span><img src="/images/logos/juju.svg" alt="Juju" /></span></span>
-      <span class="skills-orbit-item" style="--angle: 315deg;"><span><img src="/images/logos/maas.svg" alt="MAAS" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 45deg;"><span><img src="/portfolio/images/logos/terraform.svg" alt="Terraform" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 135deg;"><span><img src="/portfolio/images/logos/ansible.svg" alt="Ansible" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 225deg;"><span><img src="/portfolio/images/logos/juju.svg" alt="Juju" /></span></span>
+      <span class="skills-orbit-item" style="--angle: 315deg;"><span><img src="/portfolio/images/logos/maas.svg" alt="MAAS" /></span></span>
     </div>
 
     <div class="skills-orbit-pulse skills-orbit-pulse--one"></div>
@@ -210,19 +210,19 @@
 ## Career Snapshot
 
 <div class="home-career-grid">
-  <a class="home-career-card" href="/career/wsi/">
+  <a class="home-career-card" href="/portfolio/career/wsi/">
     <span>2024 - Present</span>
     <strong>Wellcome Sanger Institute</strong>
     <p>Cloud security, Trusted Research Environments, Kubernetes on OpenStack, GCP services, and research platform operations.</p>
   </a>
 
-  <a class="home-career-card" href="/career/canonical/">
+  <a class="home-career-card" href="/portfolio/career/canonical/">
     <span>2022 - 2024</span>
     <strong>Canonical</strong>
     <p>Customer-facing telco cloud delivery across EMEA using open infrastructure, automation, observability, and secure deployment patterns.</p>
   </a>
 
-  <a class="home-career-card" href="/career/xflow/">
+  <a class="home-career-card" href="/portfolio/career/xflow/">
     <span>2018 - 2022</span>
     <strong>xFlow Research</strong>
     <p>OpenStack, OpenShift, NFV, edge cloud, Dell EMC-aligned automation, and technical team leadership.</p>
@@ -258,19 +258,19 @@
   </div>
 
   <div class="home-cta-actions">
-    <a href="/career/">
+    <a href="/portfolio/career/">
       <strong>Experience</strong>
       <span>Role scope and delivery history</span>
     </a>
-    <a href="/certifications/">
+    <a href="/portfolio/certifications/">
       <strong>Credentials</strong>
       <span>Certifications and applied technical validation</span>
     </a>
-    <a href="/blog/">
+    <a href="/portfolio/blog/">
       <strong>Writing</strong>
       <span>Technical notes and implementation guides</span>
     </a>
-    <a href="/contact/">
+    <a href="/portfolio/contact/">
       <strong>Contact</strong>
       <span>Start a professional conversation</span>
     </a>

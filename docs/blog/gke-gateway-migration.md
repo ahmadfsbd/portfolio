@@ -12,7 +12,7 @@ tags:
 
 # Migrating GKE Internal Ingress to Gateway API
 
-<img src="/images/blog/gke-gateway-migration-title.png" alt="GKE internal Ingress migration to Gateway API with Terraform" />
+<img src="/portfolio/images/blog/gke-gateway-migration-title.png" alt="GKE internal Ingress migration to Gateway API with Terraform" />
 
 ---
 
@@ -30,7 +30,7 @@ That separation is the real reason to migrate. Google recommends Gateway API for
 
 This article follows a conservative migration pattern for private services that already use internal GKE Ingress. The goal is not to redesign the platform during cutover. The goal is to preserve behavior first, prove the new path, and then decide whether shared Gateways or other improvements are worth doing later.
 
-<img src="/images/blog/gke-gateway-architecture.png" alt="Architecture comparison between GKE Ingress and Gateway API" />
+<img src="/portfolio/images/blog/gke-gateway-architecture.png" alt="Architecture comparison between GKE Ingress and Gateway API" />
 
 ---
 
@@ -235,7 +235,7 @@ Adding an HTTP listener does not automatically create an HTTP-to-HTTPS redirect.
 
 The replacement is a small set of resources rather than a single Ingress object.
 
-<img src="/images/blog/gke-gateway-route.png" alt="Route translation from GKE internal Ingress to Gateway API and HTTPRoute" />
+<img src="/portfolio/images/blog/gke-gateway-route.png" alt="Route translation from GKE internal Ingress to Gateway API and HTTPRoute" />
 
 The diagram shows a hostname-specific route because many production migrations eventually add explicit hostnames. If the source Ingress had no `host` field, omit `hostnames` in the first Gateway API version unless you intentionally want to narrow the accepted hostnames during the migration.
 
@@ -511,7 +511,7 @@ Watch for:
 
 The DNS change is the real production cutover. The Gateway usually receives a different frontend IP from the old Ingress, so validate the new IP before moving the application hostname.
 
-<img src="/images/blog/gke-gateway-dns-cutover.png" alt="DNS cutover flow from old internal Ingress IP to new GKE Gateway IP with validation and rollback" />
+<img src="/portfolio/images/blog/gke-gateway-dns-cutover.png" alt="DNS cutover flow from old internal Ingress IP to new GKE Gateway IP with validation and rollback" />
 
 Before cutover:
 

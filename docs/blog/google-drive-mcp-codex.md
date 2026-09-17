@@ -1,6 +1,6 @@
 # Setting Up Google Drive MCP for Codex on Linux
 
-<img src="/images/blog/google-drive-mcp-codex.svg" alt="Codex connected to Google Drive through MCP" height="40" />
+<img src="/portfolio/images/blog/google-drive-mcp-codex.svg" alt="Codex connected to Google Drive through MCP" height="40" />
 
 ---
 
@@ -21,7 +21,7 @@ This post walks through the setup, the failures, and the working architecture.
 
 ## What MCP Does
 
-<img src="/images/blog/mcp-server-flow.svg" alt="MCP server translating Codex requests into Google Drive API calls" />
+<img src="/portfolio/images/blog/mcp-server-flow.svg" alt="MCP server translating Codex requests into Google Drive API calls" />
 
 An MCP server is an adapter between an AI tool and an external system.
 
@@ -37,7 +37,7 @@ That standard interface is the useful part. Codex does not need custom Google Dr
 
 The working setup uses a local MCP server:
 
-<img src="/images/blog/gdrive-mcp-architecture.svg" alt="Codex CLI using a local Google Drive MCP server to call the Google Drive API" />
+<img src="/portfolio/images/blog/gdrive-mcp-architecture.svg" alt="Codex CLI using a local Google Drive MCP server to call the Google Drive API" />
 
 Codex does not talk to Google Drive directly. It starts a local MCP server process, and that server uses Google OAuth credentials to call the Drive API.
 
@@ -93,7 +93,7 @@ https://www.googleapis.com/auth/drive.readonly
 5. Choose **Desktop app**.
 6. Download the OAuth JSON file.
 
-<img src="/images/blog/google-drive-oauth-client.png" alt="Google Cloud Console OAuth client creation for a Desktop app" />
+<img src="/portfolio/images/blog/google-drive-oauth-client.png" alt="Google Cloud Console OAuth client creation for a Desktop app" />
 
 ---
 
@@ -256,7 +256,7 @@ Inside Codex:
 
 The `gdrive` server should appear with search/read capabilities.
 
-<img src="/images/blog/google-drive-mcp-verify.png" alt="Codex MCP status showing the Google Drive MCP server" />
+<img src="/portfolio/images/blog/google-drive-mcp-verify.png" alt="Codex MCP status showing the Google Drive MCP server" />
 
 Test with:
 
@@ -264,7 +264,7 @@ Test with:
 search my Google Drive for resume
 ```
 
-<img src="/images/blog/google-drive-mcp-search.png" alt="Codex searching Google Drive through the local MCP server" />
+<img src="/portfolio/images/blog/google-drive-mcp-search.png" alt="Codex searching Google Drive through the local MCP server" />
 
 ---
 

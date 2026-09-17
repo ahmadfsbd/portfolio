@@ -32,8 +32,8 @@
 
   <div class="recognition-grid">
     <article class="recognition-card recognition-card--wide">
-      <a class="recognition-card__media" href="/images/certs/openinfra.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/openinfra.webp" alt="OpenInfra Summit Europe 2025 attendance proof" loading="eager" decoding="sync" />
+      <a class="recognition-card__media" href="/portfolio/images/certs/openinfra.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/openinfra.webp" alt="OpenInfra Summit Europe 2025 attendance proof" loading="eager" decoding="sync" />
       </a>
       <div class="recognition-card__body">
         <p class="credential-card__issuer">OpenInfra Summit Europe 2025</p>
@@ -50,8 +50,8 @@
     </article>
 
     <article class="recognition-card">
-      <a class="recognition-card__media" href="/images/certs/epoxy.png" target="_blank" rel="noopener">
-        <img src="/images/certs/epoxy.png" alt="OpenStack Epoxy contributor badge" loading="eager" decoding="sync" />
+      <a class="recognition-card__media" href="/portfolio/images/certs/epoxy.png" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/epoxy.png" alt="OpenStack Epoxy contributor badge" loading="eager" decoding="sync" />
       </a>
       <div class="recognition-card__body">
         <p class="credential-card__issuer">OpenInfra Foundation</p>
@@ -88,8 +88,8 @@
 <section class="evidence-section" aria-label="Public features and teaching">
   <div class="story-grid">
     <article class="story-card">
-      <a class="story-card__image" href="/images/certs/nocsdegree.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/nocsdegree.webp" alt="No CS Degree feature screenshot" loading="eager" decoding="sync" />
+      <a class="story-card__image" href="/portfolio/images/certs/nocsdegree.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/nocsdegree.webp" alt="No CS Degree feature screenshot" loading="eager" decoding="sync" />
       </a>
       <div class="story-card__body">
         <p class="credential-card__issuer">No CS Degree</p>
@@ -102,8 +102,8 @@
     </article>
 
     <article class="story-card story-card--portrait">
-      <a class="story-card__image" href="/images/certs/guestspeaker.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/guestspeaker.webp" alt="Guest speaker cloud computing certificate" loading="eager" decoding="sync" />
+      <a class="story-card__image" href="/portfolio/images/certs/guestspeaker.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/guestspeaker.webp" alt="Guest speaker cloud computing certificate" loading="eager" decoding="sync" />
       </a>
       <div class="story-card__body">
         <p class="credential-card__issuer">National University of Computer & Emerging Sciences</p>
@@ -123,16 +123,16 @@
   </div>
 
   <div class="mentor-strip">
-    <a href="/images/certs/top1.webp" target="_blank" rel="noopener">
-      <img src="/images/certs/top1.webp" alt="ADPList top mentor recognition number one" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/certs/top1.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/certs/top1.webp" alt="ADPList top mentor recognition number one" loading="eager" decoding="sync" />
       <span>Top Mentor #1</span>
     </a>
-    <a href="/images/certs/top2.webp" target="_blank" rel="noopener">
-      <img src="/images/certs/top2.webp" alt="ADPList top mentor recognition number two" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/certs/top2.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/certs/top2.webp" alt="ADPList top mentor recognition number two" loading="eager" decoding="sync" />
       <span>Top Mentor #2</span>
     </a>
-    <a href="/images/certs/top3.webp" target="_blank" rel="noopener">
-      <img src="/images/certs/top3.webp" alt="ADPList top mentor recognition number three" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/certs/top3.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/certs/top3.webp" alt="ADPList top mentor recognition number three" loading="eager" decoding="sync" />
       <span>Top Mentor #3</span>
     </a>
   </div>
@@ -152,8 +152,8 @@
   </div>
 
   <article class="credential-history recognition-history">
-    <a href="/images/certs/erasmus.jpg" target="_blank" rel="noopener">
-      <img src="/images/certs/erasmus.jpg" alt="ERASMUS Mundus scholarship certificate" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/certs/erasmus.jpg" target="_blank" rel="noopener">
+      <img src="/portfolio/images/certs/erasmus.jpg" alt="ERASMUS Mundus scholarship certificate" loading="eager" decoding="sync" />
     </a>
     <div>
       <p class="credential-card__issuer">ERASMUS Mundus Program</p>

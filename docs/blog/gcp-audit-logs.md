@@ -12,7 +12,7 @@ tags:
 
 # Building Audit-Based Alerting for Sensitive Cloud Storage Buckets
 
-<img src="/images/blog/gcp-audit-logs-banner.webp" alt="Cloud audit logging banner showing sensitive storage buckets, centralized log routing, and monitoring alerting" />
+<img src="/portfolio/images/blog/gcp-audit-logs-banner.webp" alt="Cloud audit logging banner showing sensitive storage buckets, centralized log routing, and monitoring alerting" />
 
 ---
 
@@ -64,7 +64,7 @@ The final design uses Cloud Audit Logs, Cloud Logging sinks, a central Cloud Log
 
 At a high level, each enabled source project keeps its normal local audit logs, but also routes a filtered copy of relevant Cloud Storage access events into a central Cloud Logging log bucket in the master project.
 
-<img src="/images/blog/gcp-audit-alerting-architecture.jpg" alt="Architecture diagram for sensitive Cloud Storage bucket audit alerting in Google Cloud" />
+<img src="/portfolio/images/blog/gcp-audit-alerting-architecture.jpg" alt="Architecture diagram for sensitive Cloud Storage bucket audit alerting in Google Cloud" />
 
 The flow is:
 
@@ -107,7 +107,7 @@ For reads, Cloud Storage Data Access audit logging needs `DATA_READ`. If delete 
 
 The important design choice is that the sink does not apply the outside-network check. It routes all successful reads and deletes for scoped sensitive buckets. The network condition is applied later by the metric and alert policy.
 
-<img src="/images/blog/gcp-audit-route-alert-mini.svg" alt="Mini diagram showing project sinks routing scoped successful access to a central log bucket before a metric applies the outside-network alert condition" />
+<img src="/portfolio/images/blog/gcp-audit-route-alert-mini.svg" alt="Mini diagram showing project sinks routing scoped successful access to a central log bucket before a metric applies the outside-network alert condition" />
 
 That gives two benefits:
 
@@ -151,7 +151,7 @@ Grouped by: source project, bucket, principal, caller IP, and method
 
 That grouping collects repeated events from the same actor and source into one incident, while still allowing distinct users or source IPs to open separate incidents.
 
-<img src="/images/blog/gcp-audit-alert-grouping-mini.svg" alt="Mini diagram showing Cloud Monitoring grouping repeated events with the same project, bucket, principal, caller IP, and method into one incident" />
+<img src="/portfolio/images/blog/gcp-audit-alert-grouping-mini.svg" alt="Mini diagram showing Cloud Monitoring grouping repeated events with the same project, bucket, principal, caller IP, and method into one incident" />
 
 ---
 

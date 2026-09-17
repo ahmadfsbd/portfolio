@@ -1,5 +1,5 @@
 <section class="photo-hero" aria-label="Photography portfolio introduction">
-  <img class="photo-hero__image" src="/images/photography/corvid-fence.webp" alt="Black and white corvid perched on a fence" loading="eager" decoding="sync" />
+  <img class="photo-hero__image" src="/portfolio/images/photography/corvid-fence.webp" alt="Black and white corvid perched on a fence" loading="eager" decoding="sync" />
   <div class="photo-hero__content">
     <p class="photo-kicker">Photography</p>
     <h1>Quiet fieldwork, patient frames.</h1>
@@ -27,8 +27,8 @@
 </section>
 
 <section class="photo-feature" id="wildlife">
-  <a class="photo-feature__image" href="/images/photography/robin-branch.webp" target="_blank" rel="noopener">
-    <img src="/images/photography/robin-branch.webp" alt="Robin perched on a branch against green woodland bokeh" loading="eager" decoding="sync" />
+  <a class="photo-feature__image" href="/portfolio/images/photography/robin-branch.webp" target="_blank" rel="noopener">
+    <img src="/portfolio/images/photography/robin-branch.webp" alt="Robin perched on a branch against green woodland bokeh" loading="eager" decoding="sync" />
   </a>
   <div class="photo-feature__copy">
     <p class="photo-kicker">Wildlife Study</p>
@@ -47,64 +47,64 @@
 
   <div class="photo-mosaic">
     <figure class="photo-card photo-card--wide">
-      <a href="/images/photography/pigeon-wing.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/pigeon-wing.webp" alt="Bird in flight with wings spread" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/pigeon-wing.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/pigeon-wing.webp" alt="Bird in flight with wings spread" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Motion</span><strong>Wing study</strong></figcaption>
     </figure>
 
     <figure class="photo-card photo-card--tall">
-      <a href="/images/photography/blue-tit.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/blue-tit.webp" alt="Blue tit perched on a branch" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/blue-tit.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/blue-tit.webp" alt="Blue tit perched on a branch" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Wildlife</span><strong>Blue tit</strong></figcaption>
     </figure>
 
     <figure class="photo-card">
-      <a href="/images/insta/warbler.webp" target="_blank" rel="noopener">
-        <img src="/images/insta/warbler.webp" alt="Willow warbler in Cambridge" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/insta/warbler.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/insta/warbler.webp" alt="Willow warbler in Cambridge" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Wildlife</span><strong>Willow warbler</strong></figcaption>
     </figure>
 
     <figure class="photo-card photo-card--wide">
-      <a href="/images/photography/gull-flight.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/gull-flight.webp" alt="Gull in flight against a pale sky" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/gull-flight.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/gull-flight.webp" alt="Gull in flight against a pale sky" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Flight</span><strong>Gull</strong></figcaption>
     </figure>
 
     <figure class="photo-card photo-card--tall">
-      <a href="/images/photography/magpie-lichen.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/magpie-lichen.webp" alt="Magpie in branches with yellow lichen" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/magpie-lichen.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/magpie-lichen.webp" alt="Magpie in branches with yellow lichen" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Texture</span><strong>Magpie and lichen</strong></figcaption>
     </figure>
 
     <figure class="photo-card">
-      <a href="/images/photography/reed-bunting.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/reed-bunting.webp" alt="Reed bunting perched among tall reeds" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/reed-bunting.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/reed-bunting.webp" alt="Reed bunting perched among tall reeds" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Habitat</span><strong>Reed bunting</strong></figcaption>
     </figure>
 
     <figure class="photo-card">
-      <a href="/images/insta/duck.webp" target="_blank" rel="noopener">
-        <img src="/images/insta/duck.webp" alt="Mallard duck in Cambridge" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/insta/duck.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/insta/duck.webp" alt="Mallard duck in Cambridge" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Local</span><strong>Mallard</strong></figcaption>
     </figure>
 
     <figure class="photo-card photo-card--wide">
-      <a href="/images/photography/goose-water.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/goose-water.webp" alt="Goose raising its wings on water" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/goose-water.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/goose-water.webp" alt="Goose raising its wings on water" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Waterfowl</span><strong>Goose</strong></figcaption>
     </figure>
 
     <figure class="photo-card">
-      <a href="/images/photography/squirrel-ground.webp" target="_blank" rel="noopener">
-        <img src="/images/photography/squirrel-ground.webp" alt="Squirrel eating on grass" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/photography/squirrel-ground.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/photography/squirrel-ground.webp" alt="Squirrel eating on grass" loading="eager" decoding="sync" />
       </a>
       <figcaption><span>Mammal</span><strong>Squirrel</strong></figcaption>
     </figure>
@@ -120,16 +120,16 @@
     </p>
   </div>
   <div class="photo-journal__grid">
-    <a href="/images/insta/vancouver.webp" target="_blank" rel="noopener">
-      <img src="/images/insta/vancouver.webp" alt="Downtown Vancouver skyline" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/insta/vancouver.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/insta/vancouver.webp" alt="Downtown Vancouver skyline" loading="eager" decoding="sync" />
       <span>Vancouver</span>
     </a>
-    <a href="/images/insta/marsden.webp" target="_blank" rel="noopener">
-      <img src="/images/insta/marsden.webp" alt="Marsden Moor landscape" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/insta/marsden.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/insta/marsden.webp" alt="Marsden Moor landscape" loading="eager" decoding="sync" />
       <span>Marsden Moor</span>
     </a>
-    <a href="/images/insta/moon.webp" target="_blank" rel="noopener">
-      <img src="/images/insta/moon.webp" alt="Half moon in the night sky" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/insta/moon.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/insta/moon.webp" alt="Half moon in the night sky" loading="eager" decoding="sync" />
       <span>Night sky</span>
     </a>
   </div>

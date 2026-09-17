@@ -35,8 +35,8 @@
 
   <div class="credential-grid">
     <article class="credential-card credential-card--featured">
-      <a class="credential-card__media" href="/images/certs/aws-saa-2026.png" target="_blank" rel="noopener">
-        <img src="/images/certs/aws-saa-2026.png" alt="AWS Certified Solutions Architect certificate" loading="eager" decoding="sync" />
+      <a class="credential-card__media" href="/portfolio/images/certs/aws-saa-2026.png" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/aws-saa-2026.png" alt="AWS Certified Solutions Architect certificate" loading="eager" decoding="sync" />
       </a>
       <div class="credential-card__body">
         <p class="credential-card__issuer">Amazon Web Services</p>
@@ -53,8 +53,8 @@
     </article>
 
     <article class="credential-card">
-      <a class="credential-card__media" href="/images/certs/k8s.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/k8s.webp" alt="Certified Kubernetes Administrator certificate" loading="eager" decoding="sync" />
+      <a class="credential-card__media" href="/portfolio/images/certs/k8s.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/k8s.webp" alt="Certified Kubernetes Administrator certificate" loading="eager" decoding="sync" />
       </a>
       <div class="credential-card__body">
         <p class="credential-card__issuer">Cloud Native Computing Foundation</p>
@@ -71,8 +71,8 @@
     </article>
 
     <article class="credential-card">
-      <a class="credential-card__media" href="/images/certs/openshift.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/openshift.webp" alt="Red Hat OpenShift administration certificate" loading="eager" decoding="sync" />
+      <a class="credential-card__media" href="/portfolio/images/certs/openshift.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/openshift.webp" alt="Red Hat OpenShift administration certificate" loading="eager" decoding="sync" />
       </a>
       <div class="credential-card__body">
         <p class="credential-card__issuer">Red Hat</p>
@@ -119,8 +119,8 @@
 
   <div class="credential-row">
     <article class="credential-mini">
-      <a href="/images/certs/psm.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/psm.webp" alt="Professional Scrum Master certificate" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/certs/psm.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/psm.webp" alt="Professional Scrum Master certificate" loading="eager" decoding="sync" />
       </a>
       <div>
         <p class="credential-card__issuer">Scrum.org</p>
@@ -130,8 +130,8 @@
     </article>
 
     <article class="credential-mini">
-      <a href="/images/certs/pspo.webp" target="_blank" rel="noopener">
-        <img src="/images/certs/pspo.webp" alt="Professional Scrum Product Owner certificate" loading="eager" decoding="sync" />
+      <a href="/portfolio/images/certs/pspo.webp" target="_blank" rel="noopener">
+        <img src="/portfolio/images/certs/pspo.webp" alt="Professional Scrum Product Owner certificate" loading="eager" decoding="sync" />
       </a>
       <div>
         <p class="credential-card__issuer">Scrum.org</p>
@@ -149,8 +149,8 @@
   </div>
 
   <article class="credential-history">
-    <a href="/images/certs/aws.webp" target="_blank" rel="noopener">
-      <img src="/images/certs/aws.webp" alt="Earlier AWS Solutions Architect certificate" loading="eager" decoding="sync" />
+    <a href="/portfolio/images/certs/aws.webp" target="_blank" rel="noopener">
+      <img src="/portfolio/images/certs/aws.webp" alt="Earlier AWS Solutions Architect certificate" loading="eager" decoding="sync" />
     </a>
     <div>
       <p class="credential-card__issuer">Amazon Web Services</p>

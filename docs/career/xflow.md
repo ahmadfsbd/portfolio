@@ -44,10 +44,10 @@ It wasn’t just a job; it was where I became a **problem-solver, mentor, and fu
 ---
 
 ### Receiving Appreciation and Promotion to Lead Role (2021)
-<img src="/images/career/xflowprom01.webp" alt="Lead Promotion" height="40" />
+<img src="/portfolio/images/career/xflowprom01.webp" alt="Lead Promotion" height="40" />
 
 ### Promoted to Senior Engineer Role (2020)
-<img src="/images/career/xflowprom02.webp" alt="Senior Promotion" height="40" />
+<img src="/portfolio/images/career/xflowprom02.webp" alt="Senior Promotion" height="40" />
 
 ### Birthday Celebrations at xFlow (2020)
-<img src="/images/career/bday.webp" alt="Birthday" height="40" />
+<img src="/portfolio/images/career/bday.webp" alt="Birthday" height="40" />

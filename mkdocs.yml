@@ -1,4 +1,5 @@
 site_name: "Muhammad Ahmad"
+site_url: "https://ahmadfsbd.github.io/portfolio/"
 
 theme:
   name: "material"
