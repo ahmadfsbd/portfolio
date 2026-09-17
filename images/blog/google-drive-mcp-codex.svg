@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Codex connected to Google Drive through MCP</title>
+  <desc id="desc">A Linux terminal connects through MCP nodes to a cloud storage service.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172026"/>
+      <stop offset="0.55" stop-color="#243238"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="0" fill="url(#bg)"/>
+  <path d="M0 510 C180 430 295 560 470 490 C675 410 780 345 1200 455 L1200 630 L0 630 Z" fill="#14b8a6" opacity="0.18"/>
+  <path d="M760 85 C865 38 1000 48 1085 132 C1168 214 1154 342 1056 405 C935 481 764 451 710 343 C660 244 664 128 760 85 Z" fill="#ffffff" opacity="0.09"/>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="130" width="475" height="310" rx="20" fill="#0b1220"/>
+    <rect x="110" y="130" width="475" height="54" rx="20" fill="#111827"/>
+    <circle cx="145" cy="157" r="8" fill="#ef4444"/>
+    <circle cx="171" cy="157" r="8" fill="#f59e0b"/>
+    <circle cx="197" cy="157" r="8" fill="#22c55e"/>
+    <rect x="145" y="220" width="305" height="18" rx="9" fill="#5eead4" opacity="0.9"/>
+    <rect x="145" y="260" width="360" height="14" rx="7" fill="#94a3b8" opacity="0.65"/>
+    <rect x="145" y="294" width="250" height="14" rx="7" fill="#94a3b8" opacity="0.5"/>
+    <rect x="145" y="342" width="160" height="18" rx="9" fill="#2dd4bf"/>
+    <rect x="320" y="342" width="90" height="18" rx="9" fill="#60a5fa"/>
+    <rect x="145" y="382" width="335" height="14" rx="7" fill="#94a3b8" opacity="0.55"/>
+  </g>
+
+  <g fill="none" stroke="#99f6e4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M595 285 H680"/>
+    <path d="M760 285 H845"/>
+    <path d="M712 245 L742 285 L712 325"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="720" cy="285" r="60" fill="url(#panel)"/>
+    <circle cx="720" cy="285" r="34" fill="#0f766e"/>
+    <circle cx="720" cy="285" r="11" fill="#ecfeff"/>
+    <circle cx="680" cy="250" r="15" fill="#67e8f9"/>
+    <circle cx="764" cy="250" r="15" fill="#93c5fd"/>
+    <circle cx="680" cy="320" r="15" fill="#5eead4"/>
+    <circle cx="764" cy="320" r="15" fill="#bfdbfe"/>
+    <path d="M695 263 L720 285 L745 263 M695 307 L720 285 L745 307" fill="none" stroke="#ecfeff" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M936 195 C1010 195 1070 255 1070 329 C1070 402 1010 462 936 462 H870 C807 462 756 411 756 348 C756 294 793 248 844 236 C864 211 897 195 936 195 Z" fill="url(#panel)"/>
+    <path d="M891 298 L843 382 H935 L983 298 Z" fill="#22c55e"/>
+    <path d="M891 298 H983 L936 214 H844 Z" fill="#facc15"/>
+    <path d="M843 382 L891 298 L844 214 L796 298 Z" fill="#38bdf8"/>
+    <path d="M936 214 L983 298 L1030 382 L984 382 Z" fill="#34d399"/>
+    <path d="M843 382 H1030 L983 298 H891 Z" fill="#60a5fa" opacity="0.95"/>
+  </g>
+
+  <g fill="#e2e8f0" opacity="0.9">
+    <circle cx="660" cy="115" r="4"/>
+    <circle cx="700" cy="95" r="3"/>
+    <circle cx="1045" cy="105" r="4"/>
+    <circle cx="985" cy="520" r="3"/>
+    <circle cx="235" cy="505" r="3"/>
+  </g>
+</svg>
