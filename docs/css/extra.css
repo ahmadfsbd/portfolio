@@ -410,6 +410,81 @@ a[style*="border: 2px solid var(--custom-accent)"]:hover {
   line-height: 1.45;
 }
 
+/* Animated impact stats band */
+.stat-band {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 2.25rem 0 2.5rem;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(0, 137, 123, 0.22);
+  box-shadow: 0 16px 40px rgba(33, 33, 33, 0.1);
+}
+
+.stat-tile {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.15rem;
+  background: linear-gradient(150deg, rgba(33, 33, 33, 0.98), rgba(0, 86, 78, 0.92));
+  text-align: left;
+}
+
+.stat-number {
+  color: var(--custom-accent-hover);
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 960px) {
+  .stat-band {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stat-band {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-tile {
+    padding: 1.25rem 1.1rem;
+  }
+}
+
+.career-photo {
+  max-width: 26rem;
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+.career-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 26px rgba(33, 33, 33, 0.14);
+}
+
+.career-photo figcaption {
+  margin-top: 0.5rem;
+  color: var(--content-text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .home-career-card {
   display: flex;
   flex-direction: column;

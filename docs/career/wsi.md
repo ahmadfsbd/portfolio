@@ -1,51 +1,60 @@
-# Wellcome Sanger Institute  
-_2024 – Present_
+# Wellcome Sanger Institute
 
-Joining the **Wellcome Sanger Institute** opened a new chapter in my career—working at the intersection of **cloud engineering** and **world-class genomics research**. Here, I design and maintain **high-performance computing (HPC) and cloud infrastructures** that power cutting-edge scientific discoveries.
+**Senior Cloud Engineer** · September 2024 – Present · Cambridge, UK
 
----
+Architecture, automation, security, and operation of cloud and container
+platforms supporting regulated genomic research, spanning on-premises
+infrastructure and Google Cloud.
 
-## Role  
-**Senior Cloud Engineer**
+## Platform Architecture
 
-I lead and support the automation, scalability, and security of Sanger’s cloud and hybrid infrastructure. This means **designing resilient systems**, enabling **rapid scientific workflows**, and ensuring **research data integrity** at massive scale.
+- Architect and run HA Kubernetes platforms across on-premises OpenStack and
+  GCP (RKE2/Rancher, OpenShift, GKE), provisioned end to end with Terraform
+  and Ansible.
+- Design and operate OpenStack infrastructure using Kolla-Ansible, providing
+  isolated, quota-controlled environments for scientific research teams.
+- Design and optimise the GCP Trusted Research Environment (GKE, Cloud Build,
+  Cloud Functions, BigQuery, Batch) supporting regulated genomic workloads for
+  **15+ partner organisations**.
+- Integrate OpenLDAP and Google Workspace for centralised identity, with Ceph
+  and Longhorn for persistent storage.
 
-### Key Highlights
-**Infrastructure Modernization & Automation**  
-  > * Architected and automated **multi-cluster Kubernetes** and **OpenStack** deployments for compute-intensive genomics workloads.  
-  > * Implemented **Infrastructure as Code** using **Terraform** and **Ansible** to create repeatable, auditable deployments.
+## Migration & Delivery
 
-**Cloud & HPC Integration**  
-  > * Built workflows to bridge on-premise HPC with cloud bursting, ensuring seamless scalability for high-demand projects.
+- Migrated legacy Docker Swarm workloads to Kubernetes with Helm, then moved
+  delivery onto Argo CD GitOps and Gateway API routing — reproducible,
+  auditable deployments and releases roughly **80% faster**.
+- Integrated agentic AI workflows for automated Kubernetes incident detection
+  and remediation.
 
-**Security & Compliance**  
-  > * Enforced CIS-aligned standards and continuous monitoring to protect sensitive genomic data.
+## Security & Reliability
 
-**Collaboration & Support**  
-  > * Partnered with researchers, bioinformaticians, and data engineers to accelerate analysis pipelines and reduce time-to-discovery.
+- Own security architecture across on-premises and GCP: Zero Trust controls,
+  ISO 27001 alignment, and automated detection and alerting for access from
+  outside trusted networks.
+- Lead reliability, code review, and incident response policy; storage
+  tiering and FinOps work has cut cloud spend by **45%**.
 
----
+## Core Stack
 
-## Beyond the Server Room  
-Tech isn’t the only place I love a good challenge. I proudly played for the **Genome Campus Cricket Team**, where we combined strategy and teamwork on the pitch and celebrated a **Cambridge University Departmental League Cup** victory! 🏆  
+Kubernetes (RKE2, GKE) · OpenStack (Kolla-Ansible) · Rancher · OpenShift ·
+Terraform · Ansible · Argo CD · Gateway API · Ceph · Longhorn · GCP (Cloud
+Build, Cloud Functions, BigQuery, Batch) · OpenLDAP
 
-<img src="/portfolio/images/career/cup.webp" alt="Cup" height="40" />
+## Team
 
-That experience reinforced the same qualities I value in engineering: **teamwork, adaptability, and a drive to win together**.
+The Genome Campus has a life outside the data centre. Playing for the campus
+cricket team, alongside colleagues from across Sanger and EBI, has been a good
+reminder that the same things that make a platform team work — communication
+under pressure, covering for each other, trusting the plan — hold up on a
+cricket pitch too.
 
----
+<figure class="career-photo">
+  <img src="/portfolio/images/career/cup.webp" alt="Genome Campus Cricket Team celebrating the Cambridge University Departmental League Cup win" />
+  <figcaption>Genome Campus Cricket Team — Cambridge University Departmental League Cup.</figcaption>
+</figure>
 
-## Core Tech Stack
-* **Cloud & Infrastructure**: Kubernetes, OpenStack, GCP, Canonical Charmed Framework  
-* **Automation & IaC**: Terraform, Ansible, Python, Bash  
-* **Monitoring & Security**: Prometheus, Grafana, Alertmanager, Ubuntu USG  
-
----
-
-## Takeaways  
-At Sanger, I’m contributing to infrastructure that helps decode the building blocks of life—while keeping my competitive spirit alive both in the **cloud** and on the **cricket field**.
-
-
-<img src="/portfolio/images/career/boardgames.webp" alt="Board Games" height="40" />
-
-    Enjoying Board Games with HGI Team.
+<figure class="career-photo">
+  <img src="/portfolio/images/career/boardgames.webp" alt="Board games evening with the Human Genetics Informatics team" />
+  <figcaption>Board games evening with the HGI team.</figcaption>
+</figure>

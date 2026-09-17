@@ -161,8 +161,3 @@
     </div>
   </article>
 </section>
-
-<section class="evidence-cta" aria-label="Certification summary">
-  <p class="evidence-kicker">Positioning</p>
-  <h2>Credentials are supporting evidence. The main signal is the ability to design and operate infrastructure that teams can depend on.</h2>
-</section>

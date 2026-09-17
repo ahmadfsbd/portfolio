@@ -75,7 +75,7 @@ mentoring, and 15,000+ lines of OpenStack deployment automation contribution.
 ## Featured Section Recommendations
 
 - Portfolio homepage: Platform architecture positioning and selected work.
-- Resume page: recruiter-friendly summary and experience detail.
+- Career Journey pages: recruiter-friendly summary and experience detail.
 - Blog: Google Drive MCP for Codex on Linux, as evidence of practical technical
   writing.
 - Case study: Trusted Research Environments and secure research platform

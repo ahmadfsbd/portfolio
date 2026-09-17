@@ -1,64 +1,64 @@
-# Canonical  
-_2022 – 2024_
+# Canonical
 
-Joining **Canonical**, the company behind Ubuntu, felt like stepping onto the global open-source stage. Here I refined my skills in **cloud automation, large-scale deployments, and open-source collaboration**—all while working with some of the brightest engineers in the industry.
+**Field Software Engineer, Telco Cloud** · June 2022 – September 2024 ·
+EMEA field engineering
 
----
+Led architecture, deployment, and automation of open-source next-generation
+network cloud platforms for Tier-1 telecommunications operators across EMEA,
+from technical pre-sales through delivery and production handover.
 
-## Role  
-**Field Software Engineer (Telco Cloud)**  
+## Delivery Ownership
 
-I was responsible for delivering **end-to-end Telco Cloud projects**—from the first customer conversation to production hand-over. This meant not only writing code and automating infrastructure, but also engaging with customers on **RFX/RFI**, preparing **Statements of Work (SOWs)**, and supporting **pre-sales** activities.
+- Led end-to-end project lifecycle from technical pre-sales (RFP/RFI) through
+  architecture, delivery, QA, and support, translating operator requirements
+  into buildable designs and statements of work.
+- Architected aggregated, disaggregated, and hyper-converged OpenStack/
+  Kubernetes platforms with Ceph storage integrated across both.
+- Automated provisioning and lifecycle of **500+ node bare-metal clouds**
+  using MAAS, Juju, and Terraform.
 
-### Key Highlights
-**End-to-End Project Delivery**  
-  > * Led design, architecture, and implementation for complex multi-site cloud environments.  
-  > * Coordinated timelines, QA, and stakeholder communication to ensure on-time, high-quality delivery.
+<figure class="career-photo">
+  <img src="/portfolio/images/career/presales.webp" alt="Presenting a pre-sales technical solution at a Canonical Field Engineering Sprint in Vancouver" />
+  <figcaption>Pre-sales technical presentation, Field Engineering Sprint — Vancouver, 2024.</figcaption>
+</figure>
 
-**Pre-Sales & Customer Engagement**  
-  > * Participated in **RFX/RFI** processes, translating customer requirements into actionable proposals.  
-  > * Drafted detailed **SOWs** and presented technical solutions to both business and technical audiences.
+## NFV & Performance
 
-<img src="/portfolio/images/career/presales.webp" alt="Presales" height="40" />
-    
-    Delivering pre-sales speech at one of the Field Engineering Sprints - Vancouver, CA (2024)
+- Tuned NFV data paths for 5G workloads: real-time kernel, CPU pinning,
+  HugePages, SR-IOV, and DPDK.
+- Built MicroK8s-based edge clusters for low-latency telco workloads.
 
-**Cloud Architecture & Automation**  
-  > * Designed aggregated, disaggregated, and **hyper-converged cloud platforms** using the **Charmed Framework**.  
-  > * Automated **NFVI deployments** with **Terraform providers for Juju and MAAS**, reducing delivery times and manual errors.
+<figure class="career-photo">
+  <img src="/portfolio/images/career/hackathon.webp" alt="Prototyping a Terraform and Juju based cloud deployment solution at a Canonical Field Engineering hackathon" />
+  <figcaption>Building a Terraform + Juju deployment prototype at a Field Engineering hackathon.</figcaption>
+</figure>
 
-<img src="/portfolio/images/career/hackathon.webp" alt="Hackathon" height="40" />
+## Security & Operations
 
-    Coding a new Terraform and Juju based cloud deployment solution at a Field Engineering Hackathon.
+- Delivered air-gapped deployments hardened to CIS benchmarks via the Ubuntu
+  Security Guide, with Prometheus/Grafana/Alertmanager observability.
+- Contributed upstream to OpenStack and Kubernetes charms in Canonical's
+  open-source Charmed Framework.
+- Mentored junior engineers across cloud architecture, automation, and
+  delivery.
 
-**Edge & NFV Solutions**  
-  > * Built **MicroK8s**-based clusters with a **Realtime Kernel** for low-latency telco workloads.  
-  > * Implemented **offline repositories** for air-gapped cloud deployments—ensuring updates and security compliance without internet access.
+## Core Stack
 
-**Monitoring & Security**  
-  > * Deployed **Prometheus, Grafana, Grafana Agent, NRPE, and Alertmanager** for full-stack observability.  
-  > * Secured deployments with **Ubuntu Security Guide (USG)** to meet **CIS benchmarks**.
+OpenStack · Kubernetes · MicroK8s · MAAS · Juju · Ceph · Terraform ·
+Prometheus/Grafana/Alertmanager · Ubuntu Security Guide
 
-**Open Source Engagement**  
-  > * Contributed to projects like **OpenStack**, **Kubernetes**, and the **Charmed Operator Framework**, collaborating with a vibrant global community.
+## Team
 
----
+Telco field engineering runs on a small, distributed EMEA team that spends a
+lot of time on customer sites and, twice a year, together in person at a
+sprint.
 
-## Core Tech Stack
-* **Cloud & Infrastructure**: Ubuntu OpenStack, Kubernetes, Juju, MAAS, MicroK8s  
-* **Automation & IaC**: Terraform, Ansible, Python  
-* **Monitoring & Security**: Prometheus, Grafana, Alertmanager, Ubuntu USG  
+<figure class="career-photo">
+  <img src="/portfolio/images/career/team.webp" alt="Canonical Telco Field Engineering team, EMEA" />
+  <figcaption>Telco Field Engineering team (EMEA).</figcaption>
+</figure>
 
----
-
-## Takeaways  
-Working at Canonical strengthened my ability to **own the entire delivery lifecycle**—from pre-sales to production.  
-I learned to navigate customer requirements, create clear SOWs, and deliver scalable, secure, and fully automated cloud platforms while staying true to open-source values.
-
-<img src="/portfolio/images/career/dinner.webp" alt="Dinner" height="40" />
-
-    Enjoying dinner with team on a fine winter evening in Vancouver, CA.
-
-<img src="/portfolio/images/career/team.webp" alt="Team" height="40" />
-
-    Telco Field Engineering team (EMEA).
+<figure class="career-photo">
+  <img src="/portfolio/images/career/dinner.webp" alt="Team dinner with the Field Engineering team in Vancouver" />
+  <figcaption>Team dinner after a Field Engineering Sprint — Vancouver.</figcaption>
+</figure>

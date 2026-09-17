@@ -1,53 +1,68 @@
-# xFlow Research  
-_2018 – 2022_  
+# xFlow Research
 
-It all started here—my first deep dive into the world of **cloud engineering** and **network virtualization**.  
-xFlow Research was more than a job; it was my launchpad into cutting-edge telecom and cloud technologies.
+**Islamabad, Pakistan** · October 2018 – May 2022
 
----
+Progressed from Network Design Engineer to Technical Lead across NFV and
+telco cloud, contributing to Dell EMC's OpenStack and OpenShift reference
+architectures.
 
-## My Role  
-**Manager - NFV Team**  
-I began as a hands-on engineer, building and automating network-function virtualization (NFV) solutions, and eventually led a talented team of developers and QA engineers.
+## Technical Lead – NFV & Telco Cloud (January 2021 – May 2022)
 
-### Key Highlights
-**NFV Innovation**  
-  > * Led **R&D for a Broadband Network Gateway (BNG)** solution powered by **Vector Packet Processing (VPP)**.  
-  > * Delivered **Edge Distributed Compute Node (DCN)** stacks within OpenStack, including the **Dell EMC Ready OpenStack (JetStream 16.x)** solution.
+- Led architecture of Dell's Red Hat OpenStack and OpenShift telco cloud
+  reference architectures, managing and mentoring a **team of 8 engineers**.
+- Principal contributor to **Jetpack**, Dell EMC's open-source RHOSP
+  deployment automation toolkit, with 15,000+ lines of code contributed.
+- Built automated OpenShift cluster deployment, cutting provisioning time and
+  removing most manual setup.
+- Introduced automated QA across OpenShift, OpenStack, Ceph, and Dell
+  PowerFlex, catching platform regressions before customer release.
+- Designed and automated Edge Distributed Compute Node stacks in OpenStack
+  environments.
 
-**Automation at Scale**  
-  > * Built Python-based automation for **Hyper-Converged Infrastructure (HCI)** nodes with NFV acceleration.  
-  > * Integrated technologies like **OVS hardware offload, SR-IOV, OVS-DPDK, NUMA pinning, DPDK, and HugePages** for lightning-fast data paths.
+<figure class="career-photo">
+  <img src="/portfolio/images/career/xflowprom01.webp" alt="Recognition for promotion to Technical Lead at xFlow Research, 2021" />
+  <figcaption>Promotion to Technical Lead, 2021.</figcaption>
+</figure>
 
-**Leadership & Mentorship**  
-  > * Planned QA test cases and drove test automation.  
-  > * Guided the team’s technical direction, ensuring timely and high-quality deliveries.  
-  > * Mentored junior engineers—passing on the same spirit of curiosity that sparked my own career.
+## Senior Cloud Engineer (January 2020 – January 2021)
 
----
+- Contracted to Dell EMC's NFV team, building NFV capability into the Ready
+  Architecture for Red Hat OpenStack and OpenShift.
+- Automated RHOSP deployments in Python, extending the architecture to HCI,
+  edge, and NFV use cases.
+- Integrated and validated the NFVi layer: NUMA awareness, HugePages, SR-IOV,
+  OVS-DPDK, PCI passthrough, and SmartNIC hardware offload for data path and
+  workload acceleration.
+- Migrated the platform to RHOSP 16 / RHEL 8, containerising legacy
+  control-plane services on Podman.
+- Integrated and validated high-performance NICs (Intel 700/800 Series,
+  Mellanox ConnectX-5/6, Broadcom).
 
-## Tech Playground  
-I honed skills that became the foundation of my career:
+<figure class="career-photo">
+  <img src="/portfolio/images/career/xflowprom02.webp" alt="Recognition for promotion to Senior Cloud Engineer at xFlow Research, 2020" />
+  <figcaption>Promotion to Senior Cloud Engineer, 2020.</figcaption>
+</figure>
 
-* **Cloud Platforms**: OpenStack (Red Hat & community), OpenShift
-* **Automation**: Python, Ansible, Terraform  
-* **Networking**: High-performance packet processing with DPDK and VPP  
-* **Containers**: Early adoption of Kubernetes and Docker for Telco solutions  
+## Network Design Engineer II (October 2018 – January 2020)
 
----
+- Benchmarked and tuned Ceph performance with FIO, Prometheus, and Grafana,
+  establishing the baselines later used for platform sizing.
+- Deployed and supported enterprise data-centre servers (rack-and-stack,
+  firmware, RAID, iDRAC/BIOS, OS tuning).
+- Wrote multithreaded Python for edge data collection in a smart
+  energy-metering product.
 
-## What I Took Away  
-xFlow was my **innovation lab**—where I learned that **automation is freedom**, and where I discovered the excitement of blending open-source technologies with real-world telecom challenges.
+## Core Stack
 
-It wasn’t just a job; it was where I became a **problem-solver, mentor, and future DevOps engineer**—skills I now carry into every role.
+OpenStack (RHOSP) · OpenShift · Dell PowerFlex · Python/Ansible automation ·
+SR-IOV / DPDK / OVS-DPDK · Podman · Ceph
 
----
+## Team
 
-### Receiving Appreciation and Promotion to Lead Role (2021)
-<img src="/portfolio/images/career/xflowprom01.webp" alt="Lead Promotion" height="40" />
+xFlow was a young, close-knit team, and it showed in how it celebrated things
+— a promotion, a release, a birthday.
 
-### Promoted to Senior Engineer Role (2020)
-<img src="/portfolio/images/career/xflowprom02.webp" alt="Senior Promotion" height="40" />
-
-### Birthday Celebrations at xFlow (2020)
-<img src="/portfolio/images/career/bday.webp" alt="Birthday" height="40" />
+<figure class="career-photo">
+  <img src="/portfolio/images/career/bday.webp" alt="Birthday celebration with the xFlow Research team" />
+  <figcaption>Team celebration at xFlow Research, 2020.</figcaption>
+</figure>

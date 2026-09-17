@@ -26,6 +26,29 @@
   
 </div>
 
+<section class="stat-band" aria-label="Platform impact by the numbers">
+  <div class="stat-tile">
+    <span class="stat-number" data-count-to="45" data-suffix="%">0%</span>
+    <span class="stat-label">Cloud cost reduction from storage tiering and FinOps</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-number" data-count-to="80" data-suffix="%">0%</span>
+    <span class="stat-label">Faster releases after moving to Kubernetes and GitOps</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-number" data-count-to="500" data-suffix="+">0+</span>
+    <span class="stat-label">Bare-metal nodes automated with MAAS, Juju, and Terraform</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-number" data-count-to="15" data-suffix="+">0+</span>
+    <span class="stat-label">Partner organisations on a Zero Trust research platform</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-number" data-count-to="8" data-suffix="+">0+</span>
+    <span class="stat-label">Years designing and operating production platforms</span>
+  </div>
+</section>
+
 <section class="home-after-hero">
   <div>
     <p class="home-section-label">What I Build</p>

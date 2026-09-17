@@ -50,21 +50,24 @@ case studies, and proof points.
 Recommended public navigation:
 
 1. Home
-2. About
-3. Experience
-4. Capabilities
-5. Resume
-6. Certifications
-7. Writing
-8. Professional Materials
-9. Contact
+2. Experience
+3. Capabilities
+4. Certifications
+5. Writing
+6. Professional Materials
+7. Contact
 
 This structure gives different audiences a direct path:
 
-- Recruiters: Home, Resume, Experience
-- Engineering leaders: Home, About, Capabilities, Experience
+- Recruiters: Home, Career Journey, Certifications
+- Engineering leaders: Home, Capabilities, Experience
 - Technical peers: Writing, Capabilities, Experience
 - Professional network: LinkedIn copy, achievements, contact
+
+The site does not host a resume page or a standalone About page — it is not a
+resume-sharing tool, and the homepage carries the positioning that About used
+to hold. A resume is shared directly (PDF, LinkedIn, application) when a
+specific conversation calls for it.
 
 ## Visual Hierarchy
 
@@ -76,7 +79,7 @@ The homepage should communicate in this order:
 3. Evidence: TRE, EMEA telco cloud, 15,000+ lines OpenStack automation, 8+ years.
 4. Work samples: Wellcome Sanger Institute, Canonical, xFlow Research.
 5. Operating philosophy: security, reliability, automation, ownership.
-6. CTA: resume, experience, contact.
+6. CTA: experience, certifications, contact.
 
 ## Tone Guide
 

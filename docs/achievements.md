@@ -164,8 +164,3 @@
     </div>
   </article>
 </section>
-
-<section class="evidence-cta" aria-label="Achievement summary">
-  <p class="evidence-kicker">Pattern</p>
-  <h2>The through-line is contribution: building platforms, engaging with open infrastructure, and making technical work easier for others to understand.</h2>
-</section>
