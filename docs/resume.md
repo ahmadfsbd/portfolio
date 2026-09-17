@@ -3,7 +3,7 @@
 **Muhammad Ahmad**  
 Platform Architect / Staff-level Cloud Engineer  
 Cambridge, UK  
-[Email](mailto:ahmadfsbd@gmail.com) | [GitHub](https://www.github.com/ahmadfsbd) | [LinkedIn](https://www.linkedin.com/in/muhammad-ahmad-b6a04736/) | [Portfolio](https://mahmad.cloud)
+[Email](mailto:ahmadfsbd@gmail.com) | [GitHub](https://www.github.com/ahmadfsbd) | [LinkedIn](https://www.linkedin.com/in/muhammad-ahmad-b6a04736/) | [Portfolio](https://ahmadfsbd.github.io/portfolio/)
 
 ## Executive Summary
 
